@@ -270,6 +270,16 @@ a:hover {
 
 .store-btn-icon {
   font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.store-svg-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .store-btn-text span {
