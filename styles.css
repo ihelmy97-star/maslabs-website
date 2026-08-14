@@ -132,6 +132,15 @@ a:hover {
   box-shadow: var(--shadow-glow);
 }
 
+.nav-logo-img {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-glow);
+  object-fit: cover;
+  display: block;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
