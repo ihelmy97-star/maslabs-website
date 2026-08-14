@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAS Labs — MediFamily Digital Health Hub</title>
+  <meta name="description" content="MediFamily is the pharmacist-designed, local-first digital health hub for tracking medications, vital signs, lab records, and encrypted family health profiles.">
+  <meta name="keywords" content="MediFamily, MAS Labs, health tracker, medication manager, blood pressure log, glucose tracker, zero knowledge backup, family health app">
+  
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:title" content="MAS Labs — MediFamily Digital Health Hub">
+  <meta property="og:description" content="Centralized family health management, intelligent medication tracking, and Zero-Knowledge encrypted records.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://maslabs.app">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">🏥</div>
+        <span>MAS Labs <span style="font-size: 14px; font-weight: 500; color: var(--primary-cyan);">/ MediFamily</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#security">Privacy & Security</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="#contact" class="btn-nav">Contact Us</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="badge-pill">
+          <span>✨ Pharmacist-Designed Digital Health Hub</span>
+        </div>
+
+        <h1 class="hero-title">
+          Empower Your Family's Health with <span class="gradient-text">Zero-Knowledge</span> Privacy
+        </h1>
+
+        <p class="hero-subtitle">
+          The centralized, local-first platform for intelligent medication schedules, multi-parameter vital signs tracking, doctor visit logs, and client-side encrypted health archives.
+        </p>
+
+        <!-- Store Download Action Buttons (with Coming Soon modal) -->
+        <div class="hero-cta">
+          <button class="store-btn" id="googlePlayBtn">
+            <div class="store-btn-icon">🤖</div>
+            <div class="store-btn-text">
+              <span>GET IT ON</span>
+              <strong>Google Play <span class="coming-soon-badge">Coming Soon</span></strong>
+            </div>
+          </button>
+
+          <button class="store-btn" id="appStoreBtn">
+            <div class="store-btn-icon">🍏</div>
+            <div class="store-btn-text">
+              <span>DOWNLOAD ON THE</span>
+              <strong>App Store <span class="coming-soon-badge">Coming Soon</span></strong>
+            </div>
+          </button>
+        </div>
+
+        <!-- Hero Feature Badges -->
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-icon">🛡️</div>
+            <div class="stat-title">100% On-Device Storage</div>
+            <div class="stat-desc">Your health records live in your private SQLite device vault, never stored unencrypted on cloud servers.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">👨‍👩‍👧‍👦</div>
+            <div class="stat-title">Multi-Profile Family Care</div>
+            <div class="stat-desc">Instant 1-tap switching between Self, Spouse, Children, and Elderly Parents with emergency contacts.</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔐</div>
+            <div class="stat-title">AES-256 Envelope Backups</div>
+            <div class="stat-desc">Zero-Knowledge backups with 16-Character Emergency Recovery Key protection.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Clinical Excellence</span>
+          <h2 class="section-title">Built for Real Everyday Health Needs</h2>
+          <p class="section-desc">Designed with clinical precision to eliminate missed doses, scattered paper records, and caregiver confusion.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1: Profiles -->
+          <div class="feature-card">
+            <div class="feature-icon-box">👤</div>
+            <h3 class="feature-title">Family Profile Hub</h3>
+            <p class="feature-text">Organize care for the entire household. Maintain separate medication histories, primary physician details, and emergency contacts for every family member.</p>
+          </div>
+
+          <!-- Card 2: Medications -->
+          <div class="feature-card">
+            <div class="feature-icon-box">💊</div>
+            <h3 class="feature-title">Intelligent Dose Management</h3>
+            <p class="feature-text">High-priority alarm alerts for time-critical prescriptions. Track instructions, food timing, remaining pill counts, and refill reminders.</p>
+          </div>
+
+          <!-- Card 3: Vitals -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🩺</div>
+            <h3 class="feature-title">12-Parameter Vitals Log</h3>
+            <p class="feature-text">Track Blood Pressure, Heart Rate, Blood Glucose, Temperature, SpO2, Weight, BMI, and Pediatrics with color-coded WHO clinical ranges.</p>
+          </div>
+
+          <!-- Card 4: Reports -->
+          <div class="feature-card">
+            <div class="feature-icon-box">📄</div>
+            <h3 class="feature-title">Clinical PDF Reports</h3>
+            <p class="feature-text">Generate comprehensive, multi-page PDF summaries with embedded photo records and lab reports ready to print or email to your doctor.</p>
+          </div>
+
+          <!-- Card 5: Caregiver Handoff -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🛬</div>
+            <h3 class="feature-title">Single Profile Transfer</h3>
+            <p class="feature-text">Safely export an individual member's health record (.medifamilyprofile) to a caregiver or relative with dual-key password protection.</p>
+          </div>
+
+          <!-- Card 6: Privacy Blur -->
+          <div class="feature-card">
+            <div class="feature-icon-box">👁️</div>
+            <h3 class="feature-title">App Switcher Privacy Blur</h3>
+            <p class="feature-text">Automatic native privacy shielding blocks sensitive medical data from being exposed in public when switching apps on iOS and Android.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zero-Knowledge Security Section -->
+    <section id="security" class="section">
+      <div class="container">
+        <div class="security-box">
+          <div class="security-grid">
+            <div>
+              <span class="section-tag">Privacy Architecture</span>
+              <h2 style="font-size: 32px; margin-bottom: 16px;">Zero-Knowledge Security by Design</h2>
+              <p style="color: var(--text-secondary); line-height: 1.7; font-size: 15px;">
+                At MAS Labs, we believe your medical records belong exclusively to you. MediFamily employs mathematical client-side cryptographic guarantees so that no third party, cloud provider, or advertiser can ever access your family's health data.
+              </p>
+
+              <ul class="security-list">
+                <li>
+                  <span class="shield-badge">✓</span>
+                  <div><strong>On-Device Encryption:</strong> All health logs, doctor visits, and photos remain in your phone's private sandbox vault.</div>
+                </li>
+                <li>
+                  <span class="shield-badge">✓</span>
+                  <div><strong>PBKDF2 SHA-256 Salt Derivation:</strong> Backup encryption keys are derived from your verified identity salt, preventing dictionary attacks.</div>
+                </li>
+                <li>
+                  <span class="shield-badge">✓</span>
+                  <div><strong>16-Character Emergency Recovery Key:</strong> Master envelope protection ensures you never lose access to your medical history.</div>
+                </li>
+                <li>
+                  <span class="shield-badge">✓</span>
+                  <div><strong>Zero Ad Trackers:</strong> No behavioral tracking, third-party analytics SDKs, or data brokers.</div>
+                </li>
+              </ul>
+            </div>
+
+            <div style="background: rgba(10, 15, 29, 0.8); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 32px; text-align: center;">
+              <div style="font-size: 56px; margin-bottom: 16px;">🔐</div>
+              <h3 style="font-size: 20px; margin-bottom: 8px;">Hardware-Enclave Security</h3>
+              <p style="font-size: 13.5px; color: var(--text-secondary); line-height: 1.6;">
+                Verification credentials and cryptographic salts are stored in hardware-level enclaves (Apple Keychain & Android KeyStore).
+              </p>
+              <div style="margin-top: 24px; display: inline-flex; gap: 10px;">
+                <span style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">AES-256-CBC</span>
+                <span style="background: rgba(2, 132, 199, 0.15); color: var(--primary-cyan); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">PBKDF2 SHA-256</span>
+                <span style="background: rgba(13, 148, 136, 0.15); color: var(--primary-teal); padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">TLS 1.3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Publisher Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">About The Publisher</span>
+          <h2 class="section-title">MAS Labs & Pharmacist Vision</h2>
+          <p class="section-desc">Created by a registered clinical pharmacist to bridge the gap between complex medical regimens and family peace of mind.</p>
+        </div>
+
+        <div style="max-width: 800px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 40px; text-align: center;">
+          <div style="width: 72px; height: 72px; background: var(--gradient-hero); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; margin: 0 auto 20px; box-shadow: var(--shadow-glow);">
+            💊
+          </div>
+          <h3 style="font-size: 24px; margin-bottom: 12px;">Pharmacist-Engineered Health Architecture</h3>
+          <p style="font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px;">
+            "As healthcare professionals, we frequently witness preventable medication errors, forgotten pediatric vaccine schedules, and lost laboratory results during critical physician visits. MediFamily was built from the ground up to solve these challenges through clean, offline-first, intuitive design that puts families in complete control of their medical records."
+          </p>
+          <div style="font-size: 14px; font-weight: 700; color: var(--primary-cyan);">
+            — MAS Labs Health Informatics Team
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Inquiries Section -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Official Contact Inboxes</h2>
+          <p class="section-desc">Direct communications with our engineering, clinical support, and security teams.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- General Inquiries -->
+          <div class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <h3>General Inquiries</h3>
+            <p>Partnerships, media, and general information about MAS Labs.</p>
+            <div class="email-pill copy-email" data-email="info@maslabs.app">
+              <span>info@maslabs.app</span>
+              <span style="font-size: 11px;">📋</span>
+            </div>
+          </div>
+
+          <!-- Customer & User Support -->
+          <div class="contact-card">
+            <div class="contact-card-icon">🏥</div>
+            <h3>User & Technical Support</h3>
+            <p>App guidance, feature requests, and account assistance.</p>
+            <div class="email-pill copy-email" data-email="support@maslabs.app">
+              <span>support@maslabs.app</span>
+              <span style="font-size: 11px;">📋</span>
+            </div>
+          </div>
+
+          <!-- Security & Privacy -->
+          <div class="contact-card">
+            <div class="contact-card-icon">🛡️</div>
+            <h3>Security & Identity Gateway</h3>
+            <p>Cryptographic verification and vulnerability reports.</p>
+            <div class="email-pill copy-email" data-email="security@maslabs.app">
+              <span>security@maslabs.app</span>
+              <span style="font-size: 11px;">📋</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive "Coming Soon" Modal Dialog -->
+  <div id="comingSoonModal" class="modal-overlay">
+    <div class="modal-box">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-icon">🚀</div>
+      <h3 class="modal-title">Public Store Launch Coming Soon!</h3>
+      <p class="modal-desc">
+        MediFamily is currently in its final pre-release review phase for the <strong>Apple App Store</strong> and <strong>Google Play Store</strong>.
+      </p>
+      <div class="alert-box" style="margin-bottom: 20px;">
+        📅 <strong>Official Release:</strong> Summer 2026<br>
+        🔒 <strong>Status:</strong> Zero-Knowledge Security Audit Complete
+      </div>
+      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
+        For beta tester access or early access inquiries, contact us at: <a href="mailto:support@maslabs.app" style="color: var(--primary-cyan); font-weight: 600;">support@maslabs.app</a>
+      </p>
+      <button id="modalDismissBtn" class="btn-nav" style="width: 100%; padding: 12px; cursor: pointer; font-size: 14px; font-weight: bold;">
+        Got It, Thank You!
+      </button>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Email copied to clipboard!</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="margin-bottom: 14px;">
+            <div class="logo-icon" style="width: 30px; height: 30px; font-size: 16px;">🏥</div>
+            <span>MediFamily</span>
+          </div>
+          <p style="color: var(--text-secondary); max-width: 360px; line-height: 1.6;">
+            A pharmacist-designed, decentralized family health hub. Built with Zero-Knowledge encryption to safeguard your family's vital medical history.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal & Compliance</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service / EULA</a></li>
+            <li><a href="terms.html#disclaimer">Clinical Disclaimer</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Publisher Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:support@maslabs.app">support@maslabs.app</a></li>
+            <li><a href="mailto:info@maslabs.app">info@maslabs.app</a></li>
+            <li><a href="mailto:security@maslabs.app">security@maslabs.app</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 MAS Labs. All rights reserved. MediFamily™ is a trademark of MAS Labs.</div>
+        <div style="display: flex; gap: 20px;">
+          <span>Version v23.2</span>
+          <span>Zero-Knowledge Architecture</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

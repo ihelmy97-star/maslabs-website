@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — MediFamily & MAS Labs</title>
+  <meta name="description" content="MediFamily Privacy Policy. Zero-Knowledge, on-device encrypted family health management. We do not collect, sell, or track your personal medical records.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🏥</div>
+        <span>MAS Labs <span style="font-size: 14px; font-weight: 500; color: var(--primary-cyan);">/ MediFamily</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home Hub</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="privacy.html" style="color: var(--primary-cyan); font-weight: 700;">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="index.html#contact" class="btn-nav">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
+    <div class="legal-container">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <span class="section-tag">Legal & Compliance</span>
+        <h1 style="font-size: 38px; margin-bottom: 12px;">MediFamily Privacy Policy</h1>
+        <p style="color: var(--text-secondary); font-size: 14px;">
+          <strong>Effective Date:</strong> August 14, 2026 &bull; <strong>Version:</strong> 2.0 (Store-Ready Compliance)
+        </p>
+      </div>
+
+      <div class="alert-box">
+        🔒 <strong>Our Core Privacy Guarantee:</strong> MediFamily is architected as an <strong>offline-first, zero-knowledge health tracking hub</strong>. Your medical records, prescription logs, attached photos, and vital readings are stored locally on your device in an encrypted vault and are <strong>NEVER transmitted to or stored unencrypted on any central cloud server</strong>.
+      </div>
+
+      <div class="legal-content">
+        <h2>1. Information We DO NOT Collect</h2>
+        <p>Unlike traditional cloud medical applications, MediFamily operates on a strict minimization and decentralized architecture. We do NOT collect, access, monetize, or harvest:</p>
+        <ul>
+          <li><strong>Clinical & Medical Data:</strong> Your medication names, dosages, vital signs, blood glucose readings, blood pressure logs, and clinical notes remain exclusively on your device.</li>
+          <li><strong>Medical Document Attachments:</strong> Lab report photos, prescription scans, and doctor note PDFs are stored in your device's private sandboxed file system.</li>
+          <li><strong>Precise Location Data:</strong> We do not request, access, or track GPS coordinates or Wi-Fi location beacons.</li>
+          <li><strong>Biometric Data:</strong> FaceID or Fingerprint authentication is processed entirely on-device by your operating system’s secure enclave.</li>
+          <li><strong>Third-Party Tracking & Advertising IDs:</strong> We do not embed ad-network trackers, analytics SDKs, or data brokers (e.g. Meta Pixel, Google AdMob).</li>
+        </ul>
+
+        <h2>2. Information We Process for Security & Account Identity</h2>
+        <p>To provide verified cryptographic backups and subscriber communications, we process only the minimal necessary data:</p>
+        <ul>
+          <li><strong>Verified Email Address:</strong> Used solely to dispatch 6-digit One-Time Password (OTP) verification codes and to serve as the mathematical cryptographic salt for PBKDF2 SHA-256 backup encryption.</li>
+          <li><strong>Device Platform & General Region:</strong> Coarse device language format (e.g. en_AE) and operating platform (iOS / Android) for local time and language formatting.</li>
+          <li><strong>Marketing Opt-In (Optional):</strong> If you explicitly check the opt-in box during verification, we may send you occasional product updates from MAS Labs. You can unsubscribe at any time.</li>
+        </ul>
+
+        <h2>3. Zero-Knowledge Cryptographic Backup Architecture</h2>
+        <p>When you create an encrypted backup package (<code>.medifamily</code>) or single profile transfer package (<code>.medifamilyprofile</code>):</p>
+        <ul>
+          <li>Data is encrypted client-side using industry-standard <strong>AES-256-CBC envelope encryption</strong>.</li>
+          <li>Encryption keys are mathematically derived using <strong>PBKDF2 with SHA-256 hashing</strong> using your verified email and your chosen secret password or 16-character Emergency Recovery Key.</li>
+          <li>MAS Labs does NOT hold, escrow, or store your passwords or recovery keys. We cannot decrypt your backups under any circumstances.</li>
+        </ul>
+
+        <h2>4. Device Hardware Permissions & Justifications</h2>
+        <p>MediFamily requests only the minimal hardware permissions strictly necessary for app functionality:</p>
+        <ul>
+          <li><strong>Camera (<code>NSCameraUsageDescription</code>):</strong> Used exclusively when you choose to photograph paper lab reports, doctor prescriptions, or medication packaging within the app.</li>
+          <li><strong>Photo Library (<code>NSPhotoLibraryUsageDescription</code>):</strong> Used exclusively when you choose to import existing medical images or PDF lab documents.</li>
+          <li><strong>Alarms & Notifications (<code>SCHEDULE_EXACT_ALARM</code>):</strong> Used to trigger reliable, time-critical medication reminder alarms on your device at your scheduled dose times.</li>
+        </ul>
+
+        <h2>5. Data Retention, Portability & Deletion</h2>
+        <p>Because your medical data resides exclusively on your local device:</p>
+        <ul>
+          <li><strong>Complete Control:</strong> You can delete any family profile, medication, or medical record at any time from within the app.</li>
+          <li><strong>App Deletion:</strong> Uninstalling the application permanently deletes the local SQLite database and all cached attachments from your device.</li>
+          <li><strong>Portable Exports:</strong> You can export your health summaries as printable PDF documents or encrypted archives whenever you choose.</li>
+        </ul>
+
+        <h2>6. Children’s Privacy (COPPA & GDPR-K Compliance)</h2>
+        <p>
+          MediFamily allows parents and legal guardians to manage pediatric family profiles (e.g., child vaccinations, growth measurements). This data is entered solely by the parent, stored locally on the parent's device, and is never shared, marketed to, or harvested.
+        </p>
+
+        <h2>7. Compliance with Store Guidelines & Regulations</h2>
+        <p>
+          This policy complies fully with the <strong>Apple App Store Review Guidelines (Guideline 5.1 Privacy)</strong>, <strong>Google Play Developer Program Policies (User Data & Health Content)</strong>, the <strong>General Data Protection Regulation (GDPR)</strong>, and international health data privacy standards.
+        </p>
+
+        <h2>8. Contact Our Data Protection Officer</h2>
+        <p>If you have any questions, security inquiries, or feedback regarding this Privacy Policy, please contact our dedicated security team:</p>
+        <ul>
+          <li><strong>Publisher:</strong> MAS Labs Health Informatics</li>
+          <li><strong>Security & Privacy Desk:</strong> <a href="mailto:security@maslabs.app">security@maslabs.app</a></li>
+          <li><strong>Customer Support:</strong> <a href="mailto:support@maslabs.app">support@maslabs.app</a></li>
+          <li><strong>General Inquiries:</strong> <a href="mailto:info@maslabs.app">info@maslabs.app</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 MAS Labs. All rights reserved. MediFamily™ Privacy Center.</div>
+        <div><a href="terms.html">Terms of Service</a> &bull; <a href="index.html">Home Hub</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
