@@ -54,7 +54,7 @@
     <section class="hero">
       <div class="container">
         <div class="badge-pill">
-          <span>✨ Pharmacist-Designed Digital Health Hub &bull; <strong>v23.2</strong></span>
+          <span>✨ Pharmacist-Designed Digital Health Hub &bull; <strong>v23.5</strong></span>
         </div>
 
         <h1 class="hero-title">
@@ -126,6 +126,7 @@
         </div>
 
         <div class="features-grid">
+          <!-- Row 1: Family Hub -->
           <!-- Card 1: Family Profiles -->
           <div class="feature-card">
             <div class="feature-icon-box">👤</div>
@@ -139,7 +140,7 @@
             <div class="feature-icon-box">🚨</div>
             <span class="card-pill">Family Hub</span>
             <h3 class="feature-title">Dedicated Physician & SOS Cards</h3>
-            <p class="feature-text">Store and maintain separate Primary Care Physician details (Name, Specialty, Phone) and Emergency Family Contacts readily accessible on dashboards and clinical exports.</p>
+            <p class="feature-text">Store and maintain separate Primary Care Physician details (Name, Specialty, Phone, Email, Address) and Emergency Family Contacts readily accessible on dashboards and clinical exports.</p>
           </div>
 
           <!-- Card 3: Family At A Glance Schedule -->
@@ -150,15 +151,8 @@
             <p class="feature-text">Live unified dashboard tracking today's upcoming medication doses and pending doctor appointments across all household family profiles in one chronological feed.</p>
           </div>
 
-          <!-- Card 4: Health Notes & Allergy Badges -->
-          <div class="feature-card">
-            <div class="feature-icon-box">📝</div>
-            <span class="card-pill">Family Hub</span>
-            <h3 class="feature-title">Health Notes & Chronic Profiles</h3>
-            <p class="feature-text">Centralized general health monitoring notes, chronic condition tags, and high-visibility allergy badges recorded per member for complete medical context.</p>
-          </div>
-
-          <!-- Card 5: Exact Dose Alarms -->
+          <!-- Row 2: Prescriptions & Visual Pill Capture -->
+          <!-- Card 4: Exact Dose Alarms -->
           <div class="feature-card">
             <div class="feature-icon-box">⏰</div>
             <span class="card-pill">Prescriptions</span>
@@ -166,7 +160,7 @@
             <p class="feature-text">Native high-priority scheduled alerts with system sound, vibration pulses, and foreground heads-up reminder banners for time-critical daily prescriptions.</p>
           </div>
 
-          <!-- Card 6: Clinical Regimen Guidance -->
+          <!-- Card 5: Clinical Regimen Guidance -->
           <div class="feature-card">
             <div class="feature-icon-box">💊</div>
             <span class="card-pill">Prescriptions</span>
@@ -174,6 +168,15 @@
             <p class="feature-text">Configure multi-time daily dose schedules, specific route directions, and food instructions (Before Food, With Food, After Food, Empty Stomach).</p>
           </div>
 
+          <!-- Card 6: Packaging & Pill Box Photo Capture (NEW v23.3.0) -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🏷️</div>
+            <span class="card-pill">Prescriptions</span>
+            <h3 class="feature-title">Packaging & Pill Box Photos</h3>
+            <p class="feature-text">Attach high-definition photos of medication boxes, blisters, and pill shapes with 1-tap full-screen pinch-to-zoom viewing and instant caregiver profile sync.</p>
+          </div>
+
+          <!-- Row 3: Prescriptions Lifecycle -->
           <!-- Card 7: Custom Repeat & Frequency -->
           <div class="feature-card">
             <div class="feature-icon-box">🔁</div>
@@ -198,7 +201,33 @@
             <p class="feature-text">Separate active medications from completed or paused treatments with 1-tap Archive and Un-Archive controls that silence reminders while preserving history.</p>
           </div>
 
-          <!-- Card 10: 12-Parameter Adult Vitals -->
+          <!-- Row 4: Health Notes, 1-Tap Telephony & Clinic Navigation -->
+          <!-- Card 10: Health Notes & Allergy Badges -->
+          <div class="feature-card">
+            <div class="feature-icon-box">📝</div>
+            <span class="card-pill">Family Hub</span>
+            <h3 class="feature-title">Health Notes & Chronic Profiles</h3>
+            <p class="feature-text">Centralized general health monitoring notes, chronic condition tags, and high-visibility allergy badges recorded per member for complete medical context.</p>
+          </div>
+
+          <!-- Card 11: 1-Tap Direct Call & SMS Action Launchers (NEW v23.4.0) -->
+          <div class="feature-card">
+            <div class="feature-icon-box">📞</div>
+            <span class="card-pill">Emergency & Care</span>
+            <h3 class="feature-title">1-Tap Direct Call & SMS</h3>
+            <p class="feature-text">Instantly dial or message Primary Physicians, Emergency Guardians, and visit-specific clinic doctors with 1-tap action buttons and modal safety fallbacks.</p>
+          </div>
+
+          <!-- Card 12: Clinic GPS Navigation & Direct Email (NEW v23.5.0) -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🗺️</div>
+            <span class="card-pill">Emergency & Care</span>
+            <h3 class="feature-title">Clinic Navigation & Direct Email</h3>
+            <p class="feature-text">Store physical clinic addresses with 1-tap turn-by-turn map directions and direct clinician email dispatch with pre-filled clinical subject lines.</p>
+          </div>
+
+          <!-- Row 5: Clinical Vitals & Pediatrics -->
+          <!-- Card 13: 12-Parameter Adult Vitals -->
           <div class="feature-card">
             <div class="feature-icon-box">🩺</div>
             <span class="card-pill">Clinical Vitals</span>
@@ -206,7 +235,7 @@
             <p class="feature-text">Track Blood Pressure, Heart Rate, Glucose, Temp, SpO2, Weight & BMI with instant keyword filtering, Search Guide modal (ℹ️), and 1-tap Clear (❌).</p>
           </div>
 
-          <!-- Card 11: Pediatric & WHO Guides -->
+          <!-- Card 14: Pediatric & WHO Guides -->
           <div class="feature-card">
             <div class="feature-icon-box">👶</div>
             <span class="card-pill">Clinical Vitals</span>
@@ -214,7 +243,7 @@
             <p class="feature-text">Track infant head circumference, height/length, and pediatric weight with instant color-coded clinical status badges for blood pressure, blood glucose, fever, and SpO2.</p>
           </div>
 
-          <!-- Card 12: Lifetime Vaccination Cabinet -->
+          <!-- Card 15: Lifetime Vaccination Cabinet -->
           <div class="feature-card">
             <div class="feature-icon-box">💉</div>
             <span class="card-pill">Clinical Vitals</span>
@@ -222,7 +251,8 @@
             <p class="feature-text">Permanent immunization tracking for doses #1–4 and booster shots, immune from bulk vital deletions, with 1-tap vaccination history PDF sharing.</p>
           </div>
 
-          <!-- Card 13: Multi-Page Photo & PDF Document Scanner -->
+          <!-- Row 6: Document Vault -->
+          <!-- Card 16: Multi-Page Photo & PDF Document Scanner -->
           <div class="feature-card">
             <div class="feature-icon-box">📸</div>
             <span class="card-pill">Document Vault</span>
@@ -230,7 +260,7 @@
             <p class="feature-text">Attach up to 10 high-resolution photos and up to 10 PDF documents per medical record (prescriptions, lab printouts, radiology scans) with duplicate byte protection.</p>
           </div>
 
-          <!-- Card 14: PDF Attachment Viewer & Sandbox -->
+          <!-- Card 17: PDF Attachment Viewer & Sandbox -->
           <div class="feature-card">
             <div class="feature-icon-box">📂</div>
             <span class="card-pill">Document Vault</span>
@@ -238,7 +268,7 @@
             <p class="feature-text">Import and preview external clinical PDF reports directly in the sandboxed private document vault without leaving the patient record.</p>
           </div>
 
-          <!-- Card 15: 8 Categorized Document Vaults -->
+          <!-- Card 18: 8 Categorized Document Vaults -->
           <div class="feature-card">
             <div class="feature-icon-box">🗂️</div>
             <span class="card-pill">Document Vault</span>
@@ -246,7 +276,8 @@
             <p class="feature-text">Organize health records into 8 distinct clinical categories: Lab Results, Radiology, Prescriptions, Vaccinations, Dental, Vision, Medical Bills, and Other files with custom notes and timestamped logging.</p>
           </div>
 
-          <!-- Card 16: Caregiver Handoff -->
+          <!-- Row 7: Caregiver Sync & Cryptographic Backup -->
+          <!-- Card 19: Caregiver Handoff -->
           <div class="feature-card">
             <div class="feature-icon-box">🛬</div>
             <span class="card-pill">Caregiver Sync</span>
@@ -254,7 +285,7 @@
             <p class="feature-text">Safely export an individual member's health dossier with transfer passwords and 3 smart collision modes (Merge & Append, Update Details, or Separate Profile).</p>
           </div>
 
-          <!-- Card 17: Cross-Platform Full Backup & Restore -->
+          <!-- Card 20: Cross-Platform Full Backup & Restore -->
           <div class="feature-card">
             <div class="feature-icon-box">🔄</div>
             <span class="card-pill">Security & Backup</span>
@@ -262,7 +293,7 @@
             <p class="feature-text">Encrypted full-hub backups (.medifamily) with 100% interoperability between iOS and Android, verified email salt, and dynamic sandbox path restoration.</p>
           </div>
 
-          <!-- Card 18: Storage Diagnostics & Cleaner -->
+          <!-- Card 21: Storage Diagnostics & Cleaner -->
           <div class="feature-card">
             <div class="feature-icon-box">🧹</div>
             <span class="card-pill">Security & Storage</span>
@@ -270,7 +301,8 @@
             <p class="feature-text">Visual diagnostic breakdown across all family profiles with permanent medical document sandbox immunity and 1-tap temporary staging cache cleaning.</p>
           </div>
 
-          <!-- Card 19: Clinical PDF Dossier Exporter -->
+          <!-- Row 8: Reporting, Privacy & UX -->
+          <!-- Card 22: Clinical PDF Dossier Exporter -->
           <div class="feature-card">
             <div class="feature-icon-box">📄</div>
             <span class="card-pill">Reporting</span>
@@ -278,7 +310,7 @@
             <p class="feature-text">Export multi-page health summaries with embedded document photos, table header page-break protection, and clinician disclaimers ready to share.</p>
           </div>
 
-          <!-- Card 20: App Switcher Privacy Blur -->
+          <!-- Card 23: App Switcher Privacy Blur -->
           <div class="feature-card">
             <div class="feature-icon-box">👁️</div>
             <span class="card-pill">Security</span>
@@ -286,7 +318,7 @@
             <p class="feature-text">Automatic native privacy shielding blocks sensitive medical records from being exposed in public when switching or backgrounding apps on iOS and Android.</p>
           </div>
 
-          <!-- Card 21: Clinical Dropdowns & Other... Fallback -->
+          <!-- Card 24: Clinical Dropdowns & Other... Fallback -->
           <div class="feature-card">
             <div class="feature-icon-box">✍️</div>
             <span class="card-pill">Clinical UX</span>
@@ -427,7 +459,7 @@
         MediFamily is currently in its final pre-release review phase for the <strong>Apple App Store</strong> and <strong>Google Play Store</strong>.
       </p>
       <div class="alert-box" style="margin-bottom: 20px;">
-        📅 <strong>Official Release:</strong> Summer 2026 (v23.2)<br>
+        📅 <strong>Official Release:</strong> Summer 2026 (v23.5)<br>
         🔒 <strong>Status:</strong> Zero-Knowledge Security Audit Complete
       </div>
       <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
@@ -478,7 +510,7 @@
       <div class="footer-bottom">
         <div>&copy; 2026 MAS Labs. All rights reserved. MediFamily™ is a trademark of MAS Labs.</div>
         <div style="display: flex; gap: 20px;">
-          <span>Version v23.2</span>
+          <span>Version v23.5</span>
           <span>Zero-Knowledge Architecture</span>
         </div>
       </div>
