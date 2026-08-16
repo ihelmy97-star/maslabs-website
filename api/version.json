@@ -1,8 +1,8 @@
 {
-  "latest_version": "23.6.1",
-  "latest_build": 237,
+  "latest_version": "23.6.2",
+  "latest_build": 238,
   "release_date": "2026-08-16",
-  "release_notes": "Medical Records Scoped Search UX, Smart 1-Tap 'Search All' Category Fallback, Active Match Badges, Photo/PDF Label Renaming & Rule 9 Zero-Loss Medical File Engine.",
+  "release_notes": "Arabic Text Reshaping, Bidirectional RTL Glyph Protection, and Unicode Safety Fix for PDF Reports and Attachment Labels.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily"
