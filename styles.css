@@ -225,6 +225,7 @@ a:hover {
 .gradient-text {
   background: var(--gradient-hero);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
