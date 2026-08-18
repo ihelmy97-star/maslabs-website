@@ -426,6 +426,30 @@ a:hover {
   margin-bottom: 16px;
 }
 
+.card-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+  user-select: none;
+}
+
+.feature-card:hover .card-number {
+  color: var(--primary-cyan);
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.2);
+}
+
 .card-pill {
   display: inline-block;
   font-size: 10.5px;
