@@ -1,8 +1,8 @@
 {
-  "latest_version": "23.7.0",
-  "latest_build": 243,
-  "release_date": "2026-08-17",
-  "release_notes": "Interactive Family Profile Rearrangement System with primary Self account holder default #1 pinning, instant Family At-A-Glance schedule sync, high-visibility Vitals Snapshot card with accessible metric badges, permanent Saved Health Reports storage safeguard (Rule 9 optimizer immunity), and compact alert banner with 1-tap Jump-to-Save.",
+  "latest_version": "23.8.0",
+  "latest_build": 244,
+  "release_date": "2026-08-18",
+  "release_notes": "Pharmacist-Grade Medication Dosing Engine with 4-pattern Progressive Disclosure Schedule Selector (Every Day, As Needed/PRN with safety lockout, 7-Day Weekdays with day-specific dosages, Cycle & Taper), Dedicated Dose Intake History Log with 1-tap undo, Clinical Food Directives, Prescription Stock Depletion Alerts, and In-Use Shelf-Life Reconstitution Countdowns.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily"
