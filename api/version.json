@@ -1,8 +1,8 @@
 {
-  "latest_version": "23.8.3",
-  "latest_build": 245,
-  "release_date": "2026-08-18",
-  "release_notes": "Pharmacist-Grade Medication Dosing Engine with 4-pattern Progressive Disclosure Schedule Selector (Every Day, As Needed/PRN with safety lockout, 7-Day Weekdays with day-specific dosages, Cycle & Taper), Dedicated Dose Intake History Log with 1-tap undo, Clinical Food Directives, Prescription Stock Depletion Alerts, In-Use Shelf-Life Reconstitution Countdowns, Medical Records Full Backup Reminder Banner & Last Backup Timestamp Tracker, and Saved Health Reports High-Contrast Visual Refinements.",
+  "latest_version": "23.9.0",
+  "latest_build": 250,
+  "release_date": "2026-08-19",
+  "release_notes": "Privacy-Preserving Telemetry & Zero-PHI Diagnostics Hub with in-app Safety Guide, Real-Time Family Profile Launchers & Dynamic Health Stats, and Ultra-Compact Dashboard Update Notification Engine with 24h Smart Snooze.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily"

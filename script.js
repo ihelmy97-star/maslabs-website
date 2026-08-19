@@ -78,4 +78,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 4. Single Source of Truth: Dynamic Version Manifest Sync
+  fetch('api/version.json')
+    .then(res => res.json())
+    .then(data => {
+      if (data && data.latest_version) {
+        const fullVersionBuild = `v${data.latest_version} (Build ${data.latest_build || 1})`;
+        
+        // Update Hero Badge
+        const heroBadge = document.getElementById('heroVersionBadge');
+        if (heroBadge) heroBadge.textContent = fullVersionBuild;
+
+        // Update Modal Alert
+        const modalAlert = document.getElementById('modalReleaseInfo');
+        if (modalAlert) {
+          modalAlert.innerHTML = `📅 <strong>Official Release:</strong> Summer 2026 (${fullVersionBuild})<br>🔒 <strong>Status:</strong> Zero-Knowledge Security Audit Complete`;
+        }
+
+        // Update Footer
+        const footerText = document.getElementById('footerVersionText');
+        if (footerText) footerText.textContent = `Version ${fullVersionBuild}`;
+      }
+    })
+    .catch(() => {
+      // Fallback gracefully to pre-rendered HTML on local/offline environments
+    });
 });
