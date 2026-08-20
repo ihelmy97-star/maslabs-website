@@ -1,8 +1,8 @@
 {
   "latest_version": "23.9.0",
   "latest_build": 250,
-  "release_date": "2026-08-19",
-  "release_notes": "Privacy-Preserving Telemetry & Zero-PHI Diagnostics Hub with in-app Safety Guide, Real-Time Family Profile Launchers & Dynamic Health Stats, and Ultra-Compact Dashboard Update Notification Engine with 24h Smart Snooze.",
+  "release_date": "2026-08-20",
+  "release_notes": "Medical Record Attachment Quotas (Max 5 Photos, Max 3 PDFs, 25MB Budget), Deep File Integrity & Magic Byte Anti-Spoofing Engine, Real-Time Live Attachment File Size Badges, Standard Compact Action Buttons, Privacy-Preserving Zero-PHI Telemetry, and Reactive In-App Update Engine.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily"
