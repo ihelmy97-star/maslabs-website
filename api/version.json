@@ -8,9 +8,15 @@
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
   "promo_campaign": {
     "is_active": true,
-    "annual_discount_percent": 20,
-    "lifetime_discount_percent": 20,
-    "monthly_discount_percent": 20,
-    "banner_text": "FOR A LIMITED TIME: 20% OFF"
+    "annual_discount_percent": 30,
+    "lifetime_discount_percent": 30,
+    "monthly_discount_percent": 33,
+    "banner_text": "FOR A LIMITED TIME: UP TO 33% OFF",
+    "annual_anchor_usd": 49.99,
+    "lifetime_anchor_usd": 99.99,
+    "monthly_anchor_usd": 5.99,
+    "annual_base_usd": 34.99,
+    "lifetime_base_usd": 69.99,
+    "monthly_base_usd": 3.99
   }
 }
