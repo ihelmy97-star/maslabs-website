@@ -38,6 +38,7 @@
 
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
         <li><a href="#security">Privacy & Security</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
@@ -155,13 +156,13 @@
           </div>
 
           <!-- Row 2: Prescriptions & Core Schedules -->
-          <!-- Card 4: Exact Dose Alarms -->
+          <!-- Card 4: Scheduled Dose Alarms & Interactive Action Buttons -->
           <div class="feature-card">
             <span class="card-number">#04</span>
             <div class="feature-icon-box">⏰</div>
             <span class="card-pill">Prescriptions</span>
-            <h3 class="feature-title">High-Priority Scheduled Dose Alarms</h3>
-            <p class="feature-text">Native high-priority clock alerts with system sound, vibration pulses, and foreground heads-up banners for multi-dose regimens — paired with calendar-aware active day delivery, boot auto-rescheduling, and an in-app diagnostic reminder sound test.</p>
+            <h3 class="feature-title">Scheduled Alarms & Interactive Action Buttons</h3>
+            <p class="feature-text">Native high-priority clock alerts with system sound and foreground heads-up banners — featuring 1-tap interactive Lock Screen action buttons ('Mark Taken' & 'Skip') with automatic background inventory decrement and boot auto-rescheduling.</p>
           </div>
 
           <!-- Card 5: Daily Routines & PRN Safety Lockouts (NEW v23.8.0) -->
@@ -406,6 +407,164 @@
             <p class="feature-text">1-tap mini-stat pill launchers on family profile cards that automatically switch active profiles and launch directly into Prescriptions, Doctor Visits, or Records with instant real-time count synchronization.</p>
           </div>
         </div>
+      </div>
+    <!-- Pricing & Plans Section -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Transparent Monetization</span>
+          <h2 class="section-title">Fair, Zero-Ad Pricing for Every Family</h2>
+          <p class="section-desc">Explore all core health tracking tools for free, or unlock unlimited family profiles, encrypted cross-platform backups, and high-priority alarms with MediFamily Pro.</p>
+        </div>
+
+        <!-- Dynamic Promotional Fire Banner (Synced via version.json) -->
+        <div class="pricing-promo-banner" id="pricingPromoBanner">
+          <span class="promo-fire-icon">🔥</span>
+          <span class="promo-banner-text" id="promoBannerText">FOR A LIMITED TIME: UP TO 33% OFF FOUNDER'S LAUNCH OFFER</span>
+        </div>
+
+        <!-- 4-Card Pricing Grid -->
+        <div class="pricing-grid">
+          
+          <!-- Plan 1: Free Exploration -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <div class="pricing-icon">🌿</div>
+              <span class="pricing-pill">Free Tier</span>
+              <h3 class="pricing-tier-name">Free Exploration</h3>
+              <p class="pricing-tier-desc">Essential health & medication tracking for individuals.</p>
+            </div>
+            <div class="pricing-price-box">
+              <div class="pricing-price-row">
+                <span class="price-val">$0</span>
+                <span class="price-period">/ Free Forever</span>
+              </div>
+              <span class="pricing-subtext">No credit card or registration required</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li><span class="check-icon">✓</span> <strong>1 Family Profile</strong> (Self account)</li>
+              <li><span class="check-icon">✓</span> <strong>Unlimited Active Medications</strong> & PRN</li>
+              <li><span class="check-icon">✓</span> <strong>12-Parameter Vitals Tracking</strong> & Trends</li>
+              <li><span class="check-icon">✓</span> <strong>Lifetime Immunization Cabinet</strong></li>
+              <li><span class="check-icon">✓</span> <strong>Sandboxed Medical Document Vault</strong></li>
+              <li><span class="check-icon">✓</span> <strong>Standard Clinical PDF Report Sharing</strong></li>
+              <li><span class="check-icon">✓</span> <strong>100% Zero Commercial Ads Ever</strong></li>
+            </ul>
+            <button class="pricing-btn btn-secondary trigger-coming-soon">Get Started Free</button>
+          </div>
+
+          <!-- Plan 2: Pro Annual (Featured / Gold Glassmorphism) -->
+          <div class="pricing-card pricing-card-featured">
+            <div class="popular-ribbon">⭐ MOST POPULAR • SAVE 30%</div>
+            <div class="pricing-header">
+              <div class="pricing-icon">💎</div>
+              <span class="pricing-pill pill-gold">Founder's Launch Rate</span>
+              <h3 class="pricing-tier-name">Pro Annual</h3>
+              <p class="pricing-tier-desc">Complete peace of mind for the whole household.</p>
+            </div>
+            <div class="pricing-price-box">
+              <div class="pricing-price-row">
+                <span class="price-strikethrough" id="annualAnchorPrice">~~$49.99~~</span>
+                <span class="price-val gradient-gold" id="annualPrice">$34.99</span>
+                <span class="price-period">/ year</span>
+              </div>
+              <span class="pricing-subtext">~$2.91/month &bull; Locked-in lifetime renewal rate</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li><span class="check-icon gold-check">✓</span> <strong>Everything in Free, plus:</strong></li>
+              <li><span class="check-icon gold-check">✓</span> <strong>Unlimited Family Member Profiles</strong></li>
+              <li><span class="check-icon gold-check">✓</span> <strong>AES-256 Full Hub Backups & Cloud Restores</strong></li>
+              <li><span class="check-icon gold-check">✓</span> <strong>Single Profile Transfers (.medifamilyprofile)</strong></li>
+              <li><span class="check-icon gold-check">✓</span> <strong>High-Priority Dose Alarms & Action Buttons</strong></li>
+              <li><span class="check-icon gold-check">✓</span> <strong>500-Page Hardware-Accelerated PDFium Viewer</strong></li>
+              <li><span class="check-icon gold-check">✓</span> <strong>Founder's Locked-In Grandfathering Guarantee</strong></li>
+            </ul>
+            <button class="pricing-btn btn-gold trigger-coming-soon">Lock In Founder Rate</button>
+          </div>
+
+          <!-- Plan 3: Pro Lifetime (Best Value / Cyber Violet) -->
+          <div class="pricing-card pricing-card-lifetime">
+            <div class="popular-ribbon ribbon-purple">👑 BEST VALUE • OWN FOREVER</div>
+            <div class="pricing-header">
+              <div class="pricing-icon">👑</div>
+              <span class="pricing-pill pill-purple">One-Time Payment</span>
+              <h3 class="pricing-tier-name">Pro Lifetime</h3>
+              <p class="pricing-tier-desc">Permanent unlimited family access with zero subscriptions.</p>
+            </div>
+            <div class="pricing-price-box">
+              <div class="pricing-price-row">
+                <span class="price-strikethrough" id="lifetimeAnchorPrice">~~$99.99~~</span>
+                <span class="price-val gradient-purple" id="lifetimePrice">$69.99</span>
+                <span class="price-period">one-time</span>
+              </div>
+              <span class="pricing-subtext">Pays for itself in ~2 years &bull; Zero subscription fatigue</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li><span class="check-icon purple-check">✓</span> <strong>Permanent Unlimited Pro Access Forever</strong></li>
+              <li><span class="check-icon purple-check">✓</span> <strong>Zero Monthly or Annual Subscription Fees</strong></li>
+              <li><span class="check-icon purple-check">✓</span> <strong>All Future Pro Modules & Updates Included</strong></li>
+              <li><span class="check-icon purple-check">✓</span> <strong>Zero-Knowledge Master Recovery Key</strong></li>
+              <li><span class="check-icon purple-check">✓</span> <strong>Unlimited Household Member Dossiers</strong></li>
+              <li><span class="check-icon purple-check">✓</span> <strong>Direct VIP MAS Labs Priority Support</strong></li>
+            </ul>
+            <button class="pricing-btn btn-purple trigger-coming-soon">Get Lifetime Access</button>
+          </div>
+
+          <!-- Plan 4: Pro Monthly (Flexible) -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <div class="pricing-icon">⚡</div>
+              <span class="pricing-pill">Flexible Access</span>
+              <h3 class="pricing-tier-name">Pro Monthly</h3>
+              <p class="pricing-tier-desc">Short-term flexibility for active caregiving periods.</p>
+            </div>
+            <div class="pricing-price-box">
+              <div class="pricing-price-row">
+                <span class="price-strikethrough" id="monthlyAnchorPrice">~~$5.99~~</span>
+                <span class="price-val" id="monthlyPrice">$3.99</span>
+                <span class="price-period">/ month</span>
+              </div>
+              <span class="pricing-subtext">Billed monthly &bull; Cancel anytime with 1-tap</span>
+            </div>
+            <ul class="pricing-features-list">
+              <li><span class="check-icon">✓</span> <strong>Full MediFamily Pro Features</strong></li>
+              <li><span class="check-icon">✓</span> <strong>Unlimited Family Profiles & Regimens</strong></li>
+              <li><span class="check-icon">✓</span> <strong>Encrypted Full Backup & Restore</strong></li>
+              <li><span class="check-icon">✓</span> <strong>Caregiver Single-Profile Transfers</strong></li>
+              <li><span class="check-icon">✓</span> <strong>High-Priority Dose Notification Alarms</strong></li>
+              <li><span class="check-icon">✓</span> <strong>Cancel easily via App Store or Google Play</strong></li>
+            </ul>
+            <button class="pricing-btn btn-secondary trigger-coming-soon">Start Monthly</button>
+          </div>
+
+        </div>
+
+        <!-- 4-Pillar Fair Pricing & Privacy Pledge -->
+        <div class="pricing-pledge-box">
+          <div class="pledge-grid">
+            <div class="pledge-item">
+              <div class="pledge-icon">🚫</div>
+              <h4>100% Zero Commercial Ads</h4>
+              <p>We will never monetize your sensitive health records or sell data to third-party ad brokers.</p>
+            </div>
+            <div class="pledge-item">
+              <div class="pledge-icon">🔐</div>
+              <h4>Zero-Knowledge Security</h4>
+              <p>Backups are client-side encrypted using mathematical identity salts that only you possess.</p>
+            </div>
+            <div class="pledge-item">
+              <div class="pledge-icon">🤝</div>
+              <h4>Locked Founder Rate</h4>
+              <p>Active annual subscribers keep their $34.99/year rate forever—zero forced price hikes.</p>
+            </div>
+            <div class="pledge-item">
+              <div class="pledge-icon">📦</div>
+              <h4>Zero Data Hostage (Vault Mode)</h4>
+              <p>If a subscription ever cancels, your existing medical history remains 100% readable & exportable locally.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
