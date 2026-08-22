@@ -102,17 +102,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 5. Dynamic Promotional Campaign Sync
         const promo = data.promo_campaign;
-        const promoBadge = document.getElementById('pricingPromoBadge');
-        const badgeText = document.getElementById('promoBadgeText');
+        const promoBanner = document.getElementById('pricingPromoBanner');
+        const bannerText = document.getElementById('promoBannerText');
         const annualAnchor = document.getElementById('annualAnchorPrice');
         const lifetimeAnchor = document.getElementById('lifetimeAnchorPrice');
+        const monthlyAnchor = document.getElementById('monthlyAnchorPrice');
         const annualPrice = document.getElementById('annualPrice');
         const lifetimePrice = document.getElementById('lifetimePrice');
         const monthlyPrice = document.getElementById('monthlyPrice');
 
         if (promo && promo.is_active) {
-          if (promoBadge) promoBadge.style.display = 'inline-flex';
-          if (badgeText && promo.banner_text) badgeText.textContent = promo.banner_text;
+          if (promoBanner) promoBanner.style.display = 'flex';
+          if (bannerText && promo.banner_text) bannerText.textContent = promo.banner_text;
 
           if (annualAnchor) {
             annualAnchor.textContent = `$${(promo.annual_anchor_usd || 49.99).toFixed(2)}`;
@@ -122,18 +123,23 @@ document.addEventListener('DOMContentLoaded', () => {
             lifetimeAnchor.textContent = `$${(promo.lifetime_anchor_usd || 99.99).toFixed(2)}`;
             lifetimeAnchor.style.display = 'inline';
           }
+          if (monthlyAnchor) {
+            monthlyAnchor.textContent = `$${(promo.monthly_anchor_usd || 5.99).toFixed(2)}`;
+            monthlyAnchor.style.display = 'inline';
+          }
 
           if (annualPrice) annualPrice.textContent = `$${(promo.annual_base_usd || 34.99).toFixed(2)}`;
           if (lifetimePrice) lifetimePrice.textContent = `$${(promo.lifetime_base_usd || 69.99).toFixed(2)}`;
-          if (monthlyPrice) monthlyPrice.textContent = `$${(promo.monthly_base_usd || 3.99).toFixed(2)}/mo`;
+          if (monthlyPrice) monthlyPrice.textContent = `$${(promo.monthly_base_usd || 3.99).toFixed(2)}`;
         } else {
-          if (promoBadge) promoBadge.style.display = 'none';
+          if (promoBanner) promoBanner.style.display = 'none';
           if (annualAnchor) annualAnchor.style.display = 'none';
           if (lifetimeAnchor) lifetimeAnchor.style.display = 'none';
+          if (monthlyAnchor) monthlyAnchor.style.display = 'none';
 
           if (annualPrice) annualPrice.textContent = '$49.99';
           if (lifetimePrice) lifetimePrice.textContent = '$99.99';
-          if (monthlyPrice) monthlyPrice.textContent = '$5.99/mo';
+          if (monthlyPrice) monthlyPrice.textContent = '$5.99';
         }
       }
     })
