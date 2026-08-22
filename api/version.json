@@ -1,8 +1,8 @@
 {
-  "latest_version": "23.9.0",
-  "latest_build": 250,
+  "latest_version": "24.4.0",
+  "latest_build": 251,
   "release_date": "2026-08-22",
-  "release_notes": "Medical Record Attachment Quotas (Max 5 Photos, Max 3 PDFs, 25MB Budget), Deep File Integrity & Magic Byte Anti-Spoofing Engine, Real-Time Live Attachment File Size Badges, Standard Compact Action Buttons, Privacy-Preserving Zero-PHI Telemetry, and Reactive In-App Update Engine.",
+  "release_notes": "Cross-Platform Full Hub Restore & APFS Inode Collision Cleansing, 100% Authoritative Snapshot Parity with Zero Merged Legacy Reports, Multi-Gigabyte Vault Scaling, and Streamlined Single Profile Handoffs.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
