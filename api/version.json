@@ -7,10 +7,10 @@
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
   "promo_campaign": {
-    "is_active": false,
-    "annual_discount_percent": 30,
-    "lifetime_discount_percent": 30,
-    "monthly_discount_percent": 33,
-    "banner_text": "FOR A LIMITED TIME: UP TO 33% OFF"
+    "is_active": true,
+    "annual_discount_percent": 20,
+    "lifetime_discount_percent": 20,
+    "monthly_discount_percent": 20,
+    "banner_text": "FOR A LIMITED TIME: 20% OFF"
   }
 }
