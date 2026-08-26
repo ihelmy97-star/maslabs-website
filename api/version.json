@@ -1,8 +1,8 @@
 {
-  "latest_version": "24.8.0",
-  "latest_build": 255,
-  "release_date": "2026-08-25",
-  "release_notes": "Mandatory 4-Pillar Database Schema Protection & Runtime Auto-Healing Standard (Rule 22), Refined Membership Subtitles, Side-by-Side Quota Testing Panel, and OTP Verify Later UX.",
+  "latest_version": "24.8.1",
+  "latest_build": 256,
+  "release_date": "2026-08-26",
+  "release_notes": "Multi-Receipt Stream Priority Resolution (Lifetime > Annual > Monthly), Authoritative Store Revocation & Cascading Fallbacks Engine, Front-Layer Membership Feedback Architecture, and Obscured Message Diagnostics.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
