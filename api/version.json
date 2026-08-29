@@ -1,8 +1,8 @@
 {
-  "latest_version": "24.8.1",
-  "latest_build": 256,
-  "release_date": "2026-08-26",
-  "release_notes": "Multi-Receipt Stream Priority Resolution (Lifetime > Annual > Monthly), Authoritative Store Revocation & Cascading Fallbacks Engine, Front-Layer Membership Feedback Architecture, and Obscured Message Diagnostics.",
+  "latest_version": "24.8.2",
+  "latest_build": 257,
+  "release_date": "2026-08-30",
+  "release_notes": "Doctor Visits Follow-Up Alarms & Lifecycle Engine, Dynamic Consultation Counter Bar, Multi-Batch FEFO Auto-Deduction, and Interactive QA Testing Suite (182 Tests).",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
