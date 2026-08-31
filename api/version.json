@@ -1,6 +1,6 @@
 {
-  "latest_version": "24.8.7",
-  "latest_build": 262,
+  "latest_version": "24.8.8",
+  "latest_build": 263,
   "release_date": "2026-08-31",
   "release_notes": "Interactive Quick Tour 14-Slide Feature Guide with Master Directory (Slide 0), Express First-Launch Profile Wizard with Date of Birth Calendar Picker, Zero-Overflow Dialog Hardening, and Universal Tri-Shield Multi-Device Layout Resilience.",
   "min_supported_version": "22.0.0",
