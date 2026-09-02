@@ -1,8 +1,8 @@
 {
-  "latest_version": "24.8.9",
-  "latest_build": 264,
-  "release_date": "2026-09-01",
-  "release_notes": "Saved Health Reports Dual Action Toolbar (Bulk Cleanup & Multi-Select), 100% Rule 31 Background Isolate Photo Compression for Clinical PDF Exports (Medical Records & Health Notes), Enterprise 25-Report / 50-MB & 25-Note / 25-MB Batch Sharing Guardrails, and In-Flight Debounce Mutex Anti-Race Protection.",
+  "latest_version": "24.9.2",
+  "latest_build": 265,
+  "release_date": "2026-09-02",
+  "release_notes": "Scoped Screen & CPU Keep-Awake Protection for Backup, Restore & Profile Transfer, Saved Health Reports Dual Action Toolbar (Bulk Cleanup & Multi-Select), 100% Rule 31 Background Isolate Photo Compression for Clinical PDF Exports, Enterprise Batch Sharing Guardrails, and In-Flight Debounce Mutex Anti-Race Protection.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
