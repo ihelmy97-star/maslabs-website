@@ -65,7 +65,7 @@
         <h2>2. Information We Process for Security & Account Identity</h2>
         <p>To provide verified cryptographic backups and subscriber communications, we process only the minimal necessary data:</p>
         <ul>
-          <li><strong>Verified Email Address:</strong> Used solely to dispatch 6-digit One-Time Password (OTP) verification codes and to serve as the mathematical cryptographic salt for PBKDF2 SHA-256 backup encryption.</li>
+          <li><strong>Verified Email Address:</strong> Used solely to dispatch 6-digit One-Time Password (OTP) verification codes and to anchor client-side zero-knowledge cryptographic backups.</li>
           <li><strong>Device Platform & General Region:</strong> Coarse device language format (e.g. en_AE) and operating platform (iOS / Android) for local time and language formatting.</li>
           <li><strong>Marketing Opt-In (Optional):</strong> If you explicitly check the opt-in box during verification, we may send you occasional product updates from MAS Labs. You can unsubscribe at any time.</li>
         </ul>
@@ -74,7 +74,7 @@
         <p>When you create an encrypted backup package (<code>.medifamily</code>) or single profile transfer package (<code>.medifamilyprofile</code>):</p>
         <ul>
           <li>Data is encrypted client-side using industry-standard <strong>AES-256-CBC envelope encryption</strong>.</li>
-          <li>Encryption keys are mathematically derived using <strong>PBKDF2 with SHA-256 hashing</strong> using your verified email and your chosen secret password or 16-character Emergency Recovery Key.</li>
+          <li>Encryption keys are mathematically derived using <strong>PBKDF2 with SHA-256 hashing</strong> bound to your chosen secret password or 16-character Emergency Recovery Key. Backup headers securely embed cryptographic salt anchors, enabling seamless restoration across any device.</li>
           <li>MAS Labs does NOT hold, escrow, or store your passwords or recovery keys. We cannot decrypt your backups under any circumstances.</li>
         </ul>
 
