@@ -1,8 +1,8 @@
 {
-  "latest_version": "24.9.4",
-  "latest_build": 267,
-  "release_date": "2026-09-04",
-  "release_notes": "Interactive Abort / Cancel Button for Clinical PDF Export with Instant Worker Isolate Teardown, Batch Low-Stock Dialog Lifecycle Isolation & Stock Ceiling Hardening.",
+  "latest_version": "24.9.5",
+  "latest_build": 268,
+  "release_date": "2026-09-05",
+  "release_notes": "Official Google Play Release: Manifest Hardening with Advertising ID Removal, 100% Policy Suite Compliance, and Multi-Track Publishing.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
