@@ -1,8 +1,8 @@
 {
-  "latest_version": "24.9.3",
-  "latest_build": 266,
+  "latest_version": "24.9.4",
+  "latest_build": 267,
   "release_date": "2026-09-04",
-  "release_notes": "Backup & Security Hub Frame-1 Instant UI (< 16ms) with Parallel Pre-Warmed Synchronous Cache, Screen Context Authority & History-Based Dose Reversal Architecture.",
+  "release_notes": "Interactive Abort / Cancel Button for Clinical PDF Export with Instant Worker Isolate Teardown, Batch Low-Stock Dialog Lifecycle Isolation & Stock Ceiling Hardening.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
