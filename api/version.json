@@ -1,8 +1,8 @@
 {
-  "latest_version": "24.9.2",
-  "latest_build": 265,
-  "release_date": "2026-09-02",
-  "release_notes": "Scoped Screen & CPU Keep-Awake Protection for Backup, Restore & Profile Transfer, Saved Health Reports Dual Action Toolbar (Bulk Cleanup & Multi-Select), 100% Rule 31 Background Isolate Photo Compression for Clinical PDF Exports, Enterprise Batch Sharing Guardrails, and In-Flight Debounce Mutex Anti-Race Protection.",
+  "latest_version": "24.9.3",
+  "latest_build": 266,
+  "release_date": "2026-09-04",
+  "release_notes": "Backup & Security Hub Frame-1 Instant UI (< 16ms) with Parallel Pre-Warmed Synchronous Cache, Screen Context Authority & History-Based Dose Reversal Architecture.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id0000000000",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
