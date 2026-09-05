@@ -55,8 +55,8 @@
         <h2>1. Information We DO NOT Collect</h2>
         <p>Unlike traditional cloud medical applications, MediFamily operates on a strict minimization and decentralized architecture. We do NOT collect, access, monetize, or harvest:</p>
         <ul>
-          <li><strong>Clinical & Medical Data:</strong> Your medication names, dosages, vital signs, blood glucose readings, blood pressure logs, and clinical notes remain exclusively on your device.</li>
-          <li><strong>Medical Document Attachments:</strong> Lab report photos, prescription scans, and doctor note PDFs are stored in your device's private sandboxed file system.</li>
+          <li><strong>Personal Health & Routine Data:</strong> Your medication names, dosages, vital signs, blood glucose readings, blood pressure logs, and personal notes remain exclusively on your device.</li>
+          <li><strong>Health Document Attachments:</strong> Lab report photos, prescription packaging scans, and doctor note PDFs are stored in your device's private sandboxed file system.</li>
           <li><strong>Precise Location Data:</strong> We do not request, access, or track GPS coordinates or Wi-Fi location beacons.</li>
           <li><strong>Biometric Data:</strong> FaceID or Fingerprint authentication is processed entirely on-device by your operating system’s secure enclave.</li>
           <li><strong>No Commercial Advertising Trackers:</strong> We do not sell your personal health records or embed third-party advertising networks (such as Google AdMob or Meta Ad Pixel) to track you across apps. We may utilize privacy-preserving, aggregated diagnostics (such as Firebase Analytics & Crashlytics) to monitor application stability and performance, without linking analytics metrics to your personal medical records.</li>
@@ -79,11 +79,11 @@
         </ul>
 
         <h2>4. Device Hardware Permissions & Justifications</h2>
-        <p>MediFamily requests only the minimal hardware permissions strictly necessary for app functionality:</p>
+        <p>In accordance with Google Play Health Apps and Permissions policies, MediFamily requests only the minimal hardware permissions strictly necessary for user-initiated features:</p>
         <ul>
-          <li><strong>Camera (<code>NSCameraUsageDescription</code>):</strong> Used exclusively when you choose to photograph paper lab reports, doctor prescriptions, or medication packaging within the app.</li>
-          <li><strong>Photo Library (<code>NSPhotoLibraryUsageDescription</code>):</strong> Used exclusively when you choose to import existing medical images or PDF lab documents.</li>
-          <li><strong>Alarms & Notifications (<code>SCHEDULE_EXACT_ALARM</code>):</strong> Used to trigger reliable, time-critical medication reminder alarms on your device at your scheduled dose times.</li>
+          <li><strong>Camera (<code>android.permission.CAMERA</code> / <code>NSCameraUsageDescription</code>):</strong> This app accesses the device camera solely to allow users to photograph printed paper documents, medication packaging, or doctor notes for encrypted on-device archival. The camera is NOT used as an optical physiological sensor (such as for heart rate or pulse oximetry measurements).</li>
+          <li><strong>Photo Library (<code>READ_MEDIA_IMAGES</code> / <code>NSPhotoLibraryUsageDescription</code>):</strong> This app accesses photos solely to allow users to import existing document images or PDF test summaries into their private, local-only vault.</li>
+          <li><strong>Exact Alarms (<code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code>):</strong> This app schedules exact alarms solely to deliver timely user-configured reminders for daily medication adherence and household wellness routines.</li>
         </ul>
 
         <h2>5. Data Retention, Portability & Deletion</h2>
