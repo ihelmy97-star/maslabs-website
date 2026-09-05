@@ -1,6 +1,6 @@
 {
-  "latest_version": "24.9.5",
-  "latest_build": 268,
+  "latest_version": "24.9.6",
+  "latest_build": 270,
   "release_date": "2026-09-05",
   "release_notes": "Official Google Play Release: Manifest Hardening with Advertising ID Removal, 100% Policy Suite Compliance, and Multi-Track Publishing.",
   "min_supported_version": "22.0.0",
