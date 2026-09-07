@@ -1464,6 +1464,16 @@ a:hover {
 .perk-icon {
   font-size: 18px;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.perk-icon svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 /* Modal Dialog Extensions */
@@ -1532,6 +1542,16 @@ a:hover {
 
 .platform-tab .tab-icon {
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.platform-tab .tab-icon svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 .platform-tab .tab-label {
