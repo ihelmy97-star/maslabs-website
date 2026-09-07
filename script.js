@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Active during Google Play 14-Day Closed Testing & Apple TestFlight Phases
   // Deployed Apps Script Webhook endpoint for tester registration & automated notifications
   // ==========================================================================
-  const BETA_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxXkP5ujCh4C26-BSe3SFkOCLSL4Q1hLjBtxwsJWfJoENiJkvIs_DhwXfjp4OjDzY4/exec';
+  const BETA_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzYqA2az4ajpOqDgIrWPJ_Zzd40ZNAT4oEfkXkwSbMpMJdvARCEsYjxDTKXMbSnuAOF/exec';
 
   const betaModal = document.getElementById('betaInviteModal');
   const betaFormView = document.getElementById('betaFormView');
