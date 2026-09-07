@@ -273,6 +273,11 @@ document.addEventListener('DOMContentLoaded', () => {
             : 'Apple TestFlight Waitlist';
         }
 
+        const androidSuccessLinks = document.getElementById('androidSuccessLinks');
+        if (androidSuccessLinks) {
+          androidSuccessLinks.style.display = platformVal.includes('Android') ? 'block' : 'none';
+        }
+
         if (betaFormView) betaFormView.style.display = 'none';
         if (betaSuccessView) betaSuccessView.style.display = 'block';
 
