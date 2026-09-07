@@ -331,19 +331,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (mobileMenuBtn && navLinks) {
     mobileMenuBtn.addEventListener('click', () => {
-      const isVisible = navLinks.style.display === 'flex';
-      navLinks.style.display = isVisible ? 'none' : 'flex';
-      if (!isVisible) {
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.right = '0';
-        navLinks.style.background = 'rgba(15, 23, 42, 0.95)';
-        navLinks.style.padding = '20px';
-        navLinks.style.backdropFilter = 'blur(16px)';
-        navLinks.style.borderBottom = '1px solid rgba(255, 255, 255, 0.1)';
-      }
+      navLinks.classList.toggle('mobile-open');
+    });
+
+    // Automatically close mobile menu when clicking any nav link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('mobile-open');
+      });
     });
   }
 
