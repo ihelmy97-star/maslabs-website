@@ -18,5 +18,12 @@
     "annual_base_usd": 34.99,
     "lifetime_base_usd": 69.99,
     "monthly_base_usd": 3.99
+  },
+  "closed_beta": {
+    "is_active": true,
+    "android_status": "Active (Google Play Console)",
+    "ios_status": "Waitlist Open (TestFlight)",
+    "target_testers": 20,
+    "reward": "MediFamily Pro Lifetime Membership ($69.99 Value)"
   }
 }

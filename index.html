@@ -44,6 +44,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="privacy.html">Privacy Policy</a></li>
         <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="#heroBetaCard" class="btn-nav-beta" id="navBetaBtn">🧪 Join Closed Beta</a></li>
         <li><a href="#contact" class="btn-nav">Contact Us</a></li>
       </ul>
 
@@ -80,7 +81,7 @@
             </div>
             <div class="store-btn-text">
               <span>GET IT ON</span>
-              <strong>Google Play <span class="coming-soon-badge">Coming Soon</span></strong>
+              <strong>Google Play <span class="coming-soon-badge beta-active-badge">Closed Beta Active</span></strong>
             </div>
           </button>
 
@@ -92,9 +93,59 @@
             </div>
             <div class="store-btn-text">
               <span>DOWNLOAD ON THE</span>
-              <strong>App Store <span class="coming-soon-badge">Coming Soon</span></strong>
+              <strong>App Store <span class="coming-soon-badge">TestFlight Waitlist</span></strong>
             </div>
           </button>
+        </div>
+
+        <!-- ========================================================================== -->
+        <!-- [TEMPORARY: CLOSED BETA TESTING PHASE]                                   -->
+        <!-- Active during Google Play 14-Day Closed Testing & Apple TestFlight Phase -->
+        <!-- To retire after public release: toggle or remove this container block     -->
+        <!-- ========================================================================== -->
+        <div class="hero-beta-card" id="heroBetaCard">
+          <div class="hero-beta-topbar">
+            <div class="hero-beta-badge">
+              <span class="pulse-dot"></span>
+              <span>EXCLUSIVE FOUNDING TESTER PROGRAM</span>
+            </div>
+            <div class="hero-beta-quota">
+              <span>🎯 Target: 20 Founding Testers</span>
+            </div>
+          </div>
+
+          <h3 class="hero-beta-title">
+            Help Shape MediFamily & Unlock <span class="gradient-text">Free Lifetime Pro</span>
+          </h3>
+
+          <p class="hero-beta-desc">
+            We are actively onboarding 20 dedicated Android testers for our Google Play Closed Beta. Test pre-release builds, help verify real-world stability, and receive a complimentary <strong>MediFamily Pro Lifetime Membership ($69.99 Value)</strong> upon public release.
+          </p>
+
+          <div class="hero-beta-action-row">
+            <button class="btn-beta-pulse" id="heroBetaActionBtn" aria-label="Apply to join closed beta">
+              <span class="btn-beta-pulse-text">🧪 Apply to Join Closed Beta</span>
+              <span class="btn-shimmer"></span>
+            </button>
+            <div class="beta-status-note">
+              <span class="status-check">✓</span> Zero ads, zero telemetry &bull; 100% On-device privacy
+            </div>
+          </div>
+
+          <div class="beta-perks-row">
+            <div class="beta-perk-item">
+              <span class="perk-icon">🤖</span>
+              <span><strong>Android Play Store</strong> (Active Now)</span>
+            </div>
+            <div class="beta-perk-item">
+              <span class="perk-icon">🍏</span>
+              <span><strong>Apple TestFlight</strong> (Waitlist Open)</span>
+            </div>
+            <div class="beta-perk-item">
+              <span class="perk-icon">🎁</span>
+              <span><strong>$69.99 Value</strong> Free Lifetime Key</span>
+            </div>
+          </div>
         </div>
 
         <!-- Hero Feature Badges -->
@@ -824,23 +875,146 @@
     </section>
   </main>
 
-  <!-- Interactive "Coming Soon" Modal Dialog -->
-  <div id="comingSoonModal" class="modal-overlay">
-    <div class="modal-box">
-      <button class="modal-close" aria-label="Close modal">&times;</button>
-      <div class="modal-icon">🚀</div>
-      <h3 class="modal-title">Public Store Launch Coming Soon!</h3>
-      <p class="modal-desc">
-        MediFamily is currently in its final pre-release review phase for the <strong>Apple App Store</strong> and <strong>Google Play Store</strong>.
-      </p>
-      <div class="alert-box" id="modalReleaseInfo" style="margin-bottom: 20px;">
-        📅 <strong>Official Release:</strong> September 2026 (v24.9.6 Build 271)<br>
-        🔒 <strong>Status:</strong> Submitted & In Official Google Play Review
+  <!-- ========================================================================== -->
+  <!-- [TEMPORARY: CLOSED BETA TESTING PHASE]                                   -->
+  <!-- Interactive Closed Beta Application Modal with Cyber Defense & Dual Flow -->
+  <!-- ========================================================================== -->
+  <div id="betaInviteModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="betaModalTitle">
+    <div class="modal-box beta-modal-box">
+      <button class="modal-close" id="betaModalCloseBtn" aria-label="Close modal">&times;</button>
+      
+      <!-- Application Form View -->
+      <div id="betaFormView">
+        <div class="modal-icon">🧪</div>
+        <h3 class="modal-title" id="betaModalTitle">Join MediFamily Closed Beta</h3>
+        <p class="modal-desc">
+          Test early pre-release builds, help ensure medical-grade reliability, and receive a permanent <strong>Free Pro Lifetime Membership ($69.99 Value)</strong>.
+        </p>
+
+        <!-- Platform Switcher Tabs -->
+        <div class="platform-tabs" role="tablist">
+          <button type="button" class="platform-tab active" id="tabAndroid" role="tab" aria-selected="true">
+            <span class="tab-icon">🤖</span>
+            <span class="tab-label">Google Play</span>
+            <span class="tab-pill tab-pill-active">Active Now</span>
+          </button>
+          <button type="button" class="platform-tab" id="tabIos" role="tab" aria-selected="false">
+            <span class="tab-icon">🍏</span>
+            <span class="tab-label">Apple TestFlight</span>
+            <span class="tab-pill tab-pill-waitlist">Waitlist</span>
+          </button>
+        </div>
+
+        <!-- In-Modal Warning/Error Banner -->
+        <div class="modal-error-banner" id="modalErrorBanner" style="display:none;" role="alert"></div>
+
+        <form id="betaTesterForm" autocomplete="on" novalidate>
+          <input type="hidden" id="betaPlatformInput" name="platform" value="Android (Google Play)">
+          <input type="hidden" id="formOpenTimestamp" name="form_timestamp" value="">
+
+          <!-- Cyber-Defense Honeypot Trap (Automated bot bait, invisible to real humans) -->
+          <div class="hp-trap-container" style="position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none;" aria-hidden="true">
+            <label for="b_hp_field">Leave this field completely blank</label>
+            <input type="text" id="b_hp_field" name="b_hp_field" tabindex="-1" autocomplete="off">
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="betaEmail" id="betaEmailLabel" class="form-label">
+              Google Play Account Email <span class="req-star">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="betaEmail" 
+              name="email" 
+              class="form-input" 
+              required 
+              placeholder="your.name@gmail.com"
+              autocomplete="email"
+              inputmode="email"
+            >
+            <small class="input-hint" id="betaEmailHint">
+              Must be the Google email address registered to your Android device's Google Play Store.
+            </small>
+          </div>
+
+          <!-- Device Model (Optional) -->
+          <div class="form-group">
+            <label for="betaDevice" class="form-label">
+              Phone Model & OS Version <span class="optional-tag">(Optional)</span>
+            </label>
+            <input 
+              type="text" 
+              id="betaDevice" 
+              name="device" 
+              class="form-input" 
+              placeholder="e.g., Samsung Galaxy S23, Google Pixel 8, Android 14"
+            >
+          </div>
+
+          <!-- 1-Tap Smart Human Verification (Bot Protection) -->
+          <div class="form-group human-verify-wrap">
+            <label class="human-checkbox-label">
+              <input type="checkbox" id="betaHumanCheck" required>
+              <span class="custom-checkbox"></span>
+              <span class="human-verify-text">I am a human tester excited to test MediFamily on my device</span>
+            </label>
+          </div>
+
+          <!-- Lifetime Membership Guarantee Badge -->
+          <div class="reward-pledge-box">
+            <div class="reward-pledge-icon">🎁</div>
+            <div class="reward-pledge-text">
+              <strong>Founding Tester Reward Guarantee:</strong>
+              <span>Install MediFamily and keep it active during the closed test period to receive an official <strong>Lifetime Pro Promo Code</strong> ($69.99 value) when we launch publicly.</span>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <button type="submit" class="btn-beta-submit" id="betaSubmitBtn">
+            <span class="btn-submit-text">🚀 Submit Tester Application</span>
+            <span class="btn-submit-spinner" style="display: none;"></span>
+          </button>
+
+          <p class="modal-privacy-note">
+            🔒 Your email is used exclusively to grant closed test access in Google Play Console. Zero marketing spam, zero third-party sharing.
+          </p>
+        </form>
       </div>
-      <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 20px;">
-      <button id="modalDismissBtn" class="btn-nav" style="width: 100%; padding: 12px; cursor: pointer; font-size: 14px; font-weight: bold;">
-        Got It, Thank You!
-      </button>
+
+      <!-- Application Success Confirmation View (Hidden by default) -->
+      <div id="betaSuccessView" style="display: none;">
+        <div class="modal-icon success-icon">🎉</div>
+        <h3 class="modal-title">Application Submitted!</h3>
+        <p class="modal-desc">
+          Thank you for joining MediFamily's Founding Tester Community! We've recorded your email address:
+        </p>
+
+        <div class="success-email-card">
+          <strong id="confirmedEmailText">tester@example.com</strong>
+          <span class="badge-pill-success" id="confirmedPlatformBadge">Google Play Closed Beta</span>
+        </div>
+
+        <div class="next-steps-card">
+          <h4>What Happens Next?</h4>
+          <ol class="next-steps-list">
+            <li>
+              <strong>Console Access Approval:</strong> Our team is adding your email to the authorized Google Play Closed Testing list.
+            </li>
+            <li>
+              <strong>Direct Store Opt-In Link:</strong> Check your inbox for your official Google Play invitation link with 1-tap download access.
+            </li>
+            <li>
+              <strong>Lifetime Pro Reward:</strong> Keep the app installed, explore features, and your permanent $69.99 Lifetime Pro Code will be issued upon public release!
+            </li>
+          </ol>
+        </div>
+
+        <button type="button" class="btn-nav" id="betaSuccessCloseBtn" style="width: 100%; padding: 12px; margin-top: 20px; font-weight: 700; cursor: pointer;">
+          Done &mdash; Can't Wait! ✨
+        </button>
+      </div>
+
     </div>
   </div>
 

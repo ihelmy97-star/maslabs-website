@@ -3,31 +3,280 @@
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. "Coming Soon" Store Modal Handlers
-  const modal = document.getElementById('comingSoonModal');
-  const storeButtons = document.querySelectorAll('.store-btn, .trigger-coming-soon');
-  const closeBtn = document.querySelector('.modal-close');
-  const modalDismiss = document.getElementById('modalDismissBtn');
+  // ==========================================================================
+  // 🧪 [TEMPORARY: CLOSED BETA TESTING PHASE] Webhook Configuration & Handlers
+  // Active during Google Play 14-Day Closed Testing & Apple TestFlight Phases
+  // Deployed Apps Script Webhook endpoint for tester registration & automated notifications
+  // ==========================================================================
+  const BETA_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbz_REPLACE_WITH_YOUR_WEB_APP_ID/exec';
 
-  function openModal(e) {
-    if (e) e.preventDefault();
-    if (modal) modal.classList.add('active');
+  const betaModal = document.getElementById('betaInviteModal');
+  const betaFormView = document.getElementById('betaFormView');
+  const betaSuccessView = document.getElementById('betaSuccessView');
+  const betaForm = document.getElementById('betaTesterForm');
+  const modalCloseBtn = document.getElementById('betaModalCloseBtn');
+  const successCloseBtn = document.getElementById('betaSuccessCloseBtn');
+  const modalErrorBanner = document.getElementById('modalErrorBanner');
+  const betaSubmitBtn = document.getElementById('betaSubmitBtn');
+  const tabAndroid = document.getElementById('tabAndroid');
+  const tabIos = document.getElementById('tabIos');
+  const platformInput = document.getElementById('betaPlatformInput');
+  const emailInput = document.getElementById('betaEmail');
+  const emailLabel = document.getElementById('betaEmailLabel');
+  const emailHint = document.getElementById('betaEmailHint');
+  const deviceInput = document.getElementById('betaDevice');
+  const humanCheck = document.getElementById('betaHumanCheck');
+  const hpField = document.getElementById('b_hp_field');
+  const confirmedEmailText = document.getElementById('confirmedEmailText');
+  const confirmedPlatformBadge = document.getElementById('confirmedPlatformBadge');
+
+  let modalOpenedAt = 0;
+
+  function openBetaModal(defaultPlatform = 'android') {
+    if (!betaModal) return;
+    modalOpenedAt = Date.now();
+    
+    // Reset view states
+    if (betaFormView) betaFormView.style.display = 'block';
+    if (betaSuccessView) betaSuccessView.style.display = 'none';
+    if (modalErrorBanner) {
+      modalErrorBanner.style.display = 'none';
+      modalErrorBanner.textContent = '';
+    }
+    if (betaSubmitBtn) {
+      betaSubmitBtn.disabled = false;
+      const btnText = betaSubmitBtn.querySelector('.btn-submit-text');
+      const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
+      if (btnText) btnText.textContent = '🚀 Submit Tester Application';
+      if (btnSpinner) btnSpinner.style.display = 'none';
+    }
+
+    // Set initial platform tab
+    selectPlatform(defaultPlatform);
+
+    betaModal.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+
+    // Auto-focus email input after animation completes
+    setTimeout(() => {
+      if (emailInput) emailInput.focus();
+    }, 280);
   }
 
-  function closeModal() {
-    if (modal) modal.classList.remove('active');
+  function closeBetaModal() {
+    if (!betaModal) return;
+    betaModal.classList.remove('active');
+    document.body.style.overflow = '';
   }
 
-  storeButtons.forEach(btn => {
-    btn.addEventListener('click', openModal);
+  function selectPlatform(platform) {
+    if (platform === 'ios') {
+      if (tabIos) {
+        tabIos.classList.add('active');
+        tabIos.setAttribute('aria-selected', 'true');
+      }
+      if (tabAndroid) {
+        tabAndroid.classList.remove('active');
+        tabAndroid.setAttribute('aria-selected', 'false');
+      }
+      if (platformInput) platformInput.value = 'iOS (Apple TestFlight)';
+      if (emailLabel) emailLabel.innerHTML = 'Apple ID Account Email <span class="req-star">*</span>';
+      if (emailInput) emailInput.placeholder = 'your.name@icloud.com';
+      if (emailHint) emailHint.textContent = 'Must be the Apple ID email address registered to your iPhone for TestFlight access.';
+    } else {
+      if (tabAndroid) {
+        tabAndroid.classList.add('active');
+        tabAndroid.setAttribute('aria-selected', 'true');
+      }
+      if (tabIos) {
+        tabIos.classList.remove('active');
+        tabIos.setAttribute('aria-selected', 'false');
+      }
+      if (platformInput) platformInput.value = 'Android (Google Play)';
+      if (emailLabel) emailLabel.innerHTML = 'Google Play Account Email <span class="req-star">*</span>';
+      if (emailInput) emailInput.placeholder = 'your.name@gmail.com';
+      if (emailHint) emailHint.textContent = 'Must be the Google email address registered to your Android device\'s Google Play Store.';
+    }
+  }
+
+  function setModalError(message) {
+    if (!modalErrorBanner) return;
+    modalErrorBanner.textContent = message;
+    modalErrorBanner.style.display = 'block';
+    modalErrorBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  // Trigger bindings
+  const betaTriggers = document.querySelectorAll('#heroBetaActionBtn, #navBetaBtn, .trigger-beta-modal');
+  betaTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openBetaModal('android');
+    });
   });
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (modalDismiss) modalDismiss.addEventListener('click', closeModal);
+  const googlePlayBtn = document.getElementById('googlePlayBtn');
+  if (googlePlayBtn) {
+    googlePlayBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openBetaModal('android');
+    });
+  }
 
-  if (modal) {
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) closeModal();
+  const appStoreBtn = document.getElementById('appStoreBtn');
+  if (appStoreBtn) {
+    appStoreBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openBetaModal('ios');
+    });
+  }
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeBetaModal);
+  if (successCloseBtn) successCloseBtn.addEventListener('click', closeBetaModal);
+
+  if (betaModal) {
+    betaModal.addEventListener('click', (e) => {
+      if (e.target === betaModal) closeBetaModal();
+    });
+  }
+
+  // Escape key support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && betaModal && betaModal.classList.contains('active')) {
+      closeBetaModal();
+    }
+  });
+
+  if (tabAndroid) {
+    tabAndroid.addEventListener('click', () => selectPlatform('android'));
+  }
+  if (tabIos) {
+    tabIos.addEventListener('click', () => selectPlatform('ios'));
+  }
+
+  // Form Submission & Cyber-Defense Engine
+  if (betaForm) {
+    betaForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (modalErrorBanner) modalErrorBanner.style.display = 'none';
+
+      // 1. Cyber-Defense Check: Honeypot Decoy Field
+      if (hpField && hpField.value.trim() !== '') {
+        console.warn('Honeypot triggered; automated submission rejected.');
+        setModalError('Security verification failed. Please try again.');
+        return;
+      }
+
+      // 2. Cyber-Defense Check: Interaction Speed (Bot Protection)
+      const elapsedMs = Date.now() - modalOpenedAt;
+      if (elapsedMs < 1500) {
+        setModalError('Please take a moment to review your details before submitting.');
+        return;
+      }
+
+      // 3. Cyber-Defense Check: Human Checkbox
+      if (humanCheck && !humanCheck.checked) {
+        setModalError('Please check the box confirming you are a human tester.');
+        return;
+      }
+
+      // 4. Input Validation: Email Address
+      const emailVal = emailInput ? emailInput.value.trim() : '';
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailVal || !emailRegex.test(emailVal)) {
+        setModalError('Please enter a valid email address.');
+        if (emailInput) emailInput.focus();
+        return;
+      }
+
+      // 5. Formula Injection Sanitization (Prepend ' if starts with =, +, -, @)
+      const sanitizeInput = (str) => {
+        if (!str) return '';
+        const trimmed = str.trim();
+        if (/^[=+\-@]/.test(trimmed)) {
+          return "'" + trimmed;
+        }
+        return trimmed;
+      };
+
+      const cleanEmail = sanitizeInput(emailVal);
+      const cleanDevice = deviceInput ? sanitizeInput(deviceInput.value) : '';
+      const platformVal = platformInput ? platformInput.value : 'Android (Google Play)';
+
+      // UI: Show Loading Spinner
+      if (betaSubmitBtn) {
+        betaSubmitBtn.disabled = true;
+        const btnText = betaSubmitBtn.querySelector('.btn-submit-text');
+        const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
+        if (btnText) btnText.textContent = 'Registering Your Access...';
+        if (btnSpinner) btnSpinner.style.display = 'inline-block';
+      }
+
+      // Prepare Payload
+      const payload = {
+        email: cleanEmail,
+        platform: platformVal,
+        device: cleanDevice,
+        human_check: true,
+        elapsed_ms: elapsedMs,
+        b_hp_field: '',
+        submitted_at: new Date().toISOString()
+      };
+
+      try {
+        // Check if Webhook is real or placeholder
+        const isLiveWebhook = BETA_WEBHOOK_URL && !BETA_WEBHOOK_URL.includes('REPLACE_WITH_YOUR_WEB_APP_ID');
+
+        if (isLiveWebhook) {
+          // Send to Google Apps Script Webhook
+          await fetch(BETA_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors', // Standard for Google Apps Script Web Apps to prevent CORS preflight blocks
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          });
+        } else {
+          // Simulated delay for local/staging preview
+          await new Promise(resolve => setTimeout(resolve, 800));
+        }
+
+        // Cache application locally as an offline backup record
+        try {
+          const cached = JSON.parse(localStorage.getItem('medifamily_beta_applications') || '[]');
+          cached.push(payload);
+          localStorage.setItem('medifamily_beta_applications', JSON.stringify(cached));
+        } catch (storageErr) {
+          // Non-critical local storage fallback
+        }
+
+        // Transition to Success Confirmation View
+        if (confirmedEmailText) confirmedEmailText.textContent = cleanEmail.replace(/^'/, '');
+        if (confirmedPlatformBadge) {
+          confirmedPlatformBadge.textContent = platformVal.includes('Android') 
+            ? 'Google Play Closed Beta' 
+            : 'Apple TestFlight Waitlist';
+        }
+
+        if (betaFormView) betaFormView.style.display = 'none';
+        if (betaSuccessView) betaSuccessView.style.display = 'block';
+
+        // Clear Form Inputs
+        betaForm.reset();
+        selectPlatform(platformVal.includes('Android') ? 'android' : 'ios');
+
+      } catch (err) {
+        console.error('Submission error:', err);
+        setModalError('Connection error while sending application. Please check your internet connection and try again.');
+        if (betaSubmitBtn) {
+          betaSubmitBtn.disabled = false;
+          const btnText = betaSubmitBtn.querySelector('.btn-submit-text');
+          const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
+          if (btnText) btnText.textContent = '🚀 Submit Tester Application';
+          if (btnSpinner) btnSpinner.style.display = 'none';
+        }
+      }
     });
   }
 
