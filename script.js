@@ -113,15 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
         tabIos.setAttribute('aria-selected', 'false');
       }
       if (platformInput) platformInput.value = 'Android (Google Play)';
-      if (betaModalTitle) betaModalTitle.textContent = 'Join MediFamily Closed Beta';
+      if (betaModalTitle) betaModalTitle.textContent = 'Join MediFamily Early Access';
       if (emailLabel) emailLabel.innerHTML = 'Google Play Account Email (@gmail.com) <span class="req-star">*</span>';
       if (emailInput) emailInput.placeholder = 'your.name@gmail.com';
       if (emailHint) emailHint.textContent = 'Must be your personal Google account email (@gmail.com) registered to your Android device\'s Google Play Store.';
       if (betaDeviceLabel) betaDeviceLabel.innerHTML = 'Phone Model & Android Version <span class="optional-tag">(Optional)</span>';
       if (deviceInput) deviceInput.placeholder = 'e.g., Samsung Galaxy S23, Google Pixel 8, Android 14';
       if (betaHumanCheckText) betaHumanCheckText.textContent = 'I am a human tester excited to test MediFamily on my device';
-      if (betaSubmitBtnText) betaSubmitBtnText.textContent = '🚀 Join Google Play Beta';
-      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively to grant closed test access in Google Play Console. Zero marketing spam, zero third-party sharing.';
+      if (betaSubmitBtnText) betaSubmitBtnText.textContent = '🚀 Join Google Play Early Access';
+      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively to grant early access in Google Play Console. Zero marketing spam, zero third-party sharing.';
     }
   }
 
@@ -224,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const isGmail = lowerEmail.endsWith('@gmail.com') || lowerEmail.endsWith('@googlemail.com');
 
         if (isNonGoogle || !isGmail) {
-          setModalError('Google Play Closed Beta requires an active Google Account email (@gmail.com). Non-Google emails (such as Yahoo, Outlook, or iCloud) cannot access the Google Play Store closed testing track.');
+          setModalError('Google Play Early Access requires an active Google Account email (@gmail.com). Non-Google emails (such as Yahoo, Outlook, or iCloud) cannot access the Google Play Store early access track.');
           if (emailInput) emailInput.focus();
           return;
         }
@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (confirmedPlatformBadge) {
           confirmedPlatformBadge.textContent = isIos 
             ? 'Apple TestFlight Waitlist' 
-            : 'Google Play Closed Beta';
+            : 'Google Play Early Access';
         }
 
         if (betaSuccessTitle) {
@@ -320,19 +320,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 <strong>Official TestFlight Invitation:</strong> As soon as the iOS beta build is staged in App Store Connect, you will receive an official invitation email directly from Apple TestFlight.
               </li>
               <li>
-                <strong>Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the entire closed testing phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
+                <strong>Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the early access phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
               </li>
             `;
           } else {
             betaNextStepsList.innerHTML = `
               <li>
-                <strong>Console Access Approval:</strong> Our team will add your email to the authorized Google Play Closed Testing list within a couple of hours.
+                <strong>Console Access Approval:</strong> Our team will add your email to the authorized Google Play Early Access list within a couple of hours.
               </li>
               <li>
                 <strong>Direct Store Opt-In Link:</strong> Check your inbox for your official Google Play invitation link with 1-tap download access.
               </li>
               <li>
-                <strong>Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the entire closed testing phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
+                <strong>Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the early access phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
               </li>
             `;
           }
