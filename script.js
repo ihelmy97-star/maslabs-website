@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
         tabIos.setAttribute('aria-selected', 'false');
       }
       if (platformInput) platformInput.value = 'Android (Google Play)';
-      if (emailLabel) emailLabel.innerHTML = 'Google Play Account Email <span class="req-star">*</span>';
+      if (emailLabel) emailLabel.innerHTML = 'Google Play Account Email (@gmail.com) <span class="req-star">*</span>';
       if (emailInput) emailInput.placeholder = 'your.name@gmail.com';
-      if (emailHint) emailHint.textContent = 'Must be the Google email address registered to your Android device\'s Google Play Store.';
+      if (emailHint) emailHint.textContent = 'Must be your personal Google account email (@gmail.com) registered to your Android device\'s Google Play Store.';
     }
   }
 
@@ -189,6 +189,21 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      const platformVal = platformInput ? platformInput.value : 'Android (Google Play)';
+
+      // 4b. Strict Android Google Play Validation (Must be a Google Account / @gmail.com)
+      if (platformVal.includes('Android')) {
+        const lowerEmail = emailVal.toLowerCase();
+        const isNonGoogle = /@(yahoo\.|ymail\.|hotmail\.|outlook\.|live\.|msn\.|icloud\.|me\.|mac\.|aol\.|proton\.|protonmail\.)/i.test(lowerEmail);
+        const isGmail = lowerEmail.endsWith('@gmail.com') || lowerEmail.endsWith('@googlemail.com');
+
+        if (isNonGoogle || !isGmail) {
+          setModalError('Google Play Closed Beta requires an active Google Account email (@gmail.com). Non-Google emails (such as Yahoo, Outlook, or iCloud) cannot access the Google Play Store closed testing track.');
+          if (emailInput) emailInput.focus();
+          return;
+        }
+      }
+
       // 5. Formula Injection Sanitization (Prepend ' if starts with =, +, -, @)
       const sanitizeInput = (str) => {
         if (!str) return '';
@@ -201,7 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const cleanEmail = sanitizeInput(emailVal);
       const cleanDevice = deviceInput ? sanitizeInput(deviceInput.value) : '';
-      const platformVal = platformInput ? platformInput.value : 'Android (Google Play)';
 
       // UI: Show Loading Spinner
       if (betaSubmitBtn) {
