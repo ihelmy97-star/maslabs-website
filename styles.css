@@ -150,14 +150,23 @@ a:hover {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 18px;
   list-style: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.nav-links li {
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .nav-links a {
   color: var(--text-secondary);
   font-weight: 500;
   font-size: 14px;
+  white-space: nowrap;
+  transition: var(--transition);
 }
 
 .nav-links a:hover {
@@ -171,6 +180,11 @@ a:hover {
   color: var(--primary-cyan) !important;
   border-radius: var(--radius-full);
   transition: var(--transition);
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-nav:hover {
@@ -1186,6 +1200,18 @@ a:hover {
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
+@media (max-width: 1140px) {
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 13px; }
+  .btn-nav-beta { padding: 6px 12px !important; font-size: 12.5px !important; }
+  .btn-nav { padding: 6px 14px !important; font-size: 13px !important; }
+}
+
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+}
+
 @media (max-width: 992px) {
   .hero-title { font-size: 42px; }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1206,8 +1232,6 @@ a:hover {
   .pricing-card-featured:hover { transform: translateY(-6px); }
   .pledge-grid { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: 1fr; }
-  .nav-links { display: none; }
-  .mobile-menu-btn { display: block; }
   .legal-container { padding: 24px; }
   .security-box { padding: 28px; }
 }
@@ -1230,6 +1254,8 @@ a:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
 .btn-nav-beta:hover {
