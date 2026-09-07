@@ -43,7 +43,7 @@
         <span class="section-tag">Legal & Compliance</span>
         <h1 style="font-size: 38px; margin-bottom: 12px;">MediFamily Privacy Policy</h1>
         <p style="color: var(--text-secondary); font-size: 14px;">
-          <strong>Effective Date:</strong> August 14, 2026 &bull; <strong>Version:</strong> 2.0 (Store-Ready Compliance)
+          <strong>Last Updated:</strong> September 7, 2026 &bull; <strong>Version:</strong> 2.1 (Store-Ready Compliance)
         </p>
       </div>
 
@@ -79,11 +79,15 @@
         </ul>
 
         <h2>4. Device Hardware Permissions & Justifications</h2>
-        <p>In accordance with Google Play Health Apps and Permissions policies, MediFamily requests only the minimal hardware permissions strictly necessary for user-initiated features:</p>
+        <p>In accordance with Google Play Health Apps, User Data, and Permissions policies, MediFamily requests only the minimal hardware permissions strictly necessary for user-initiated health tracking, document archival, and medication adherence features:</p>
         <ul>
-          <li><strong>Camera (<code>android.permission.CAMERA</code> / <code>NSCameraUsageDescription</code>):</strong> This app accesses the device camera solely to allow users to photograph printed paper documents, medication packaging, or doctor notes for encrypted on-device archival. The camera is NOT used as an optical physiological sensor (such as for heart rate or pulse oximetry measurements).</li>
-          <li><strong>Photo Library (<code>READ_MEDIA_IMAGES</code> / <code>NSPhotoLibraryUsageDescription</code>):</strong> This app accesses photos solely to allow users to import existing document images or PDF test summaries into their private, local-only vault.</li>
-          <li><strong>Exact Alarms (<code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code>):</strong> This app schedules exact alarms solely to deliver timely user-configured reminders for daily medication adherence and household wellness routines.</li>
+          <li><strong>Camera (<code>android.permission.CAMERA</code> / <code>NSCameraUsageDescription</code>):</strong> Accessed solely to allow users to photograph printed paper medical records, prescription packaging, or doctor notes for encrypted on-device archival. The camera is NOT used as an optical physiological sensor (such as for heart rate or pulse oximetry measurements).</li>
+          <li><strong>Photo Library & Storage (<code>READ_MEDIA_IMAGES</code> / <code>READ_EXTERNAL_STORAGE</code> / <code>NSPhotoLibraryUsageDescription</code>):</strong> Accessed solely to allow users to import existing document images or PDF clinical summaries from device storage into their private, local-only encrypted vault.</li>
+          <li><strong>Exact Alarms (<code>SCHEDULE_EXACT_ALARM</code> / <code>USE_EXACT_ALARM</code>):</strong> Schedules exact-minute alarms solely to deliver timely, user-configured reminders for daily medication adherence and household wellness routines, preventing delays during operating system battery-saver modes.</li>
+          <li><strong>Post Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Requested solely to deliver user-scheduled medication dose reminders, refill warnings, and doctor appointment alerts. MediFamily never uses push notifications for marketing, advertising, or promotional tracking.</li>
+          <li><strong>Full-Screen Lock-Screen Alerts (<code>android.permission.USE_FULL_SCREEN_INTENT</code>):</strong> Invoked exclusively when a critical, time-sensitive medication reminder fires while the device is locked, allowing the app to present the urgent dose alert and action buttons (Take Dose or Snooze) directly over your lock screen so essential treatments are never missed. It is never used for advertising or unsolicited popups.</li>
+          <li><strong>Restore Alarms on Device Restart (<code>RECEIVE_BOOT_COMPLETED</code>):</strong> Because mobile operating systems clear pending alarm timers upon power-off or reboot, this permission allows MediFamily to automatically re-register your active medication reminder schedules when your phone turns back on, ensuring continuous adherence.</li>
+          <li><strong>Keep Device Awake (<code>android.permission.WAKE_LOCK</code> / iOS Idle Timer):</strong> Invoked strictly during active, user-initiated cryptographic operations (such as creating or restoring AES-256 encrypted health vaults and exporting multi-page PDF dossiers) to prevent the device from entering sleep mode mid-process, guaranteeing zero archive corruption. It is immediately released upon completion and is never active in the background or during normal app usage.</li>
         </ul>
 
         <h2>5. Data Retention, Portability & Deletion</h2>
