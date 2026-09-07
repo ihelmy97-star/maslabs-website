@@ -25,10 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailLabel = document.getElementById('betaEmailLabel');
   const emailHint = document.getElementById('betaEmailHint');
   const deviceInput = document.getElementById('betaDevice');
+  const betaDeviceLabel = document.getElementById('betaDeviceLabel');
   const humanCheck = document.getElementById('betaHumanCheck');
+  const betaHumanCheckText = document.getElementById('betaHumanCheckText');
   const hpField = document.getElementById('b_hp_field');
   const confirmedEmailText = document.getElementById('confirmedEmailText');
   const confirmedPlatformBadge = document.getElementById('confirmedPlatformBadge');
+  const betaModalTitle = document.getElementById('betaModalTitle');
+  const betaSubmitBtnText = document.getElementById('betaSubmitBtnText');
+  const modalPrivacyNote = document.getElementById('modalPrivacyNote');
+  const betaSuccessTitle = document.getElementById('betaSuccessTitle');
+  const betaSuccessDesc = document.getElementById('betaSuccessDesc');
+  const betaNextStepsList = document.getElementById('betaNextStepsList');
+  const androidSuccessLinks = document.getElementById('androidSuccessLinks');
+  const iosSuccessLinks = document.getElementById('iosSuccessLinks');
 
   let modalOpenedAt = 0;
 
@@ -47,7 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
       betaSubmitBtn.disabled = false;
       const btnText = betaSubmitBtn.querySelector('.btn-submit-text');
       const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
-      if (btnText) btnText.textContent = '🚀 Submit Tester Application';
+      if (btnText) {
+        btnText.textContent = defaultPlatform === 'ios' 
+          ? '🍏 Join Apple TestFlight Waitlist' 
+          : '🚀 Join Google Play Beta';
+      }
       if (btnSpinner) btnSpinner.style.display = 'none';
     }
 
@@ -80,9 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
         tabAndroid.setAttribute('aria-selected', 'false');
       }
       if (platformInput) platformInput.value = 'iOS (Apple TestFlight)';
+      if (betaModalTitle) betaModalTitle.textContent = 'Join MediFamily Apple Waitlist';
       if (emailLabel) emailLabel.innerHTML = 'Apple ID Account Email <span class="req-star">*</span>';
       if (emailInput) emailInput.placeholder = 'your.name@icloud.com';
       if (emailHint) emailHint.textContent = 'Must be the Apple ID email address registered to your iPhone for TestFlight access.';
+      if (betaDeviceLabel) betaDeviceLabel.innerHTML = 'iPhone / iPad Model & iOS Version <span class="optional-tag">(Optional)</span>';
+      if (deviceInput) deviceInput.placeholder = 'e.g., iPhone 15 Pro, iPhone 14, iOS 17 / iOS 18';
+      if (betaHumanCheckText) betaHumanCheckText.textContent = 'I am a human tester excited to test MediFamily on my Apple device';
+      if (betaSubmitBtnText) betaSubmitBtnText.textContent = '🍏 Join Apple TestFlight Waitlist';
+      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively for Apple TestFlight waitlist enrollment and invitation dispatch. Zero marketing spam, zero third-party sharing.';
     } else {
       if (tabAndroid) {
         tabAndroid.classList.add('active');
@@ -93,9 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
         tabIos.setAttribute('aria-selected', 'false');
       }
       if (platformInput) platformInput.value = 'Android (Google Play)';
+      if (betaModalTitle) betaModalTitle.textContent = 'Join MediFamily Closed Beta';
       if (emailLabel) emailLabel.innerHTML = 'Google Play Account Email (@gmail.com) <span class="req-star">*</span>';
       if (emailInput) emailInput.placeholder = 'your.name@gmail.com';
       if (emailHint) emailHint.textContent = 'Must be your personal Google account email (@gmail.com) registered to your Android device\'s Google Play Store.';
+      if (betaDeviceLabel) betaDeviceLabel.innerHTML = 'Phone Model & Android Version <span class="optional-tag">(Optional)</span>';
+      if (deviceInput) deviceInput.placeholder = 'e.g., Samsung Galaxy S23, Google Pixel 8, Android 14';
+      if (betaHumanCheckText) betaHumanCheckText.textContent = 'I am a human tester excited to test MediFamily on my device';
+      if (betaSubmitBtnText) betaSubmitBtnText.textContent = '🚀 Join Google Play Beta';
+      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively to grant closed test access in Google Play Console. Zero marketing spam, zero third-party sharing.';
     }
   }
 
@@ -265,17 +291,58 @@ document.addEventListener('DOMContentLoaded', () => {
           // Non-critical local storage fallback
         }
 
+        const isIos = !platformVal.includes('Android');
+
         // Transition to Success Confirmation View
         if (confirmedEmailText) confirmedEmailText.textContent = cleanEmail.replace(/^'/, '');
         if (confirmedPlatformBadge) {
-          confirmedPlatformBadge.textContent = platformVal.includes('Android') 
-            ? 'Google Play Closed Beta' 
-            : 'Apple TestFlight Waitlist';
+          confirmedPlatformBadge.textContent = isIos 
+            ? 'Apple TestFlight Waitlist' 
+            : 'Google Play Closed Beta';
         }
 
-        const androidSuccessLinks = document.getElementById('androidSuccessLinks');
+        if (betaSuccessTitle) {
+          betaSuccessTitle.textContent = isIos ? 'Waitlist Confirmed! 🍏' : 'Application Submitted! 🚀';
+        }
+        if (betaSuccessDesc) {
+          betaSuccessDesc.textContent = isIos
+            ? "Thank you for joining MediFamily's Apple TestFlight Waitlist! We've recorded your Apple ID email:"
+            : "Thank you for joining MediFamily's Founding Tester Community! We've recorded your email address:";
+        }
+
+        if (betaNextStepsList) {
+          if (isIos) {
+            betaNextStepsList.innerHTML = `
+              <li>
+                <strong>Priority Waitlist Enrollment:</strong> Your Apple ID is registered on our priority TestFlight testing roster.
+              </li>
+              <li>
+                <strong>Official TestFlight Invitation:</strong> As soon as the iOS beta build is staged in App Store Connect, you will receive an official invitation email directly from Apple TestFlight.
+              </li>
+              <li>
+                <strong>Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the entire closed testing phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
+              </li>
+            `;
+          } else {
+            betaNextStepsList.innerHTML = `
+              <li>
+                <strong>Console Access Approval:</strong> Our team will add your email to the authorized Google Play Closed Testing list within a couple of hours.
+              </li>
+              <li>
+                <strong>Direct Store Opt-In Link:</strong> Check your inbox for your official Google Play invitation link with 1-tap download access.
+              </li>
+              <li>
+                <strong>Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the entire closed testing phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
+              </li>
+            `;
+          }
+        }
+
         if (androidSuccessLinks) {
-          androidSuccessLinks.style.display = platformVal.includes('Android') ? 'block' : 'none';
+          androidSuccessLinks.style.display = isIos ? 'none' : 'block';
+        }
+        if (iosSuccessLinks) {
+          iosSuccessLinks.style.display = isIos ? 'block' : 'none';
         }
 
         if (betaFormView) betaFormView.style.display = 'none';
@@ -283,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Clear Form Inputs
         betaForm.reset();
-        selectPlatform(platformVal.includes('Android') ? 'android' : 'ios');
+        selectPlatform(isIos ? 'ios' : 'android');
 
       } catch (err) {
         console.error('Submission error:', err);
@@ -292,7 +359,11 @@ document.addEventListener('DOMContentLoaded', () => {
           betaSubmitBtn.disabled = false;
           const btnText = betaSubmitBtn.querySelector('.btn-submit-text');
           const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
-          if (btnText) btnText.textContent = '🚀 Submit Tester Application';
+          if (btnText) {
+            btnText.textContent = platformVal.includes('Android') 
+              ? '🚀 Join Google Play Beta' 
+              : '🍏 Join Apple TestFlight Waitlist';
+          }
           if (btnSpinner) btnSpinner.style.display = 'none';
         }
       }
