@@ -1,0 +1,15 @@
+# OS & Temp
+.DS_Store
+*.swp
+*~
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# Private Environment & API Configs
+.env
+.env.*
+!*.env.example
+credentials.json
