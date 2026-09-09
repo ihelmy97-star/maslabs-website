@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
       if (btnText) {
         btnText.textContent = defaultPlatform === 'ios' 
-          ? '🍏 Join Apple TestFlight Waitlist' 
+          ? '🍏 Join Apple TestFlight Beta' 
           : '🚀 Join Google Play Beta';
       }
       if (btnSpinner) btnSpinner.style.display = 'none';
@@ -94,15 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
         tabAndroid.setAttribute('aria-selected', 'false');
       }
       if (platformInput) platformInput.value = 'iOS (Apple TestFlight)';
-      if (betaModalTitle) betaModalTitle.textContent = 'Join MediFamily Apple Waitlist';
+      if (betaModalTitle) betaModalTitle.textContent = 'Join MediFamily Apple Beta Testing';
       if (emailLabel) emailLabel.innerHTML = 'Apple ID Account Email <span class="req-star">*</span>';
       if (emailInput) emailInput.placeholder = 'your.name@icloud.com';
       if (emailHint) emailHint.textContent = 'Must be the Apple ID email address registered to your iPhone for TestFlight access.';
       if (betaDeviceLabel) betaDeviceLabel.innerHTML = 'iPhone / iPad Model & iOS Version <span class="optional-tag">(Optional)</span>';
       if (deviceInput) deviceInput.placeholder = 'e.g., iPhone 15 Pro, iPhone 14, iOS 17 / iOS 18';
       if (betaHumanCheckText) betaHumanCheckText.textContent = 'I am a human tester excited to test MediFamily on my Apple device';
-      if (betaSubmitBtnText) betaSubmitBtnText.textContent = '🍏 Join Apple TestFlight Waitlist';
-      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively for Apple TestFlight waitlist enrollment and invitation dispatch. Zero marketing spam, zero third-party sharing.';
+      if (betaSubmitBtnText) betaSubmitBtnText.textContent = '🍏 Join Apple TestFlight Beta';
+      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively for Apple TestFlight invitation dispatch. Zero marketing spam, zero third-party sharing.';
     } else {
       if (tabAndroid) {
         tabAndroid.classList.add('active');
@@ -297,16 +297,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (confirmedEmailText) confirmedEmailText.textContent = cleanEmail.replace(/^'/, '');
         if (confirmedPlatformBadge) {
           confirmedPlatformBadge.textContent = isIos 
-            ? 'Apple TestFlight Waitlist' 
+            ? 'Apple TestFlight (iOS 24.9.7 Build 272)' 
             : 'Google Play Early Access';
         }
 
         if (betaSuccessTitle) {
-          betaSuccessTitle.textContent = isIos ? 'Waitlist Confirmed! 🍏' : 'Application Submitted! 🚀';
+          betaSuccessTitle.textContent = isIos ? 'Application Received! 🍏' : 'Application Submitted! 🚀';
         }
         if (betaSuccessDesc) {
           betaSuccessDesc.textContent = isIos
-            ? "Thank you for joining MediFamily's Apple TestFlight Waitlist! We've recorded your Apple ID email:"
+            ? "Thank you for joining MediFamily's Apple TestFlight Beta! We've recorded your Apple ID email:"
             : "Thank you for joining MediFamily's Founding Tester Community! We've recorded your email address:";
         }
 
@@ -314,13 +314,13 @@ document.addEventListener('DOMContentLoaded', () => {
           if (isIos) {
             betaNextStepsList.innerHTML = `
               <li>
-                <strong>Priority Waitlist Enrollment:</strong> Your Apple ID is registered on our priority TestFlight testing roster.
+                <strong>Immediate TestFlight Enrollment:</strong> Your Apple ID is being enrolled into our external TestFlight beta group for iOS Version 24.9.7 (Build 272).
               </li>
               <li>
-                <strong>Official TestFlight Invitation:</strong> As soon as the iOS beta build is staged in App Store Connect, you will receive an official invitation email directly from Apple TestFlight.
+                <strong>Official TestFlight Invitation:</strong> Watch your inbox for an official invitation email directly from Apple TestFlight to install MediFamily with 1 tap.
               </li>
               <li>
-                <strong>Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the early access phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
+                <strong>Permanent Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the early access phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
               </li>
             `;
           } else {
@@ -362,7 +362,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (btnText) {
             btnText.textContent = platformVal.includes('Android') 
               ? '🚀 Join Google Play Beta' 
-              : '🍏 Join Apple TestFlight Waitlist';
+              : '🍏 Join Apple TestFlight Beta';
           }
           if (btnSpinner) btnSpinner.style.display = 'none';
         }
