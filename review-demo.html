@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Review Demonstration — MediFamily & MAS Labs</title>
+  <meta name="description" content="Official Apple App Review demonstration video and compliance reference for MediFamily: Health Organizer (iOS Build 272).">
+  <!-- Favicons & App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .video-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 36px;
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+    .video-responsive-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      border-radius: var(--radius-md);
+      background: #000;
+      box-shadow: var(--shadow-md);
+    }
+    .video-responsive-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .action-button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .btn-action-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      background: var(--gradient-hero);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 14px rgba(6, 182, 212, 0.35);
+    }
+    .btn-action-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+    }
+    .btn-action-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-glass);
+      color: var(--text-primary);
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn-action-secondary:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+    .chapter-timeline {
+      margin-top: 28px;
+      border-top: 1px solid var(--border-glass);
+      padding-top: 24px;
+    }
+    .chapter-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .chapter-item {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .timestamp-badge {
+      background: rgba(6, 182, 212, 0.15);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: var(--primary-cyan);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-family: monospace;
+      flex-shrink: 0;
+    }
+    .chapter-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .chapter-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+    .compliance-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .compliance-card {
+      background: var(--bg-glass);
+      border: 1px solid var(--border-glass);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+    .compliance-card h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--primary-cyan);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .compliance-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/nav-logo.png" alt="MediFamily Logo" class="nav-logo-img" width="38" height="38" style="width: 38px; height: 38px; max-width: 38px; max-height: 38px; border-radius: 8px; flex-shrink: 0;">
+        <span>MAS Labs <span style="font-size: 14px; font-weight: 500; color: var(--primary-cyan);">/ MediFamily</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home Hub</a></li>
+        <li><a href="index.html#features">Features</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="index.html#contact" class="btn-nav">Contact Us</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top: 140px; padding-bottom: 80px;">
+    <div class="legal-container" style="max-width: 1080px;">
+      
+      <!-- Title & Header -->
+      <div style="text-align: center; margin-bottom: 36px;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.15); color: var(--primary-cyan); border: 1px solid rgba(6, 182, 212, 0.3); padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase;">Apple App Review Certification</span>
+        <h1 style="font-size: 36px; margin-top: 12px; margin-bottom: 12px;">App Review Demonstration</h1>
+        <p style="color: var(--text-secondary); font-size: 14px;">
+          <strong>iOS App Version:</strong> 24.9.7 (Build 272) &bull; <strong>Submission ID:</strong> <code>123e9897-58d5-4032-88ab-07be8232174c</code> &bull; <strong>Guideline:</strong> 2.1 Information Needed
+        </p>
+      </div>
+
+      <!-- Video Player Card -->
+      <div class="video-card">
+        <div style="margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+          <div>
+            <h2 style="font-size: 18px; font-weight: 700; color: var(--text-primary); margin-bottom: 2px;">MediFamily: Complete User Flow & Architecture Walkthrough</h2>
+            <p style="font-size: 13px; color: var(--text-secondary);">Recorded on physical hardware running iOS &bull; Duration: 16:03 &bull; Full HD (1080p)</p>
+          </div>
+          <span style="background: #10b98120; border: 1px solid #10b98150; color: #10b981; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 12px;">HD Stream Ready</span>
+        </div>
+
+        <!-- Embedded Stream Player -->
+        <div class="video-responsive-wrapper">
+          <iframe 
+            src="https://drive.google.com/file/d/1uuRsV62fTKRWpN3MmpmpQI4NcUg-OY-j/preview" 
+            title="MediFamily App Review Walkthrough Demonstration"
+            allow="autoplay; fullscreen" 
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-button-grid">
+          <a href="https://drive.google.com/file/d/1uuRsV62fTKRWpN3MmpmpQI4NcUg-OY-j/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-action-primary">
+            <span>Watch Fullscreen on Google Drive</span> &rarr;
+          </a>
+          <a href="https://drive.usercontent.google.com/download?id=1uuRsV62fTKRWpN3MmpmpQI4NcUg-OY-j&export=download" target="_blank" rel="noopener noreferrer" class="btn-action-secondary">
+            <span>Download Original Video (1.4 GB)</span>
+          </a>
+          <a href="privacy.html" class="btn-action-secondary">
+            <span>Review Privacy Policy</span>
+          </a>
+          <a href="terms.html" class="btn-action-secondary">
+            <span>Review Terms of Use</span>
+          </a>
+        </div>
+
+        <!-- Interactive Chapter Guide -->
+        <div class="chapter-timeline">
+          <h3 style="font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px;">Video Chapter & User Flow Guide:</h3>
+          <p style="font-size: 12px; color: var(--text-secondary);">Key user flows demonstrated in the recording for App Review verification:</p>
+          
+          <div class="chapter-list">
+            <div class="chapter-item">
+              <span class="timestamp-badge">00:00</span>
+              <div>
+                <div class="chapter-title">Cold Launch & Profiles Hub</div>
+                <div class="chapter-desc">Instant launch into Family Profiles Hub with pre-populated sample profiles (James, Mia, Sara, Baby Leo). Zero login or sign-in needed.</div>
+              </div>
+            </div>
+
+            <div class="chapter-item">
+              <span class="timestamp-badge">01:30</span>
+              <div>
+                <div class="chapter-title">Medications & Dose Intake</div>
+                <div class="chapter-desc">Inspection of daily medication schedules, FEFO (First-Expired, First-Out) stock tracking, and 1-tap "Mark Done" adherence logging.</div>
+              </div>
+            </div>
+
+            <div class="chapter-item">
+              <span class="timestamp-badge">04:45</span>
+              <div>
+                <div class="chapter-title">Vitals & WHO Growth Curves</div>
+                <div class="chapter-desc">Blood pressure and blood glucose telemetry logs, alongside pediatric WHO growth percentiles (weight, height, BMI curves).</div>
+              </div>
+            </div>
+
+            <div class="chapter-item">
+              <span class="timestamp-badge">08:15</span>
+              <div>
+                <div class="chapter-title">Medicine Cabinet & Expiration</div>
+                <div class="chapter-desc">Batch inventory management, expiration warning thresholds, packaging photo storage, and refill reminders.</div>
+              </div>
+            </div>
+
+            <div class="chapter-item">
+              <span class="timestamp-badge">11:00</span>
+              <div>
+                <div class="chapter-title">StoreKit 2 Paywall & Restore</div>
+                <div class="chapter-desc">Navigation drawer ➔ "My Membership", displaying Monthly ($3.99), Annual ($34.99), Lifetime ($69.99), and "Sync & Restore Purchases".</div>
+              </div>
+            </div>
+
+            <div class="chapter-item">
+              <span class="timestamp-badge">13:45</span>
+              <div>
+                <div class="chapter-title">Account Deletion Compliance</div>
+                <div class="chapter-desc">Guideline 5.1.1(v) verification: Demonstrating 1-tap Local Profile Deletion, permanently purging data from encrypted on-device database.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Architectural & Compliance Overview Cards -->
+      <div style="margin-top: 40px;">
+        <h2 style="font-size: 22px; font-weight: 700; margin-bottom: 8px;">Architecture & Regulatory Overview (Guideline 2.1 Compliance)</h2>
+        <p style="color: var(--text-secondary); font-size: 14px;">Summary of architectural facts answering Apple App Review's standard onboarding questionnaire:</p>
+
+        <div class="compliance-grid">
+          <div class="compliance-card">
+            <h3>🔒 Zero-Knowledge & Serverless</h3>
+            <p>MediFamily requires <strong>no account creation, no login, and no passwords</strong>. All health records, medications, and vitals are stored strictly in the local sandboxed device file system with AES-256 encryption.</p>
+          </div>
+
+          <div class="compliance-card">
+            <h3>🗑️ Account Deletion (Guideline 5.1.1(v))</h3>
+            <p>Because user identity is not stored on remote servers, account deletion is achieved via <strong>1-tap Local Profile Deletion</strong>. Deleting a profile completely and permanently purges all associated records with zero cloud trace.</p>
+          </div>
+
+          <div class="compliance-card">
+            <h3>🚫 Zero User-Generated Content (UGC)</h3>
+            <p>MediFamily is a <strong>private household utility</strong>. There are no social feeds, public forums, user-to-user messaging, or public sharing features. Therefore, UGC reporting and blocking mechanisms (Guideline 1.2) do not apply.</p>
+          </div>
+
+          <div class="compliance-card">
+            <h3>💳 100% Native Apple StoreKit 2</h3>
+            <p>All monetization is handled natively through Apple In-App Purchase (StoreKit 2). MediFamily offers Monthly ($3.99), Annual ($34.99), and Lifetime ($69.99) tiers, with full "Restore Purchases" support.</p>
+          </div>
+
+          <div class="compliance-card">
+            <h3>🩺 Non-SaMD Health Organizer</h3>
+            <p>MediFamily is an <strong>informational scheduling and wellness tool</strong>. It is NOT a Software as a Medical Device (SaMD) under FDA, EU MDR, or UK MHRA regulations, and does not provide clinical diagnoses or treatment advice.</p>
+          </div>
+
+          <div class="compliance-card">
+            <h3>🌍 100% Global Feature Parity</h3>
+            <p>MediFamily functions identically across all 175 App Store countries and regions worldwide with zero geofencing, regional locks, or regional content variances.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 MAS Labs. All rights reserved. MediFamily™ App Review Center.</div>
+        <div><a href="privacy.html">Privacy Policy</a> &bull; <a href="terms.html">Terms of Service</a> &bull; <a href="index.html">Home Hub</a></div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

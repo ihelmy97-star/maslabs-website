@@ -13,3 +13,9 @@
 .env.*
 !*.env.example
 credentials.json
+
+# Media files exceeding GitHub 100MB limit
+*.mp4
+*.mov
+review-demo.mp4
+
