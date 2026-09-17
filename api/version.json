@@ -1,8 +1,8 @@
 {
   "latest_version": "24.9.7",
-  "latest_build": 272,
-  "release_date": "2026-09-09",
-  "release_notes": "Official Apple App Store Review Submission (v24.9.7 Build 272), StoreKit 2 Monetization Suite, and Google Play Parity.",
+  "latest_build": 273,
+  "release_date": "2026-09-17",
+  "release_notes": "Apple App Store Review Guidelines 2.3.2 & 2.3.10 Resolution (v24.9.7 Build 273), Rule 33 Platform Neutrality, and Google Play Closed Testing Day 3 Iteration.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id6810080893",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
@@ -22,8 +22,8 @@
   },
   "closed_beta": {
     "is_active": true,
-    "android_status": "Active (Google Play Console)",
-    "ios_status": "Build 272 Staged (TestFlight & App Store Review)",
+    "android_status": "Active (Google Play Closed Testing Day 3)",
+    "ios_status": "Build 273 In Review (Apple App Store Review & TestFlight)",
     "target_testers": 20,
     "reward": "MediFamily Pro Lifetime Membership ($99.99 Value)"
   }

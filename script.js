@@ -297,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (confirmedEmailText) confirmedEmailText.textContent = cleanEmail.replace(/^'/, '');
         if (confirmedPlatformBadge) {
           confirmedPlatformBadge.textContent = isIos 
-            ? 'Apple TestFlight (iOS 24.9.7 Build 272)' 
+            ? 'Apple TestFlight (iOS 24.9.7 Build 273)' 
             : 'Google Play Early Access';
         }
 
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (isIos) {
             betaNextStepsList.innerHTML = `
               <li>
-                <strong>Immediate TestFlight Enrollment:</strong> Your Apple ID is being enrolled into our external TestFlight beta group for iOS Version 24.9.7 (Build 272).
+                <strong>Immediate TestFlight Enrollment:</strong> Your Apple ID is being enrolled into our external TestFlight beta group for iOS Version 24.9.7 (Build 273).
               </li>
               <li>
                 <strong>Official TestFlight Invitation:</strong> Watch your inbox for an official invitation email directly from Apple TestFlight to install MediFamily with 1 tap.
