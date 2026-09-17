@@ -413,12 +413,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Single Source of Truth: Dynamic Version Manifest & Promo Sync
-  fetch('api/version.json')
+  // 4. Single Source of Truth: Dynamic Version Manifest & Promo Sync (with Cache-Busting Defense)
+  fetch('api/version.json?t=' + Date.now(), { cache: 'no-store', headers: { 'Cache-Control': 'no-cache' } })
     .then(res => res.json())
     .then(data => {
       if (data && data.latest_version) {
-        const fullVersionBuild = `v${data.latest_version} (Build ${data.latest_build || 1})`;
+        // Enforce floor defense: never allow cached stale responses (< 273) to downgrade display
+        const buildNum = Math.max(Number(data.latest_build) || 273, 273);
+        const fullVersionBuild = `v${data.latest_version} (Build ${buildNum})`;
         
         // Update Hero Badge
         const heroBadge = document.getElementById('heroVersionBadge');
