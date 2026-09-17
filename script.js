@@ -4,9 +4,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
-  // 🧪 [TEMPORARY: CLOSED BETA TESTING PHASE] Webhook Configuration & Handlers
-  // Active during Google Play 14-Day Closed Testing & Apple TestFlight Phases
-  // Deployed Apps Script Webhook endpoint for tester registration & automated notifications
+  // Early Access Registration Webhook Configuration & Handlers
+  // Active during Google Play Closed Testing & Apple TestFlight Phases
+  // Deployed Webhook endpoint for tester registration & automated notifications
   // ==========================================================================
   const BETA_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzYqA2az4ajpOqDgIrWPJ_Zzd40ZNAT4oEfkXkwSbMpMJdvARCEsYjxDTKXMbSnuAOF/exec';
 
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       if (modalErrorBanner) modalErrorBanner.style.display = 'none';
 
-      // 1. Cyber-Defense Check: Honeypot Decoy Field
+      // 1. Client-Side Form Security Check: Honeypot Decoy Field
       if (hpField && hpField.value.trim() !== '') {
         console.warn('Honeypot triggered; automated submission rejected.');
         setModalError('Security verification failed. Please try again.');
