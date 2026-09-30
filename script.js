@@ -5,7 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // Early Access Registration Webhook Configuration & Handlers
-  // Active during Google Play Closed Testing & Apple TestFlight Phases
+  // Active during Google Play Production Rollout & Early Access Phases
   // Deployed Webhook endpoint for tester registration & automated notifications
   // ==========================================================================
   const BETA_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzYqA2az4ajpOqDgIrWPJ_Zzd40ZNAT4oEfkXkwSbMpMJdvARCEsYjxDTKXMbSnuAOF/exec';
@@ -59,8 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
       if (btnText) {
         btnText.textContent = defaultPlatform === 'ios' 
-          ? '🍏 Join Apple TestFlight Beta' 
-          : '🚀 Join Google Play Beta';
+          ? 'Claim Founding Reviewer Perks' 
+          : 'Join Google Play Early Access';
       }
       if (btnSpinner) btnSpinner.style.display = 'none';
     }
@@ -93,16 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
         tabAndroid.classList.remove('active');
         tabAndroid.setAttribute('aria-selected', 'false');
       }
-      if (platformInput) platformInput.value = 'iOS (Apple TestFlight)';
-      if (betaModalTitle) betaModalTitle.textContent = 'Join MediFamily Apple Beta Testing';
+      if (platformInput) platformInput.value = 'iOS (Apple App Store)';
+      if (betaModalTitle) betaModalTitle.textContent = 'MediFamily on Apple App Store';
       if (emailLabel) emailLabel.innerHTML = 'Apple ID Account Email <span class="req-star">*</span>';
       if (emailInput) emailInput.placeholder = 'your.name@icloud.com';
-      if (emailHint) emailHint.textContent = 'Must be the Apple ID email address registered to your iPhone for TestFlight access.';
+      if (emailHint) emailHint.textContent = 'MediFamily is live on the App Store! Enter your Apple ID email to claim founding reviewer perks and updates.';
       if (betaDeviceLabel) betaDeviceLabel.innerHTML = 'iPhone / iPad Model & iOS Version <span class="optional-tag">(Optional)</span>';
       if (deviceInput) deviceInput.placeholder = 'e.g., iPhone 15 Pro, iPhone 14, iOS 17 / iOS 18';
-      if (betaHumanCheckText) betaHumanCheckText.textContent = 'I am a human tester excited to test MediFamily on my Apple device';
-      if (betaSubmitBtnText) betaSubmitBtnText.textContent = '🍏 Join Apple TestFlight Beta';
-      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively for Apple TestFlight invitation dispatch. Zero marketing spam, zero third-party sharing.';
+      if (betaHumanCheckText) betaHumanCheckText.textContent = 'I am an Apple user excited to experience MediFamily on my device';
+      if (betaSubmitBtnText) betaSubmitBtnText.textContent = 'Claim Founding Reviewer Perks';
+      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively for MediFamily launch notifications and perks. Zero marketing spam, zero third-party sharing.';
     } else {
       if (tabAndroid) {
         tabAndroid.classList.add('active');
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (betaDeviceLabel) betaDeviceLabel.innerHTML = 'Phone Model & Android Version <span class="optional-tag">(Optional)</span>';
       if (deviceInput) deviceInput.placeholder = 'e.g., Samsung Galaxy S23, Google Pixel 8, Android 14';
       if (betaHumanCheckText) betaHumanCheckText.textContent = 'I am a human tester excited to test MediFamily on my device';
-      if (betaSubmitBtnText) betaSubmitBtnText.textContent = '🚀 Join Google Play Early Access';
+      if (betaSubmitBtnText) betaSubmitBtnText.textContent = 'Join Google Play Early Access';
       if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively to grant early access in Google Play Console. Zero marketing spam, zero third-party sharing.';
     }
   }
@@ -148,14 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
       openBetaModal('android');
     });
   }
-
-  const appStoreBtn = document.getElementById('appStoreBtn');
-  if (appStoreBtn) {
-    appStoreBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      openBetaModal('ios');
-    });
-  }
+  // Note: appStoreBtn functions as a direct anchor link to the live Apple App Store
 
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeBetaModal);
   if (successCloseBtn) successCloseBtn.addEventListener('click', closeBetaModal);
@@ -297,16 +290,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (confirmedEmailText) confirmedEmailText.textContent = cleanEmail.replace(/^'/, '');
         if (confirmedPlatformBadge) {
           confirmedPlatformBadge.textContent = isIos 
-            ? 'Apple TestFlight (iOS 24.9.7 Build 273)' 
+            ? 'Apple App Store (Official Release Live)' 
             : 'Google Play Early Access';
         }
 
         if (betaSuccessTitle) {
-          betaSuccessTitle.textContent = isIos ? 'Application Received! 🍏' : 'Application Submitted! 🚀';
+          betaSuccessTitle.textContent = isIos ? 'Registration Confirmed!' : 'Application Submitted!';
         }
         if (betaSuccessDesc) {
           betaSuccessDesc.textContent = isIos
-            ? "Thank you for joining MediFamily's Apple TestFlight Beta! We've recorded your Apple ID email:"
+            ? "Thank you for joining MediFamily's Apple Community! We've recorded your Apple ID email:"
             : "Thank you for joining MediFamily's Founding Tester Community! We've recorded your email address:";
         }
 
@@ -314,13 +307,13 @@ document.addEventListener('DOMContentLoaded', () => {
           if (isIos) {
             betaNextStepsList.innerHTML = `
               <li>
-                <strong>Immediate TestFlight Enrollment:</strong> Your Apple ID is being enrolled into our external TestFlight beta group for iOS Version 24.9.7 (Build 273).
+                <strong>Official App Store Access:</strong> MediFamily is available right now for direct download on the Apple App Store.
               </li>
               <li>
-                <strong>Official TestFlight Invitation:</strong> Watch your inbox for an official invitation email directly from Apple TestFlight to install MediFamily with 1 tap.
+                <strong>Founding Tester Roster:</strong> Your Apple ID is registered for upcoming feature previews and founder program communication.
               </li>
               <li>
-                <strong>Permanent Lifetime Pro Reward:</strong> Actively test core features, explore everyday health routines, and submit your feedback throughout the early access phase to receive your permanent $99.99 Lifetime Pro Code upon public launch!
+                <strong>Lifetime Pro Reward:</strong> Explore everyday health routines and share your constructive app feedback to receive your complimentary $99.99 Lifetime Pro promo benefits!
               </li>
             `;
           } else {
@@ -361,8 +354,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
           if (btnText) {
             btnText.textContent = platformVal.includes('Android') 
-              ? '🚀 Join Google Play Beta' 
-              : '🍏 Join Apple TestFlight Beta';
+              ? 'Join Google Play Early Access' 
+              : 'Claim Founding Reviewer Perks';
           }
           if (btnSpinner) btnSpinner.style.display = 'none';
         }
