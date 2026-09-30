@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const betaNextStepsList = document.getElementById('betaNextStepsList');
   const androidSuccessLinks = document.getElementById('androidSuccessLinks');
   const iosSuccessLinks = document.getElementById('iosSuccessLinks');
+  const modalIosLiveCard = document.getElementById('modalIosLiveCard');
 
   let modalOpenedAt = 0;
 
@@ -93,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tabAndroid.classList.remove('active');
         tabAndroid.setAttribute('aria-selected', 'false');
       }
+      if (modalIosLiveCard) modalIosLiveCard.style.display = 'block';
       if (platformInput) platformInput.value = 'iOS (Apple App Store)';
       if (betaModalTitle) betaModalTitle.textContent = 'MediFamily on Apple App Store';
       if (emailLabel) emailLabel.innerHTML = 'Apple ID Account Email <span class="req-star">*</span>';
@@ -112,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         tabIos.classList.remove('active');
         tabIos.setAttribute('aria-selected', 'false');
       }
+      if (modalIosLiveCard) modalIosLiveCard.style.display = 'none';
       if (platformInput) platformInput.value = 'Android (Google Play)';
       if (betaModalTitle) betaModalTitle.textContent = 'Join MediFamily Early Access';
       if (emailLabel) emailLabel.innerHTML = 'Google Play Account Email (@gmail.com) <span class="req-star">*</span>';
@@ -148,7 +151,14 @@ document.addEventListener('DOMContentLoaded', () => {
       openBetaModal('android');
     });
   }
-  // Note: appStoreBtn functions as a direct anchor link to the live Apple App Store
+
+  // Live Apple App Store Link: Guaranteed direct navigation without modal interception
+  const appStoreLiveBtn = document.getElementById('appStoreLiveBtn');
+  if (appStoreLiveBtn) {
+    appStoreLiveBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
 
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeBetaModal);
   if (successCloseBtn) successCloseBtn.addEventListener('click', closeBetaModal);
