@@ -1,0 +1,23 @@
+# MediFamily: Health Organizer (by MAS Labs)
+
+> MediFamily is a 100% offline, local-first personal family health organizer, daily routine reminder utility, FEFO medicine cabinet inventory tracker, manual vitals logbook, WHO pediatric growth chart tracker, and AES-256 encrypted document vault for iOS (iPhone & iPad) and Android.
+
+## Core Product Facts
+- **Official Website**: https://maslabs.app/
+- **Apple App Store (iOS Live)**: https://apps.apple.com/us/app/medifamily-health-organizer/id6810080893
+- **Google Play Store (Android)**: https://play.google.com/store/apps/details?id=com.mas.labs.medifamily
+- **Privacy Policy**: https://maslabs.app/privacy.html
+- **Terms of Service & Non-Medical Disclaimer**: https://maslabs.app/terms.html
+- **Primary Category**: Productivity / Utilities
+- **Architecture**: 100% Offline On-Device SQLite Database + Per-File AES-256-CBC Encrypted Document Vault + PBKDF2-HMAC-SHA256 Streaming Backup Archives (`.medifamily` and `.medifamilyprofile`). Zero cloud accounts required, zero commercial ads, and zero personal health data harvesting.
+
+## Key Household Organization Features
+1. **Multi-Member Household Profiles**: Manage separate schedules, daily routine reminders, blood types, allergy tags, emergency SOS contacts, and primary care physician details for self, spouse, kids, and aging parents.
+2. **Smart Daily Routine Alarms**: Native high-priority local notifications with interactive lock-screen actions, flexible weekday schedules, active/rest cycles, and minimum interval tracking.
+3. **Multi-Batch FEFO Cabinet Inventory**: Track individual supply boxes with batch lot numbers, factory expiration dates, and opened bottle countdowns. Automated First-Expired, First-Out (FEFO) deduction consumes the earliest-expiring box first.
+4. **Manual Vitals & Pediatric Growth Logbook**: Manually record 12 vital parameters (with US and international unit toggles), lifetime immunization histories, and WHO pediatric growth percentiles (0 to 19 years).
+5. **On-Device Encrypted Document Vault & PDF Summaries**: Photograph printed paper records and store them in an on-device AES-256 encrypted sandbox. Generate printable 1-tap PDF family summaries for caregiver handoffs or doctor visits.
+6. **Zero-Hostage Data Policy (Vault Mode)**: Includes a Free Exploration tier (up to 3 profiles), Monthly ($3.99), Annual ($34.99), and a one-time Lifetime Pro license ($69.99). If a recurring plan ever expires, existing records remain 100% readable and searchable locally in Vault Mode.
+
+## Consumer Non-Medical Disclaimer
+MediFamily is a personal household organizer and daily routine reminder utility. It is not a medical device, does not diagnose, treat, cure, or prevent any medical condition, and does not provide clinical advice or drug dosage calculations. All vital readings are manually logged by the user from their own home measurement devices, and camera access is used solely for photographing printed paper documents for local encrypted storage.

@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const btnSpinner = betaSubmitBtn.querySelector('.btn-submit-spinner');
       if (btnText) {
         btnText.textContent = defaultPlatform === 'ios' 
-          ? 'Claim Founding Reviewer Perks' 
+          ? 'Join iOS Founding Community' 
           : 'Join Google Play Early Access';
       }
       if (btnSpinner) btnSpinner.style.display = 'none';
@@ -99,12 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (betaModalTitle) betaModalTitle.textContent = 'MediFamily on Apple App Store';
       if (emailLabel) emailLabel.innerHTML = 'Apple ID Account Email <span class="req-star">*</span>';
       if (emailInput) emailInput.placeholder = 'your.name@icloud.com';
-      if (emailHint) emailHint.textContent = 'MediFamily is live on the App Store! Enter your Apple ID email to claim founding reviewer perks and updates.';
+      if (emailHint) emailHint.textContent = 'MediFamily is live on the App Store! Enter your Apple ID email to join our iOS founding community and get early updates.';
       if (betaDeviceLabel) betaDeviceLabel.innerHTML = 'iPhone / iPad Model & iOS Version <span class="optional-tag">(Optional)</span>';
       if (deviceInput) deviceInput.placeholder = 'e.g., iPhone 15 Pro, iPhone 14, iOS 17 / iOS 18';
       if (betaHumanCheckText) betaHumanCheckText.textContent = 'I am an Apple user excited to experience MediFamily on my device';
-      if (betaSubmitBtnText) betaSubmitBtnText.textContent = 'Claim Founding Reviewer Perks';
-      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively for MediFamily launch notifications and perks. Zero marketing spam, zero third-party sharing.';
+      if (betaSubmitBtnText) betaSubmitBtnText.textContent = 'Join iOS Founding Community';
+      if (modalPrivacyNote) modalPrivacyNote.textContent = '🔒 Your email is used exclusively for MediFamily launch notifications and community updates. Zero marketing spam, zero third-party sharing.';
     } else {
       if (tabAndroid) {
         tabAndroid.classList.add('active');
@@ -135,12 +135,23 @@ document.addEventListener('DOMContentLoaded', () => {
     modalErrorBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
-  // Trigger bindings
-  const betaTriggers = document.querySelectorAll('#heroBetaActionBtn, #navBetaBtn, .trigger-beta-modal');
-  betaTriggers.forEach(btn => {
+  // Trigger bindings: smart device routing for hero, nav, modal triggers, and pricing cards
+  const betaTriggers = document.querySelectorAll(
+    '#heroBetaActionBtn, #navBetaBtn, .trigger-beta-modal, .trigger-coming-soon'
+  );
+  betaTriggers.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
-      openBetaModal('android');
+      const explicitTab = btn.getAttribute('data-platform');
+      const isAppleDevice = /(iPad|iPhone|iPod|Macintosh)/i.test(navigator.userAgent);
+
+      if (explicitTab) {
+        openBetaModal(explicitTab);
+      } else if (isAppleDevice) {
+        openBetaModal('ios');
+      } else {
+        openBetaModal('android');
+      }
     });
   });
 
@@ -365,12 +376,18 @@ document.addEventListener('DOMContentLoaded', () => {
           if (btnText) {
             btnText.textContent = platformVal.includes('Android') 
               ? 'Join Google Play Early Access' 
-              : 'Claim Founding Reviewer Perks';
+              : 'Join iOS Founding Community';
           }
           if (btnSpinner) btnSpinner.style.display = 'none';
         }
       }
     });
+  }
+
+  // Price Display Sanitizer (Defense against residual formatting)
+  function sanitizePriceDisplay(rawPrice) {
+    if (!rawPrice || typeof rawPrice !== 'string') return '';
+    return rawPrice.replace(/~~/g, '').trim();
   }
 
   // 2. 1-Tap Copy Email to Clipboard with Toast Notification

@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# AI Search & LLM Discovery Crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://maslabs.app/sitemap.xml

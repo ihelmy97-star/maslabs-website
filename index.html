@@ -3,28 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MAS Labs — MediFamily Personal Family Health Organizer</title>
-  <meta name="description" content="MediFamily is the private, local-first personal family health organizer for tracking medications, vital signs, document records, and encrypted family health profiles.">
-  <meta name="keywords" content="MediFamily, MAS Labs, health tracker, medication manager, blood pressure log, glucose tracker, zero knowledge backup, family health app">
-  
-  <!-- OpenGraph / Social Meta Tags -->
-  <meta property="og:title" content="MAS Labs — MediFamily Personal Family Health Organizer">
-  <meta property="og:description" content="Centralized family health management, intelligent medication tracking, and Zero-Knowledge encrypted records.">
+  <!-- Primary SEO Meta Tags -->
+  <title>MediFamily: Offline Family Health Organizer, Pill Reminder &amp; Vitals Vault | MAS Labs</title>
+  <meta name="description"
+    content="100% offline, AES-256 encrypted family health organizer for iOS and Android. Track daily pill routines, household cabinet stock, WHO child growth charts, and manual vital logs with zero cloud accounts.">
+  <meta name="author" content="MAS Labs">
+  <meta name="keywords" content="MediFamily, MAS Labs, family health organizer, offline pill reminder, medicine cabinet tracker, vitals logbook, child growth percentiles, encrypted medical vault">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://maslabs.app/">
+  <link rel="alternate" hreflang="en" href="https://maslabs.app/">
+  <link rel="alternate" hreflang="x-default" href="https://maslabs.app/">
+
+  <!-- Native iOS Safari Smart App Banner (App ID: 6810080893) -->
+  <meta name="apple-itunes-app" content="app-id=6810080893, app-argument=https://maslabs.app/">
+
+  <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://maslabs.app">
+  <meta property="og:site_name" content="MAS Labs">
+  <meta property="og:title" content="MediFamily: 100% Offline Family Health Organizer &amp; Pill Reminder">
+  <meta property="og:description"
+    content="Zero cloud. Zero accounts. Protect your family's daily routine schedules, cabinet inventory, and visit notes with local AES-256 hardware encryption.">
+  <meta property="og:image" content="https://maslabs.app/assets/og-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MediFamily Offline Family Health Organizer and Encrypted Vault on iOS and Android">
+  <meta property="og:url" content="https://maslabs.app/">
+  <meta property="og:locale" content="en_US">
+
+  <!-- X / Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MediFamily: 100% Offline Family Health Organizer &amp; Pill Reminder">
+  <meta name="twitter:description"
+    content="Track family routines, household medicine cabinet stock, and child growth charts with local AES-256 hardware encryption. No cloud, no subscriptions required.">
+  <meta name="twitter:image" content="https://maslabs.app/assets/og-banner.png">
+
   <!-- Favicons & App Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
-  <meta property="og:image" content="https://maslabs.app/assets/logo.png">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=273.1">
+  <link rel="stylesheet" href="styles.css?v=273.2">
+
+  <!-- Schema.org Structured Data (@graph: SoftwareApplication + Organization + WebSite + FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://maslabs.app/#organization",
+        "name": "MAS Labs",
+        "url": "https://maslabs.app/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://maslabs.app/assets/nav-logo.png"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "email": "support@maslabs.app",
+            "contactType": "customer support"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://maslabs.app/#website",
+        "url": "https://maslabs.app/",
+        "name": "MAS Labs — MediFamily Health Organizer",
+        "publisher": {
+          "@id": "https://maslabs.app/#organization"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://maslabs.app/#medifamily",
+        "name": "MediFamily: Health Organizer",
+        "operatingSystem": "iOS 15.0 or later, iPadOS 15.0 or later, Android",
+        "applicationCategory": "ProductivityApplication",
+        "applicationSubCategory": "UtilitiesApplication",
+        "url": "https://maslabs.app/",
+        "downloadUrl": "https://apps.apple.com/us/app/medifamily-health-organizer/id6810080893",
+        "installUrl": "https://apps.apple.com/us/app/medifamily-health-organizer/id6810080893",
+        "softwareVersion": "24.9.7",
+        "author": {
+          "@id": "https://maslabs.app/#organization"
+        },
+        "description": "100% offline, AES-256 encrypted personal and family health organizer, daily pill reminder, household cabinet tracker, WHO child growth log, and PDF visit summary utility.",
+        "featureList": [
+          "100% Offline Local SQLite Database with AES-256 Encryption",
+          "Multi-Profile Family & Household Routine Organizer",
+          "Daily Pill Reminder & Flexible Schedule Tracker",
+          "Household Cabinet Inventory with First-Expiry First-Out Tracking",
+          "Offline WHO Child Growth Percentile Logger",
+          "Manual Vitals Logbook & One-Tap Doctor Visit PDF Summary",
+          "Zero-Cloud PBKDF2 Encrypted .medifamily Vault Backup"
+        ],
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "0.00",
+          "highPrice": "69.99",
+          "priceCurrency": "USD",
+          "offerCount": "4",
+          "url": "https://apps.apple.com/us/app/medifamily-health-organizer/id6810080893"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://maslabs.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does Lifetime Forever actually mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "When you purchase Lifetime Pro, you unlock all current and future Pro features in the MediFamily app with a single one-time payment and no recurring subscription charges."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does upgrading from Monthly to Annual work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Apple App Store and Google Play automatically prorate your remaining monthly billing cycle when you switch to the Annual plan through your native store subscription settings."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I upgrade from a subscription to Lifetime Pro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. After unlocking Lifetime Pro inside the app, simply cancel your recurring monthly or annual renewal in your Apple ID or Google Play subscription settings so you are never billed again."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens to my family data if my subscription expires?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MediFamily enforces a Zero-Hostage Vault policy. Your existing family records remain 100% viewable on your device and you can always export your encrypted .medifamily backup or PDF reports even if your subscription expires."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I transfer my data and restore Pro on a new phone?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Because MediFamily has zero cloud servers, you transfer data by exporting an AES-256 encrypted .medifamily backup file via AirDrop or local files, and restore your Pro unlock using the native Restore Purchases button linked to your Apple ID or Google Play account."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are billing and refunds handled?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "All transactions are processed directly by Apple App Store or Google Play Store using native StoreKit and Google Play Billing APIs. Refunds are managed directly through Apple or Google support."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -217,12 +363,12 @@
             <p class="feature-text">Live unified dashboard tracking today's upcoming medication doses, scheduled follow-ups, and pending doctor appointments across all household family profiles in one chronological feed.</p>
           </div>
 
-          <!-- Row 2: Smart Prescription Alarms -->
+          <!-- Row 2: Smart Daily Routine Alarms -->
           <!-- Card 4: Scheduled Dose Alarms & Interactive Action Buttons -->
           <div class="feature-card">
             <span class="card-number">#04</span>
             <div class="feature-icon-box">⏰</div>
-            <span class="card-pill">Prescriptions</span>
+            <span class="card-pill">Daily Routines</span>
             <h3 class="feature-title">Scheduled Alarms & Interactive Action Buttons</h3>
             <p class="feature-text">Native high-priority clock alerts with system sound and foreground heads-up banners — featuring 1-tap interactive Lock Screen action buttons ('Mark Taken' & 'Skip') with automatic background inventory decrement and boot auto-rescheduling.</p>
           </div>
@@ -231,18 +377,18 @@
           <div class="feature-card">
             <span class="card-number">#05</span>
             <div class="feature-icon-box">💊</div>
-            <span class="card-pill">Prescriptions</span>
+            <span class="card-pill">Daily Routines</span>
             <h3 class="feature-title">Daily Routines & PRN Safety Lockouts</h3>
-            <p class="feature-text">Configure multi-dose daily schedules alongside on-demand symptom tracking (PRN) featuring safe minimum interval lockouts (e.g. 4h–8h) and maximum daily caps to prevent accidental toxic overdose.</p>
+            <p class="feature-text">Configure multi-dose daily schedules alongside on-demand symptom tracking (PRN) featuring safe minimum interval lockouts (e.g. 4h–8h) and maximum daily caps to prevent accidental duplicate intake.</p>
           </div>
 
           <!-- Card 6: Day-Specific Dosages & Cycle Tapering -->
           <div class="feature-card">
             <span class="card-number">#06</span>
             <div class="feature-icon-box">📅</div>
-            <span class="card-pill">Prescriptions</span>
+            <span class="card-pill">Daily Routines</span>
             <h3 class="feature-title">Day-Specific Dosages & Cycle Tapering</h3>
-            <p class="feature-text">7-day weekday selector supporting varying dosages per day (e.g. Warfarin / Methotrexate alternating mg) paired with repeating active/rest cycles (e.g. 21/7 regimens) and step-down tapering protocols.</p>
+            <p class="feature-text">7-day weekday selector supporting varying dosages per day (e.g. alternating morning/evening amounts) paired with repeating active/rest cycles (e.g. 21/7 day cycles) and step-down tapering schedules.</p>
           </div>
 
           <!-- Row 3: Multi-Batch Pharmacy Inventory -->
@@ -250,7 +396,7 @@
           <div class="feature-card">
             <span class="card-number">#07</span>
             <div class="feature-icon-box">📦</div>
-            <span class="card-pill">Pharmacy Stock</span>
+            <span class="card-pill">Cabinet Stock</span>
             <h3 class="feature-title">Multi-Batch Inventory & FEFO Auto-Deduction</h3>
             <p class="feature-text">Manage individual medication boxes with separate batch lot numbers and factory expiration dates. The automated First-Expired, First-Out (FEFO) engine consumes the earliest-expiring batch first and auto-promotes the next active box upon depletion.</p>
           </div>
@@ -259,7 +405,7 @@
           <div class="feature-card">
             <span class="card-number">#08</span>
             <div class="feature-icon-box">🍽️</div>
-            <span class="card-pill">Prescriptions</span>
+            <span class="card-pill">Daily Routines</span>
             <h3 class="feature-title">Prescribed Food & Dietary Directives</h3>
             <p class="feature-text">Record doctor-prescribed meal instructions (e.g. 30m Before Food, With Meals, Empty Stomach) and specific dietary terms (Avoid Grapefruit/Dairy) with custom text input to attach usage directives to reminders and family health reports.</p>
           </div>
@@ -268,7 +414,7 @@
           <div class="feature-card">
             <span class="card-number">#09</span>
             <div class="feature-icon-box">⏳</div>
-            <span class="card-pill">Prescriptions</span>
+            <span class="card-pill">Cabinet Stock</span>
             <h3 class="feature-title">In-Use Reconstitution & Stock Refills</h3>
             <p class="feature-text">Automatic in-use countdowns for opened suspensions and reconstituted antibiotic syrups/eye drops once mixed, paired with Rx prescription numbering, authorized refill tracking, and low-stock depletion alerts.</p>
           </div>
@@ -296,7 +442,7 @@
           <div class="feature-card">
             <span class="card-number">#12</span>
             <div class="feature-icon-box">🗄️</div>
-            <span class="card-pill">Prescriptions</span>
+            <span class="card-pill">Cabinet Stock</span>
             <h3 class="feature-title">Active & Archived Cabinet</h3>
             <p class="feature-text">Separate active medications from completed or paused treatments with 1-tap Archive and Un-Archive controls that silence reminders while preserving full adherence history.</p>
           </div>
@@ -584,7 +730,7 @@
             </div>
             <div class="pricing-price-box">
               <div class="pricing-price-row">
-                <span class="price-strikethrough" id="annualAnchorPrice">~~$49.99~~</span>
+                <span class="price-strikethrough" id="annualAnchorPrice">$49.99</span>
                 <span class="price-val gradient-gold" id="annualPrice">$34.99</span>
                 <span class="price-period">/ year</span>
               </div>
@@ -613,7 +759,7 @@
             </div>
             <div class="pricing-price-box">
               <div class="pricing-price-row">
-                <span class="price-strikethrough" id="lifetimeAnchorPrice">~~$99.99~~</span>
+                <span class="price-strikethrough" id="lifetimeAnchorPrice">$99.99</span>
                 <span class="price-val gradient-purple" id="lifetimePrice">$69.99</span>
                 <span class="price-period">one-time</span>
               </div>
@@ -641,7 +787,7 @@
             </div>
             <div class="pricing-price-box">
               <div class="pricing-price-row">
-                <span class="price-strikethrough" id="monthlyAnchorPrice">~~$5.99~~</span>
+                <span class="price-strikethrough" id="monthlyAnchorPrice">$5.99</span>
                 <span class="price-val" id="monthlyPrice">$3.99</span>
                 <span class="price-period">/ month</span>
               </div>
@@ -832,7 +978,7 @@
             "As parents and caregivers, we frequently experience forgotten daily doses, misplaced paper records, and stressful doctor visits. MediFamily was built from the ground up to solve these challenges through clean, offline-first, intuitive design that puts families in complete control of their personal health history."
           </p>
           <div style="font-size: 14px; font-weight: 700; color: var(--primary-cyan);">
-            — MAS Labs Health Informatics Team
+            — MAS Labs Team
           </div>
         </div>
       </div>
@@ -1125,6 +1271,11 @@
         </div>
       </div>
 
+      <!-- Consumer Non-Medical Device Disclaimer -->
+      <div style="margin-top: 32px; padding: 18px 24px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-glass); border-radius: var(--radius-md); font-size: 12.5px; line-height: 1.6; color: var(--text-muted); text-align: center;">
+        <strong>Consumer Non-Medical Disclaimer:</strong> MediFamily is a personal household organizer and daily routine reminder utility. It is not a medical device, does not diagnose, treat, cure, or prevent any medical condition, and does not provide clinical advice or drug dosage calculations. All vital signs are manually recorded by the user from their own home measurement equipment. Always consult qualified healthcare professionals for medical advice.
+      </div>
+
       <div class="footer-bottom">
         <div>&copy; 2026 MAS Labs. All rights reserved. MediFamily™ is a trademark of MAS Labs.</div>
         <div style="display: flex; gap: 20px;">
@@ -1135,6 +1286,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=273.1"></script>
+  <script src="script.js?v=273.2"></script>
 </body>
 </html>

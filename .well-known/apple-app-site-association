@@ -1,0 +1,23 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "83SZ5A2797.com.mas.labs.medifamily"
+        ],
+        "components": [
+          {
+            "/": "/*",
+            "comment": "Matches all maslabs.app routes for Universal Links"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "83SZ5A2797.com.mas.labs.medifamily"
+    ]
+  }
+}
