@@ -14,7 +14,7 @@
     "store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily"
   },
   "release_date": "2026-10-24",
-  "release_notes": "Live on Apple App Store (v24.9.8 Build 275) and Google Play Closed Testing (v24.9.8 Build 275). Enhanced historical vaccine records, streamlined drawer feedback, and clinical stability improvements.",
+  "release_notes": "Enhanced historical vaccine records, streamlined drawer feedback, and clinical stability improvements.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id6810080893",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
