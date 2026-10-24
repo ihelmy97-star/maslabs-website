@@ -271,8 +271,12 @@ a:hover {
 .store-btn {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 24px;
+  gap: 14px;
+  padding: 12px 20px;
+  width: 254px;
+  max-width: 100%;
+  min-height: 66px;
+  box-sizing: border-box;
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
@@ -282,6 +286,9 @@ a:hover {
   cursor: pointer;
   box-shadow: var(--shadow-md);
   text-decoration: none;
+  font-family: inherit;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 .store-btn:hover {
@@ -296,6 +303,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .store-svg-icon {
@@ -305,30 +313,49 @@ a:hover {
   display: block;
 }
 
+.store-btn-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
 .store-btn-text span {
   display: block;
   font-size: 11px;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  line-height: 1.2;
 }
 
 .store-btn-text strong {
-  display: block;
+  display: inline-flex;
+  align-items: center;
   font-size: 15px;
   font-weight: 700;
+  line-height: 1.2;
+  margin-top: 2px;
+  white-space: nowrap;
 }
 
 .coming-soon-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: rgba(245, 158, 11, 0.2);
   color: var(--accent-amber);
   font-size: 10px;
   font-weight: 700;
-  padding: 2px 6px;
+  padding: 2px 7px;
   border-radius: 4px;
   margin-left: 6px;
   border: 1px solid rgba(245, 158, 11, 0.4);
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
 }
 
 /* Hero Showcase Cards */
