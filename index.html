@@ -49,7 +49,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=275.3">
+  <link rel="stylesheet" href="styles.css?v=275.4">
 
   <!-- Schema.org Structured Data (@graph: SoftwareApplication + Organization + WebSite + FAQPage) -->
   <script type="application/ld+json">
@@ -717,7 +717,7 @@
               <li><span class="check-icon">✓</span> <strong>PDF Reports & Backup Trial</strong> (2 full exports)</li>
               <li><span class="check-icon">✓</span> <strong>100% Zero Commercial Ads Ever</strong> (100% Private On-Device)</li>
             </ul>
-            <button class="pricing-btn btn-secondary trigger-coming-soon">Get Started Free</button>
+            <button class="pricing-btn btn-secondary trigger-pricing-plan" data-plan="free">Get Started Free</button>
           </div>
 
           <!-- Plan 2: Pro Annual (Featured / Gold Glassmorphism) -->
@@ -746,7 +746,7 @@
               <li><span class="check-icon gold-check">✓</span> <strong>Unlimited Family Health PDF Reports</strong> & Built-in Viewer</li>
               <li><span class="check-icon gold-check">✓</span> <strong>Founder's Grandfathered Rate Guarantee Forever</strong></li>
             </ul>
-            <button class="pricing-btn btn-gold trigger-coming-soon">Lock In Founder Rate</button>
+            <button class="pricing-btn btn-gold trigger-pricing-plan" data-plan="annual">Lock In Founder Rate</button>
           </div>
 
           <!-- Plan 3: Pro Lifetime (Best Value / Cyber Violet) -->
@@ -764,10 +764,11 @@
                 <span class="price-val gradient-purple" id="lifetimePrice">$69.99</span>
                 <span class="price-period">one-time</span>
               </div>
-              <span class="pricing-subtext">Pays for itself in ~2 years &bull; Zero subscription fatigue</span>
+              <span class="pricing-subtext">Pays for itself in ~2 years &bull; Family Sharing included</span>
             </div>
             <ul class="pricing-features-list">
               <li><span class="check-icon purple-check">✓</span> <strong>100% Full Pro Features Unlocked</strong></li>
+              <li><span class="check-icon purple-check">✓</span> <strong>Apple Family Sharing Included</strong> (1 purchase for 5 family members)</li>
               <li><span class="check-icon purple-check">✓</span> <strong>Permanent Unlimited Pro Access Forever</strong></li>
               <li><span class="check-icon purple-check">✓</span> <strong>Zero Recurring Monthly or Annual Fees</strong></li>
               <li><span class="check-icon purple-check">✓</span> <strong>All Future Pro Modules & Updates Included</strong></li>
@@ -775,7 +776,7 @@
               <li><span class="check-icon purple-check">✓</span> <strong>Unlimited Household Profiles & Health Vault</strong></li>
               <li><span class="check-icon purple-check">✓</span> <strong>Direct VIP MAS Labs Priority Support</strong></li>
             </ul>
-            <button class="pricing-btn btn-purple trigger-coming-soon">Get Lifetime Access</button>
+            <button class="pricing-btn btn-purple trigger-pricing-plan" data-plan="lifetime">Get Lifetime Access</button>
           </div>
 
           <!-- Plan 4: Pro Monthly (Flexible) -->
@@ -803,7 +804,7 @@
               <li><span class="check-icon">✓</span> <strong>Unlimited Family Health PDF Reports</strong> & Built-in Viewer</li>
               <li><span class="check-icon">✓</span> <strong>Cancel easily via App Store or Google Play</strong></li>
             </ul>
-            <button class="pricing-btn btn-secondary trigger-coming-soon">Start Monthly</button>
+            <button class="pricing-btn btn-secondary trigger-pricing-plan" data-plan="monthly">Start Monthly</button>
           </div>
 
         </div>
@@ -1287,6 +1288,20 @@
     </div>
   </footer>
 
-  <script src="script.js?v=275.3"></script>
+  <!-- Mobile Sticky Download Bar (Rule 28/29 Viewport Shield) -->
+  <aside class="mobile-sticky-bar" id="mobileStickyBar" aria-label="Quick App Store Download">
+    <div class="sticky-bar-content">
+      <img src="assets/nav-logo.png" alt="MediFamily" class="sticky-logo" width="34" height="34">
+      <div class="sticky-text">
+        <span class="sticky-title">MediFamily</span>
+        <span class="sticky-subtitle">Free &bull; 100% Offline</span>
+      </div>
+      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_web_sticky" class="sticky-btn" target="_blank" rel="noopener noreferrer">
+        Get on App Store &rarr;
+      </a>
+    </div>
+  </aside>
+
+  <script src="script.js?v=275.4"></script>
 </body>
 </html>

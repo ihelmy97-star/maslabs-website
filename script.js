@@ -135,9 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
     modalErrorBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
-  // Trigger bindings: smart device routing for hero, nav, modal triggers, and pricing cards
+  // Trigger bindings: early access modal triggers (hero banner and nav)
   const betaTriggers = document.querySelectorAll(
-    '#heroBetaActionBtn, #navBetaBtn, .trigger-beta-modal, .trigger-coming-soon'
+    '#heroBetaActionBtn, #navBetaBtn, .trigger-beta-modal'
   );
   betaTriggers.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -151,6 +151,33 @@ document.addEventListener('DOMContentLoaded', () => {
         openBetaModal('ios');
       } else {
         openBetaModal('android');
+      }
+    });
+  });
+
+  // Dedicated Pricing Cards Conversion Router (Direct App Store on Apple, Beta Modal on Android/Desktop)
+  const pricingButtons = document.querySelectorAll('.pricing-btn, .trigger-pricing-plan');
+  const APP_STORE_PRICING_URL = 'https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_web_pricing';
+
+  pricingButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isIOS = /(iPad|iPhone|iPod)/i.test(navigator.userAgent);
+      const isMac = /Macintosh/i.test(navigator.userAgent) && !isIOS;
+      const isAndroid = /Android/i.test(navigator.userAgent);
+
+      if (isIOS) {
+        // Direct native store intent on iPhone & iPad
+        window.location.href = APP_STORE_PRICING_URL;
+      } else if (isMac) {
+        // Direct App Store preview in new tab for Mac desktop users
+        window.open(APP_STORE_PRICING_URL, '_blank', 'noopener,noreferrer');
+      } else if (isAndroid) {
+        // Android users join the Google Play Closed Beta testing track
+        openBetaModal('android');
+      } else {
+        // Windows/Linux PC users: open the platform choice modal with App Store prominent
+        openBetaModal('ios');
       }
     });
   });
@@ -524,4 +551,30 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  // 7. Mobile Sticky Download Bar Scroll Listener (Rule 2 Pillar 1 120 FPS requestAnimationFrame)
+  const mobileStickyBar = document.getElementById('mobileStickyBar');
+  if (mobileStickyBar) {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    window.addEventListener(
+      'scroll',
+      () => {
+        lastScrollY = window.scrollY;
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            if (lastScrollY > 420) {
+              mobileStickyBar.classList.add('visible');
+            } else {
+              mobileStickyBar.classList.remove('visible');
+            }
+            ticking = false;
+          });
+          ticking = true;
+        }
+      },
+      { passive: true }
+    );
+  }
 });
