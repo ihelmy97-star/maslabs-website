@@ -621,7 +621,8 @@ a:hover {
 }
 
 .feature-text {
-  text-align: center;
+  text-align: justify;
+  text-justify: inter-word;
   font-size: 13.5px;
   color: var(--text-secondary);
   line-height: 1.6;
