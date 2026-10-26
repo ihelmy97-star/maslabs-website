@@ -138,7 +138,7 @@ a:hover {
 }
 
 .nav-logo-img,
-.logo img {
+.logo img:not(.nav-brand-lockup):not(.footer-brand-lockup) {
   width: 38px !important;
   height: 38px !important;
   max-width: 38px !important;
@@ -148,6 +148,49 @@ a:hover {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-glow);
   object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav-brand-lockup {
+  height: 38px !important;
+  width: auto !important;
+  max-width: 120px !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain !important;
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav-brand-divider {
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1;
+  user-select: none;
+}
+
+.nav-product-tag {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-cyan);
+  letter-spacing: -0.2px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.footer-brand-lockup {
+  height: 32px !important;
+  width: auto !important;
+  max-width: 100px !important;
+  min-width: unset !important;
+  min-height: unset !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain !important;
   display: block;
   flex-shrink: 0;
 }
@@ -2216,5 +2259,21 @@ a:hover {
 
 .comparison-table tbody tr:hover .comp-highlight {
   background: rgba(0, 229, 255, 0.07);
+}
+
+@media (max-width: 480px) {
+  .logo {
+    gap: 6px;
+  }
+  .nav-brand-lockup {
+    height: 30px !important;
+    max-width: 90px !important;
+  }
+  .nav-brand-divider {
+    font-size: 15px;
+  }
+  .nav-product-tag {
+    font-size: 13.5px;
+  }
 }
 
