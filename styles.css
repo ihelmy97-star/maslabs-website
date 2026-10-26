@@ -173,6 +173,60 @@ a:hover {
   user-select: none;
 }
 
+.nav-product-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-app-icon {
+  width: 28px !important;
+  height: 28px !important;
+  max-width: 28px !important;
+  max-height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.footer-app-icon {
+  width: 24px !important;
+  height: 24px !important;
+  max-width: 24px !important;
+  max-height: 24px !important;
+  min-width: 24px !important;
+  min-height: 24px !important;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(6, 182, 212, 0.25);
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
+
+.hero-brand-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.hero-app-icon {
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+  box-shadow: 0 12px 36px rgba(6, 182, 212, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+}
+
+.hero-app-icon:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 16px 44px rgba(6, 182, 212, 0.45), 0 0 0 1px rgba(0, 245, 160, 0.3);
+}
+
 .nav-product-tag {
   font-size: 15px;
   font-weight: 600;
@@ -2266,14 +2320,40 @@ a:hover {
     gap: 6px;
   }
   .nav-brand-lockup {
-    height: 30px !important;
-    max-width: 90px !important;
+    height: 28px !important;
+    max-width: 85px !important;
+  }
+  .nav-product-group {
+    gap: 6px;
+  }
+  .nav-app-icon {
+    width: 22px !important;
+    height: 22px !important;
+    max-width: 22px !important;
+    max-height: 22px !important;
+    min-width: 22px !important;
+    min-height: 22px !important;
+    border-radius: 5px;
+  }
+  .footer-app-icon {
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+    max-height: 20px !important;
+    min-width: 20px !important;
+    min-height: 20px !important;
+    border-radius: 5px;
   }
   .nav-brand-divider {
-    font-size: 15px;
+    font-size: 14px;
   }
   .nav-product-tag {
-    font-size: 13.5px;
+    font-size: 13px;
+  }
+  .hero-app-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 17px;
   }
 }
 
