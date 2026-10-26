@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline Medication Tracker &amp; Private Pill Reminder App | MediFamily</title>
+  <meta name="description" content="The 100% offline medication tracker and pill reminder app. Zero cloud storage, on-device AES-256 encryption, exact clock alarms, and FEFO inventory tracking.">
+  <meta name="author" content="MAS Labs">
+  <meta name="keywords" content="offline medication tracker, private pill reminder app, medicine reminder without cloud, offline pill organizer, medication alarm without subscription, local health vault">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://maslabs.app/offline-medication-tracker/">
+  <link rel="alternate" hreflang="en" href="https://maslabs.app/offline-medication-tracker/">
+  <link rel="alternate" hreflang="x-default" href="https://maslabs.app/offline-medication-tracker/">
+
+  <!-- Native iOS Safari Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=6810080893, app-argument=https://maslabs.app/offline-medication-tracker/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MAS Labs">
+  <meta property="og:title" content="Offline Medication Tracker &amp; Private Pill Reminder | MediFamily">
+  <meta property="og:description" content="100% offline on-device medication tracker. Zero cloud accounts, exact clock alarms, multi-batch FEFO inventory, and local AES-256 encryption.">
+  <meta property="og:url" content="https://maslabs.app/offline-medication-tracker/">
+  <meta property="og:image" content="https://maslabs.app/assets/og-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Offline Medication Tracker &amp; Private Pill Reminder | MediFamily">
+  <meta name="twitter:description" content="100% offline on-device medication tracker. Zero cloud accounts, exact clock alarms, and local encryption.">
+  <meta name="twitter:image" content="https://maslabs.app/assets/og-banner.png">
+
+  <!-- Favicons & App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css?v=275.8">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://maslabs.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Offline Medication Tracker",
+            "item": "https://maslabs.app/offline-medication-tracker/"
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MediFamily: Health Organizer",
+        "operatingSystem": "iOS 16.0+, iPadOS 16.0+, Android 8.0+",
+        "applicationCategory": "UtilitiesApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        },
+        "description": "100% offline personal family health organizer and medication reminder with local AES-256 encryption, exact clock alarms, and FEFO inventory tracking.",
+        "url": "https://maslabs.app/offline-medication-tracker/",
+        "author": {
+          "@type": "Organization",
+          "name": "MAS Labs",
+          "url": "https://maslabs.app/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does MediFamily work completely without an internet connection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. MediFamily is built on a 100% on-device architecture. All medication schedules, inventory records, dose logs, and vital history are stored in a local SQLite database on your device. Alarms, reminders, and inventory calculations function with zero cellular or Wi-Fi connectivity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the pill reminder wake my phone if it is in sleep mode?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MediFamily uses native operating system high-priority alarm schedulers. On iOS, it leverages local UserNotifications with time-sensitive authorization. On Android, it utilizes exact alarm permissions to wake the device from battery Doze mode with full lock-screen action buttons."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I track expiration dates on individual medicine boxes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. MediFamily features a multi-batch pharmacy inventory engine with First-Expired, First-Out (FEFO) auto-deduction. You can enter separate batch lot numbers and factory expiration dates for each box. The app automatically consumes the earliest-expiring batch first and alerts you before stock runs low."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my medication data uploaded to any cloud servers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Never. MediFamily enforces a zero-cloud, zero-knowledge architecture. Your records, medication names, dosages, and logs never touch external servers or third-party data brokers. Backups are exported as encrypted local archives directly under your personal control."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I purchase MediFamily without a monthly subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. While monthly and annual subscriptions are available, MediFamily offers a one-time Pro Lifetime purchase for $69.99 flat. It includes Apple Family Sharing at no extra cost, allowing up to five family members to share full Pro access for life."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <img src="/assets/nav-logo.png" alt="MediFamily Logo" class="nav-logo-img" width="38" height="38" style="width: 38px; height: 38px; max-width: 38px; max-height: 38px; border-radius: 8px; flex-shrink: 0;">
+        <span>MAS Labs <span style="font-size: 14px; font-weight: 500; color: var(--primary-cyan);">/ MediFamily</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/">Home Hub</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/offline-medication-tracker/" style="color: var(--primary-cyan); font-weight: 700;">Offline Tracker</a></li>
+        <li><a href="/family-health-organizer/">Family Hub</a></li>
+        <li><a href="/private-medical-records-vault/">Records Vault</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_offline_nav" class="btn-nav">Get App &rarr;</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container" style="padding-top: 100px;">
+    <nav style="font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+      <a href="/" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+      <span>&rsaquo;</span>
+      <span style="color: var(--primary-cyan);">Offline Medication Tracker</span>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding-top: 20px; padding-bottom: 60px;">
+    <div class="container">
+      <div style="text-align: center; max-width: 860px; margin: 0 auto;">
+        <span class="hero-badge" style="margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px;">
+          <span>&#128274;</span> 100% On-Device &bull; Zero Cloud &bull; AES-256 Encrypted
+        </span>
+        <h1 style="font-size: clamp(32px, 5vw, 54px); line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.03em;">
+          The Private, 100% Offline <br>
+          <span style="background: var(--gradient-hero); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Medication Tracker &amp; Pill Reminder</span>
+        </h1>
+        <p style="font-size: clamp(16px, 2.2vw, 19px); color: var(--text-secondary); line-height: 1.6; margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto;">
+          No forced accounts, no cloud sync, and no recurring hostage fees. Track daily prescriptions, receive exact time-critical alarms, and manage multi-batch medicine cabinet inventory directly on your phone.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+          <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_offline_hero" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 16px; border-radius: var(--radius-full); text-decoration: none;">
+            <span>Download on Apple App Store</span>
+            <span>&rarr;</span>
+          </a>
+          <a href="/#pricing" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 16px; border-radius: var(--radius-full); text-decoration: none;">
+            <span>View Lifetime Pro Option</span>
+          </a>
+        </div>
+
+        <!-- Key Metrics Strip -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 20px;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 18px 12px; text-align: center;">
+            <div style="font-size: 22px; font-weight: 800; color: var(--primary-cyan);">100%</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">Offline Native</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 18px 12px; text-align: center;">
+            <div style="font-size: 22px; font-weight: 800; color: var(--accent-emerald);">0 KB</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">Cloud Exposure</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 18px 12px; text-align: center;">
+            <div style="font-size: 22px; font-weight: 800; color: var(--accent-amber);">120 FPS</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">Fluid Performance</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 18px 12px; text-align: center;">
+            <div style="font-size: 22px; font-weight: 800; color: var(--text-primary);">$69.99</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">Lifetime Flat</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem vs Solution: Why Offline Matters -->
+  <section style="padding: 60px 0; background: var(--bg-secondary); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 48px auto;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--primary-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Why Offline Matters</span>
+        <h2 style="font-size: 32px; margin-top: 12px; margin-bottom: 16px;">Most Medication Apps Treat Your Health as Their Commodity</h2>
+        <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.6;">When a medication reminder stores your prescriptions on a central server, your data is vulnerable to network outages, security breaches, and marketing trackers.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <div style="background: var(--bg-card); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="color: #ef4444; font-size: 20px; font-weight: 700; margin-bottom: 12px;">&#10008; Typical Cloud Health Trackers</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+            <li>&bull; <strong style="color: var(--text-primary);">Mandatory Account Creation:</strong> Requires your personal email, phone number, or social login before you can set a single alarm.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Vulnerable Central Storage:</strong> Your medical conditions and prescriptions are stored on corporate servers vulnerable to breaches.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Silent Network Failures:</strong> If you are in a hospital basement, subway, or traveling abroad, cloud sync lags can cause missed reminders.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Expensive Subscriptions:</strong> Charges $5 to $10 every month forever. If you cancel, your own health history is locked away.</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow-glow);">
+          <div style="color: var(--accent-emerald); font-size: 20px; font-weight: 700; margin-bottom: 12px;">&#10004; The MediFamily Offline Standard</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+            <li>&bull; <strong style="color: var(--text-primary);">Zero Accounts or Registration:</strong> Open the app and start immediately. No personal profiles are sent off your device.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">100% Local SQLite Database:</strong> All data is stored in your phone's sandboxed local database with hardware-backed encryption.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Guaranteed Hardware Alarms:</strong> Native clock alarms wake your phone on time even in battery Doze mode and airplane mode.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">One-Time Lifetime Ownership:</strong> One affordable purchase gives you lifetime access with Apple Family Sharing included.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep-Dive Features Grid -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 54px auto;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--primary-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Clinical Precision</span>
+        <h2 style="font-size: 34px; margin-top: 12px; margin-bottom: 16px;">Built for Real Medication Regimens</h2>
+        <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.6;">Designed by health informatics specialists to handle complex schedules, multi-box inventory, and strict safety rules.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+        <!-- Card 1 -->
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#9200;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Exact Alarms &amp; Lock-Screen Actions</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Time-critical local notifications wake your device with custom sounds. Log doses, snooze for 15 minutes, or record a skipped dose with 1 tap directly from the lock screen without unlocking your phone.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128230;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">FEFO Multi-Batch Inventory</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Track individual medication boxes with separate batch lot numbers and expiration dates. Our First-Expired, First-Out (FEFO) engine automatically deducts units from the earliest-expiring batch first.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128197;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Flexible Dosing Protocols</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Supports fixed daily schedules, specific weekdays, repeating active and rest cycles, and on-demand PRN medications with safe minimum interval lockouts to prevent accidental double-dosing.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128203;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">1-Tap Doctor Visit PDF Export</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Generate printable, consolidated PDF medical summaries in seconds. Print or share directly with your doctor or pharmacist to review your adherence logs, active prescriptions, and recent vital readings.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#129658;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Integrated Vitals Tracking</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Log blood pressure, pulse, blood glucose, body temperature, oxygen saturation, and body weight. Correlate your medication adherence with your vital trends over 7, 30, and 90 days.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128106;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Multi-Member Household Profiles</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Manage medications and appointments for yourself, your children, and elderly parents in one unified hub with quick 1-tap profile switching and independent reminder schedules.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Competitor Comparison Table -->
+  <section style="padding: 60px 0; background: var(--bg-secondary); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 40px auto;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--primary-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Comparison Matrix</span>
+        <h2 style="font-size: 32px; margin-top: 12px; margin-bottom: 16px;">How MediFamily Compares</h2>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; text-align: left; background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-glass); font-size: 14px;">
+          <thead>
+            <tr style="background: rgba(15, 23, 42, 0.9); border-bottom: 2px solid var(--border-glass);">
+              <th style="padding: 16px 20px; color: var(--text-primary); font-weight: 700;">Feature / Capability</th>
+              <th style="padding: 16px 20px; color: var(--primary-cyan); font-weight: 700; text-align: center;">MediFamily</th>
+              <th style="padding: 16px 20px; color: var(--text-secondary); font-weight: 600; text-align: center;">Apple Health</th>
+              <th style="padding: 16px 20px; color: var(--text-secondary); font-weight: 600; text-align: center;">Typical Cloud Apps</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-glass);">
+              <td style="padding: 14px 20px; font-weight: 600;">100% Offline (No Cloud Requirement)</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--accent-emerald); font-weight: 700;">&#10004; Yes</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--text-muted);">&#9888; Syncs to iCloud</td>
+              <td style="padding: 14px 20px; text-align: center; color: #ef4444;">&#10008; Cloud Required</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-glass);">
+              <td style="padding: 14px 20px; font-weight: 600;">Zero Account or Registration</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--accent-emerald); font-weight: 700;">&#10004; Yes</td>
+              <td style="padding: 14px 20px; text-align: center; color: #ef4444;">&#10008; Apple ID Required</td>
+              <td style="padding: 14px 20px; text-align: center; color: #ef4444;">&#10008; Mandatory Account</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-glass);">
+              <td style="padding: 14px 20px; font-weight: 600;">Multi-Batch FEFO Stock Deduction</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--accent-emerald); font-weight: 700;">&#10004; Built-In</td>
+              <td style="padding: 14px 20px; text-align: center; color: #ef4444;">&#10008; Not Available</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--text-muted);">&#9888; Basic Count Only</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-glass);">
+              <td style="padding: 14px 20px; font-weight: 600;">Multi-Member Household Profiles</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--accent-emerald); font-weight: 700;">&#10004; Unlimited in Pro</td>
+              <td style="padding: 14px 20px; text-align: center; color: #ef4444;">&#10008; Single Person Only</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--text-muted);">&#9888; Paid per seat</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-glass);">
+              <td style="padding: 14px 20px; font-weight: 600;">Doctor-Ready Consolidated PDF</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--accent-emerald); font-weight: 700;">&#10004; 1-Tap Export</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--text-muted);">&#9888; Raw Data Dump</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--text-muted);">&#9888; Paywalled</td>
+            </tr>
+            <tr>
+              <td style="padding: 14px 20px; font-weight: 600;">One-Time Lifetime Ownership Option</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--accent-emerald); font-weight: 700;">&#10004; $69.99 Flat</td>
+              <td style="padding: 14px 20px; text-align: center; color: var(--text-primary);">Free (Basic)</td>
+              <td style="padding: 14px 20px; text-align: center; color: #ef4444;">&#10008; $60 to $120/year</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="padding: 80px 0;">
+    <div class="container" style="max-width: 860px;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--primary-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Frequently Asked Questions</span>
+        <h2 style="font-size: 32px; margin-top: 12px;">Questions About Offline Tracking</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">Does MediFamily work completely without an internet connection?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            Yes. MediFamily is built on a 100% on-device architecture. All medication schedules, inventory records, dose logs, and vital history are stored in a local SQLite database on your device. Alarms, reminders, and inventory calculations function with zero cellular or Wi-Fi connectivity.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">How does the pill reminder wake my phone if it is in sleep mode?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            MediFamily uses native operating system high-priority alarm schedulers. On iOS, it leverages local UserNotifications with time-sensitive authorization. On Android, it utilizes exact alarm permissions to wake the device from battery Doze mode with full lock-screen action buttons.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">Can I track expiration dates on individual medicine boxes?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            Yes. MediFamily features a multi-batch pharmacy inventory engine with First-Expired, First-Out (FEFO) auto-deduction. You can enter separate batch lot numbers and factory expiration dates for each box. The app automatically consumes the earliest-expiring batch first and alerts you before stock runs low.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">Is my medication data uploaded to any cloud servers?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            Never. MediFamily enforces a zero-cloud, zero-knowledge architecture. Your records, medication names, dosages, and logs never touch external servers or third-party data brokers. Backups are exported as encrypted local archives directly under your personal control.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">Can I purchase MediFamily without a monthly subscription?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            Yes. While monthly and annual options exist, MediFamily provides a one-time Pro Lifetime license for $69.99 flat. It includes Apple Family Sharing at no extra cost, allowing up to five family members to share full Pro access for life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Banner -->
+  <section style="padding: 60px 0; background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(2, 132, 199, 0.1) 100%);">
+    <div class="container" style="text-align: center; max-width: 760px;">
+      <h2 style="font-size: 36px; margin-bottom: 16px;">Take Control of Your Health Routine Privately</h2>
+      <p style="color: var(--text-secondary); font-size: 16px; margin-bottom: 32px; line-height: 1.6;">
+        Download MediFamily for iOS today. Free exploration mode includes up to 3 profiles and full offline medication scheduling.
+      </p>
+      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_offline_bottom" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; font-size: 17px; border-radius: var(--radius-full); text-decoration: none;">
+        <span>Get MediFamily on the App Store</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom: 14px;">
+            <img src="/assets/nav-logo.png" alt="MediFamily Logo" class="nav-logo-img" width="34" height="34" style="width: 34px; height: 34px; border-radius: 8px;">
+            <span style="font-size: 18px;">MediFamily <span style="font-size: 12px; color: var(--primary-cyan); font-weight: 500;">/ MAS Labs</span></span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.6; max-width: 340px;">
+            The 100% on-device private health organizer, medication reminder, and encrypted family records vault. Zero cloud tracking.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-primary); font-size: 14px; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Specialized Guides</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px;">
+            <li><a href="/offline-medication-tracker/" style="color: var(--primary-cyan); text-decoration: none;">Offline Medication Tracker</a></li>
+            <li><a href="/family-health-organizer/" style="color: var(--text-muted); text-decoration: none;">Family Health Organizer</a></li>
+            <li><a href="/private-medical-records-vault/" style="color: var(--text-muted); text-decoration: none;">Private Records Vault</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-primary); font-size: 14px; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Legal &amp; Privacy</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px;">
+            <li><a href="/privacy.html" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="/terms.html" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a></li>
+            <li><a href="mailto:support@maslabs.app" style="color: var(--text-muted); text-decoration: none;">Support: support@maslabs.app</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Consumer Non-Medical Device Disclaimer -->
+      <div style="margin-top: 32px; padding: 18px 24px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-glass); border-radius: var(--radius-md); font-size: 12.5px; line-height: 1.6; color: var(--text-muted); text-align: center;">
+        <strong>Consumer Non-Medical Disclaimer:</strong> MediFamily is a personal household organizer and daily routine reminder utility. It is not a medical device, does not diagnose, treat, cure, or prevent any medical condition, and does not provide clinical advice or drug dosage calculations. All vital signs are manually recorded by the user from their own home measurement equipment. Always consult qualified healthcare professionals for medical advice.
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 MAS Labs. All rights reserved. MediFamily&trade; is a trademark of MAS Labs.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Download Bar -->
+  <aside id="mobileStickyBar" class="mobile-sticky-bar" aria-label="Mobile download bar" style="display: none;">
+    <div class="sticky-bar-content">
+      <div class="sticky-bar-left">
+        <img src="/assets/nav-logo.png" alt="MediFamily App Icon" class="sticky-bar-icon" width="34" height="34">
+        <div class="sticky-bar-text">
+          <span class="sticky-bar-title">MediFamily</span>
+          <span class="sticky-bar-subtitle">Free &bull; 100% Offline</span>
+        </div>
+      </div>
+      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_offline_sticky" class="sticky-bar-btn" id="stickyBarDownloadBtn">Get App</a>
+    </div>
+  </aside>
+
+  <script src="/script.js?v=275.8"></script>
+</body>
+</html>

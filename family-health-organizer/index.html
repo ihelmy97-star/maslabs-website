@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Health Organizer &amp; Multi-Profile Medical Records App | MediFamily</title>
+  <meta name="description" content="The private family health organizer app for multi-member households. Track kids, parents, and seniors with separate profiles, WHO growth charts, and vaccine records.">
+  <meta name="author" content="MAS Labs">
+  <meta name="keywords" content="family health organizer app, multi profile health tracker, household medical records app, WHO child growth percentiles, family vaccine logbook, caregiver health app">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://maslabs.app/family-health-organizer/">
+  <link rel="alternate" hreflang="en" href="https://maslabs.app/family-health-organizer/">
+  <link rel="alternate" hreflang="x-default" href="https://maslabs.app/family-health-organizer/">
+
+  <!-- Native iOS Safari Smart App Banner -->
+  <meta name="apple-itunes-app" content="app-id=6810080893, app-argument=https://maslabs.app/family-health-organizer/">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MAS Labs">
+  <meta property="og:title" content="Family Health Organizer &amp; Multi-Profile Records | MediFamily">
+  <meta property="og:description" content="Manage health records for kids, adults, and aging parents in one private on-device app. WHO pediatric curves, vaccine cabinet, and Apple Family Sharing.">
+  <meta property="og:url" content="https://maslabs.app/family-health-organizer/">
+  <meta property="og:image" content="https://maslabs.app/assets/og-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Family Health Organizer &amp; Multi-Profile Records | MediFamily">
+  <meta name="twitter:description" content="Private family health organizer with WHO pediatric growth curves, vaccine log, and multi-profile tracking.">
+  <meta name="twitter:image" content="https://maslabs.app/assets/og-banner.png">
+
+  <!-- Favicons & App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css?v=275.8">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://maslabs.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Family Health Organizer",
+            "item": "https://maslabs.app/family-health-organizer/"
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "MediFamily: Family Health Organizer",
+        "operatingSystem": "iOS 16.0+, iPadOS 16.0+, Android 8.0+",
+        "applicationCategory": "UtilitiesApplication",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        },
+        "description": "Private, multi-profile family health organizer with WHO pediatric growth charts, historical vaccine cabinet, and Apple Family Sharing.",
+        "url": "https://maslabs.app/family-health-organizer/",
+        "author": {
+          "@type": "Organization",
+          "name": "MAS Labs",
+          "url": "https://maslabs.app/"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many family members can I track in MediFamily?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The free exploration tier supports up to 3 individual profiles. Upgrading to MediFamily Pro (available as a $69.99 one-time Lifetime purchase) unlocks unlimited family profiles, allowing you to manage kids, parents, and extended relatives in one app."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does MediFamily include pediatric growth charts?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. MediFamily includes interactive World Health Organization (WHO) pediatric growth percentile curves for height, weight, BMI, and head circumference from birth to 19 years, complete with interactive pinch-to-zoom and metric/imperial unit conversions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I export health records to show my pediatrician or doctor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. With 1 tap, MediFamily generates a consolidated, printable PDF health summary for any selected profile. The report organizes active medications, vital reading trends, allergy lists, and immunization histories into a doctor-ready document."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Apple Family Sharing work with MediFamily Pro Lifetime?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Under Apple Family Sharing, a single MediFamily Pro Lifetime purchase ($69.99) can be shared across up to 5 family members on iOS without any additional fees. That equates to approximately $14 per person for lifetime ownership."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is each family member's data kept private on the device?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All profile records, notes, photos, and vitals remain encrypted in the local SQLite database sandbox on your device. Zero data is uploaded to third-party cloud servers or shared with commercial brokers."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <img src="/assets/nav-logo.png" alt="MediFamily Logo" class="nav-logo-img" width="38" height="38" style="width: 38px; height: 38px; max-width: 38px; max-height: 38px; border-radius: 8px; flex-shrink: 0;">
+        <span>MAS Labs <span style="font-size: 14px; font-weight: 500; color: var(--primary-cyan);">/ MediFamily</span></span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="/">Home Hub</a></li>
+        <li><a href="/#features">Features</a></li>
+        <li><a href="/offline-medication-tracker/">Offline Tracker</a></li>
+        <li><a href="/family-health-organizer/" style="color: var(--primary-cyan); font-weight: 700;">Family Hub</a></li>
+        <li><a href="/private-medical-records-vault/">Records Vault</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_family_nav" class="btn-nav">Get App &rarr;</a></li>
+      </ul>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container" style="padding-top: 100px;">
+    <nav style="font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+      <a href="/" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+      <span>&rsaquo;</span>
+      <span style="color: var(--primary-cyan);">Family Health Organizer</span>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" style="padding-top: 20px; padding-bottom: 60px;">
+    <div class="container">
+      <div style="text-align: center; max-width: 860px; margin: 0 auto;">
+        <span class="hero-badge" style="margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px;">
+          <span>&#128106;</span> Multi-Profile Household Hub &bull; Apple Family Sharing
+        </span>
+        <h1 style="font-size: clamp(32px, 5vw, 54px); line-height: 1.15; margin-bottom: 20px; letter-spacing: -0.03em;">
+          One Private Health Hub <br>
+          <span style="background: var(--gradient-hero); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">For Your Entire Household</span>
+        </h1>
+        <p style="font-size: clamp(16px, 2.2vw, 19px); color: var(--text-secondary); line-height: 1.6; margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto;">
+          Organize medication schedules, historical vaccines, WHO growth percentiles, and doctor visit summaries for your kids, spouse, and aging parents. Stored 100% on-device with zero cloud exposure.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
+          <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_family_hero" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 16px; border-radius: var(--radius-full); text-decoration: none;">
+            <span>Download on Apple App Store</span>
+            <span>&rarr;</span>
+          </a>
+          <a href="/#pricing" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 16px; border-radius: var(--radius-full); text-decoration: none;">
+            <span>See Family Sharing Value</span>
+          </a>
+        </div>
+
+        <!-- Key Metrics Strip -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-top: 20px;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 18px 12px; text-align: center;">
+            <div style="font-size: 22px; font-weight: 800; color: var(--primary-cyan);">Unlimited</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">Profiles in Pro</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 18px 12px; text-align: center;">
+            <div style="font-size: 22px; font-weight: 800; color: var(--accent-emerald);">WHO Curves</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">0 to 19 Years</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 18px 12px; text-align: center;">
+            <div style="font-size: 22px; font-weight: 800; color: var(--accent-amber);">Vaccine Log</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">With Lot Numbers</div>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 18px 12px; text-align: center;">
+            <div style="font-size: 22px; font-weight: 800; color: var(--text-primary);">~$14/person</div>
+            <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; margin-top: 4px;">Lifetime Sharing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Generational Architecture Section -->
+  <section style="padding: 60px 0; background: var(--bg-secondary); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 48px auto;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--primary-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Multi-Generational Care</span>
+        <h2 style="font-size: 32px; margin-top: 12px; margin-bottom: 16px;">One App for Every Stage of Family Life</h2>
+        <p style="color: var(--text-secondary); font-size: 16px; line-height: 1.6;">From newborn pediatric checkups to elderly prescription coordination, MediFamily provides specialized tools for every generation.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <!-- Column 1: Kids & Babies -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 26px; margin-bottom: 12px;">&#129323; For Kids &amp; Babies</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+            <li>&bull; <strong style="color: var(--text-primary);">WHO Growth Curves:</strong> Interactive percentiles for weight, height, BMI, and head circumference from birth to age 19.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Childhood Immunization Cabinet:</strong> Keep track of MMR, DTaP, Polio, and booster records with lot numbers and clinic dates.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Allergy &amp; Blood Type Tags:</strong> Critical safety badges (e.g. Penicillin, Peanuts) ready for school forms and babysitters.</li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Adults & Self -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 26px; margin-bottom: 12px;">&#128104;&#8205;&#9877;&#65039; For Self &amp; Partner</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+            <li>&bull; <strong style="color: var(--text-primary);">Daily Wellness Schedules:</strong> Reminders for vitamins, supplements, and routine prescriptions with 1-tap lock screen logging.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">12 Vital Sign Trackers:</strong> Correlate blood pressure, glucose, resting heart rate, and weight over custom 7/30/90 day charts.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Lab Document Vault:</strong> Securely photograph printed bloodwork, radiology reports, and insurance documents.</li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Aging Parents & Seniors -->
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 26px; margin-bottom: 12px;">&#129491; For Aging Parents</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; color: var(--text-secondary); font-size: 14px; line-height: 1.5;">
+            <li>&bull; <strong style="color: var(--text-primary);">Multi-Batch Pharmacy Stock:</strong> Manage multiple prescription boxes with FEFO auto-deduction and low stock warnings.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Caregiver Handoff PDF:</strong> Print or export consolidated 1-page health summaries for appointments or visiting nurses.</li>
+            <li>&bull; <strong style="color: var(--text-primary);">Emergency Doctor Directory:</strong> Store primary physicians, cardiologists, and pharmacy phone numbers with 1-tap dialing.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep-Dive Features Grid -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 54px auto;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--primary-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Household Management</span>
+        <h2 style="font-size: 34px; margin-top: 12px; margin-bottom: 16px;">Engineered for Painless Family Organization</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128100;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">1-Tap Profile Switching</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Switch between children and parents in less than one second. No logging in and out, no password prompts, and no switching accounts. Each family member retains their own private dashboard.
+          </p>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128200;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Interactive WHO Percentile Curves</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Track pediatric progress against official World Health Organization datasets. Plot measurements on smooth, pinch-to-zoom percentile graphs (3rd to 97th percentiles) with instant metric and imperial toggles.
+          </p>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128137;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Immunization Cabinet</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Record past vaccines with dose numbers, manufacturer lot details, administration sites, and provider names. Never dig through shoe boxes or call former clinics for school immunization records again.
+          </p>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128196;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Doctor Visit PDF Summaries</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            Export a clean, single-page PDF clinical summary before every pediatrician or specialist appointment. Give the physician a crystal-clear breakdown of current medications, allergies, and recent vitals.
+          </p>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#127822;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Apple Family Sharing Included</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            A single MediFamily Pro purchase on iOS covers up to five family members via Apple Family Sharing. No extra licenses, no per-seat fees, and no recurring monthly invoices.
+          </p>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-lg); padding: 28px;">
+          <div style="font-size: 28px; margin-bottom: 14px;">&#128274;</div>
+          <h3 style="font-size: 20px; margin-bottom: 10px;">Zero-Hostage Vault Mode</h3>
+          <p style="color: var(--text-secondary); font-size: 14px; line-height: 1.6;">
+            We believe your family health history belongs to you forever. If a recurring subscription ever ends, existing profiles and records remain 100% accessible, searchable, and exportable locally in Vault Mode.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Family Sharing Economics -->
+  <section style="padding: 60px 0; background: var(--bg-secondary); border-top: 1px solid var(--border-glass); border-bottom: 1px solid var(--border-glass);">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 40px auto;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--primary-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Family Economics</span>
+        <h2 style="font-size: 32px; margin-top: 12px; margin-bottom: 16px;">The True Cost of Family Health Software</h2>
+        <p style="color: var(--text-secondary); font-size: 15px;">Most competitors charge $5 to $8 per month per family member. Here is how MediFamily compares for a family of 5 over 3 years.</p>
+      </div>
+
+      <div style="max-width: 700px; margin: 0 auto; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-glass); padding: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--border-glass);">
+          <div>
+            <div style="font-size: 18px; font-weight: 700; color: var(--text-primary);">Typical Cloud Health App (5 Users)</div>
+            <div style="font-size: 13px; color: var(--text-muted);">$4.99/mo per user &bull; 3-Year Total</div>
+          </div>
+          <div style="font-size: 24px; font-weight: 800; color: #ef4444;">$898.20</div>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 18px;">
+          <div>
+            <div style="font-size: 18px; font-weight: 700; color: var(--accent-emerald);">MediFamily Pro Lifetime (Family Sharing)</div>
+            <div style="font-size: 13px; color: var(--primary-cyan);">1-Time Purchase &bull; Covers up to 5 Users Forever</div>
+          </div>
+          <div style="font-size: 24px; font-weight: 800; color: var(--accent-emerald);">$69.99 flat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section style="padding: 80px 0;">
+    <div class="container" style="max-width: 860px;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <span class="section-tag" style="background: rgba(6, 182, 212, 0.1); color: var(--primary-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">Frequently Asked Questions</span>
+        <h2 style="font-size: 32px; margin-top: 12px;">Questions About Family Management</h2>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">How many family members can I track in MediFamily?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            The free exploration tier supports up to 3 individual profiles. Upgrading to MediFamily Pro (available as a $69.99 one-time Lifetime purchase) unlocks unlimited family profiles, allowing you to manage kids, parents, and extended relatives in one app.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">Does MediFamily include pediatric growth charts?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            Yes. MediFamily includes interactive World Health Organization (WHO) pediatric growth percentile curves for height, weight, BMI, and head circumference from birth to 19 years, complete with interactive pinch-to-zoom and metric/imperial unit conversions.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">Can I export health records to show my pediatrician or doctor?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            Yes. With 1 tap, MediFamily generates a consolidated, printable PDF health summary for any selected profile. The report organizes active medications, vital reading trends, allergy lists, and immunization histories into a doctor-ready document.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">How does Apple Family Sharing work with MediFamily Pro Lifetime?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            Under Apple Family Sharing, a single MediFamily Pro Lifetime purchase ($69.99) can be shared across up to 5 family members on iOS without any additional fees. That equates to approximately $14 per person for lifetime ownership.
+          </p>
+        </div>
+
+        <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px;">
+          <h3 style="font-size: 18px; margin-bottom: 10px; color: var(--text-primary);">Is each family member's data kept private on the device?</h3>
+          <p style="color: var(--text-secondary); font-size: 14.5px; line-height: 1.6;">
+            Yes. All profile records, notes, photos, and vitals remain encrypted in the local SQLite database sandbox on your device. Zero data is uploaded to third-party cloud servers or shared with commercial brokers.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Banner -->
+  <section style="padding: 60px 0; background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(2, 132, 199, 0.1) 100%);">
+    <div class="container" style="text-align: center; max-width: 760px;">
+      <h2 style="font-size: 36px; margin-bottom: 16px;">Bring Peace of Mind to Your Family Health Routine</h2>
+      <p style="color: var(--text-secondary); font-size: 16px; margin-bottom: 32px; line-height: 1.6;">
+        Download MediFamily for iOS today. Free exploration mode includes up to 3 household profiles.
+      </p>
+      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_family_bottom" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; font-size: 17px; border-radius: var(--radius-full); text-decoration: none;">
+        <span>Get MediFamily on the App Store</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="logo" style="margin-bottom: 14px;">
+            <img src="/assets/nav-logo.png" alt="MediFamily Logo" class="nav-logo-img" width="34" height="34" style="width: 34px; height: 34px; border-radius: 8px;">
+            <span style="font-size: 18px;">MediFamily <span style="font-size: 12px; color: var(--primary-cyan); font-weight: 500;">/ MAS Labs</span></span>
+          </div>
+          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.6; max-width: 340px;">
+            The 100% on-device private health organizer, medication reminder, and encrypted family records vault. Zero cloud tracking.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-primary); font-size: 14px; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Specialized Guides</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px;">
+            <li><a href="/offline-medication-tracker/" style="color: var(--text-muted); text-decoration: none;">Offline Medication Tracker</a></li>
+            <li><a href="/family-health-organizer/" style="color: var(--primary-cyan); text-decoration: none;">Family Health Organizer</a></li>
+            <li><a href="/private-medical-records-vault/" style="color: var(--text-muted); text-decoration: none;">Private Records Vault</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-primary); font-size: 14px; text-transform: uppercase; margin-bottom: 16px; letter-spacing: 0.05em;">Legal &amp; Privacy</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px;">
+            <li><a href="/privacy.html" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a></li>
+            <li><a href="/terms.html" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a></li>
+            <li><a href="mailto:support@maslabs.app" style="color: var(--text-muted); text-decoration: none;">Support: support@maslabs.app</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Consumer Non-Medical Device Disclaimer -->
+      <div style="margin-top: 32px; padding: 18px 24px; background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-glass); border-radius: var(--radius-md); font-size: 12.5px; line-height: 1.6; color: var(--text-muted); text-align: center;">
+        <strong>Consumer Non-Medical Disclaimer:</strong> MediFamily is a personal household organizer and daily routine reminder utility. It is not a medical device, does not diagnose, treat, cure, or prevent any medical condition, and does not provide clinical advice or drug dosage calculations. All vital signs are manually recorded by the user from their own home measurement equipment. Always consult qualified healthcare professionals for medical advice.
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 MAS Labs. All rights reserved. MediFamily&trade; is a trademark of MAS Labs.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Download Bar -->
+  <aside id="mobileStickyBar" class="mobile-sticky-bar" aria-label="Mobile download bar" style="display: none;">
+    <div class="sticky-bar-content">
+      <div class="sticky-bar-left">
+        <img src="/assets/nav-logo.png" alt="MediFamily App Icon" class="sticky-bar-icon" width="34" height="34">
+        <div class="sticky-bar-text">
+          <span class="sticky-bar-title">MediFamily</span>
+          <span class="sticky-bar-subtitle">Free &bull; Family Health Hub</span>
+        </div>
+      </div>
+      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_family_sticky" class="sticky-bar-btn" id="stickyBarDownloadBtn">Get App</a>
+    </div>
+  </aside>
+
+  <script src="/script.js?v=275.8"></script>
+</body>
+</html>

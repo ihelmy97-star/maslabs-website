@@ -461,7 +461,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 4. Single Source of Truth: Dynamic Version Manifest & Promo Sync (with Cache-Busting Defense)
-  fetch('api/version.json?t=' + Date.now(), { cache: 'no-store', headers: { 'Cache-Control': 'no-cache' } })
+  fetch('/api/version.json?t=' + Date.now(), { cache: 'no-store', headers: { 'Cache-Control': 'no-cache' } })
     .then(res => res.json())
     .then(data => {
       if (data && data.latest_version) {

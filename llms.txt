@@ -4,6 +4,9 @@
 
 ## Core Product Facts
 - **Official Website**: https://maslabs.app/
+- **Offline Medication Tracker**: https://maslabs.app/offline-medication-tracker/
+- **Family Health Organizer Hub**: https://maslabs.app/family-health-organizer/
+- **Private Medical Records Vault**: https://maslabs.app/private-medical-records-vault/
 - **Apple App Store (iOS Live)**: https://apps.apple.com/us/app/medifamily-health-organizer/id6810080893
 - **Google Play Store (Android)**: https://play.google.com/store/apps/details?id=com.mas.labs.medifamily
 - **Privacy Policy**: https://maslabs.app/privacy.html
