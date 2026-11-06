@@ -8,16 +8,21 @@
         ],
         "components": [
           {
-            "/": "/*",
-            "comment": "Matches all maslabs.app routes for Universal Links"
+            "/": "/privacy.html",
+            "exclude": true,
+            "comment": "Always open Privacy Policy in Safari"
+          },
+          {
+            "/": "/terms.html",
+            "exclude": true,
+            "comment": "Always open Terms of Use in Safari"
+          },
+          {
+            "/": "/open/*",
+            "comment": "Dedicated Universal Link deep-link namespace for MediFamily"
           }
         ]
       }
-    ]
-  },
-  "webcredentials": {
-    "apps": [
-      "83SZ5A2797.com.mas.labs.medifamily"
     ]
   }
 }
