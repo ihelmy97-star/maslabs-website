@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Private Medical Records Vault &amp; Encrypted Health Storage | MediFamily</title>
+  <title>Private Medical Records Vault &amp; Health App | MediFamily</title>
   <meta name="description" content="Local AES-256 encrypted medical records vault. Photograph paper lab reports, doctor summaries, and vaccine cards with zero cloud exposure and 1-tap PDF export.">
   <meta name="author" content="MAS Labs">
   <meta name="keywords" content="private medical records vault, encrypted health records app, offline lab report organizer, secure medical document storage, doctor visit pdf summary, zero knowledge health app">
@@ -11,6 +11,7 @@
   <link rel="canonical" href="https://maslabs.app/private-medical-records-vault/">
   <link rel="alternate" hreflang="en" href="https://maslabs.app/private-medical-records-vault/">
   <link rel="alternate" hreflang="x-default" href="https://maslabs.app/private-medical-records-vault/">
+  <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Product Summary">
 
   <!-- Native iOS Safari Smart App Banner -->
   <meta name="apple-itunes-app" content="app-id=6810080893, app-argument=https://maslabs.app/private-medical-records-vault/">
@@ -24,12 +25,14 @@
   <meta property="og:image" content="https://maslabs.app/assets/og-banner.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MediFamily Offline Family Health Organizer and AES-256 Encrypted Vault">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Private Medical Records Vault &amp; Encrypted Storage | MediFamily">
   <meta name="twitter:description" content="Local AES-256 encrypted health document vault. Zero cloud tracking, 1-tap PDF export.">
   <meta name="twitter:image" content="https://maslabs.app/assets/og-banner.png">
+  <meta name="twitter:image:alt" content="MediFamily Offline Family Health Organizer and AES-256 Encrypted Vault">
 
   <!-- Favicons & App Icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -43,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="/styles.css?v=275.12">
+  <link rel="stylesheet" href="/styles.css?v=275.14">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -69,21 +72,42 @@
       },
       {
         "@type": "SoftwareApplication",
-        "name": "MediFamily: Medical Records Vault",
-        "operatingSystem": "iOS 16.0+, iPadOS 16.0+, Android 8.0+",
-        "applicationCategory": "UtilitiesApplication",
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD"
-        },
-        "description": "Local AES-256 encrypted medical records vault and vital logbook with zero cloud storage, photo document attachments, and 1-tap PDF export.",
-        "url": "https://maslabs.app/private-medical-records-vault/",
+        "@id": "https://maslabs.app/#medifamily",
+        "name": "MediFamily: Health Organizer",
+        "operatingSystem": "iOS 15.0 or later, iPadOS 15.0 or later, Android",
+        "applicationCategory": "ProductivityApplication",
+        "applicationSubCategory": "UtilitiesApplication",
+        "softwareVersion": "24.9.8",
+        "url": "https://maslabs.app/",
+        "downloadUrl": "https://apps.apple.com/us/app/medifamily-health-organizer/id6810080893",
         "author": {
           "@type": "Organization",
+          "@id": "https://maslabs.app/#organization",
           "name": "MAS Labs",
           "url": "https://maslabs.app/"
-        }
+        },
+        "sameAs": [
+          "https://apps.apple.com/us/app/medifamily-health-organizer/id6810080893",
+          "https://alternativeto.net/software/medifamily/about/",
+          "https://appraven.net/app/323709854"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "9",
+          "reviewCount": "7"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "lowPrice": "0.00",
+          "highPrice": "69.99",
+          "priceCurrency": "USD",
+          "offerCount": "4",
+          "url": "https://apps.apple.com/us/app/medifamily-health-organizer/id6810080893"
+        },
+        "description": "Local AES-256 encrypted medical records vault and vital logbook with zero cloud storage, photo document attachments, and 1-tap PDF export."
       },
       {
         "@type": "FAQPage",
@@ -140,10 +164,16 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo" aria-label="MAS Labs / MediFamily Home">
-        <img src="/assets/branding/mas_labs_horizontal_lockup_nav.svg" alt="MAS Labs - Privacy-First Studio" class="nav-brand-lockup" width="99" height="38">
+        <picture class="brand-picture">
+          <source srcset="/assets/branding/mas_labs_horizontal_lockup_nav.webp" type="image/webp">
+          <img src="/assets/branding/mas_labs_horizontal_lockup_nav.png" alt="MAS Labs - Privacy-First Studio" class="nav-brand-lockup" width="99" height="38" decoding="async">
+        </picture>
         <span class="nav-brand-divider">/</span>
         <span class="nav-product-group">
-          <img src="/assets/medifamily-icon-nav.png" alt="MediFamily App Icon" class="nav-app-icon" width="28" height="28">
+          <picture class="brand-picture">
+            <source srcset="/assets/medifamily-icon-nav.webp" type="image/webp">
+            <img src="/assets/medifamily-icon-nav.png" alt="MediFamily App Icon" class="nav-app-icon" width="28" height="28" decoding="async">
+          </picture>
           <span class="nav-product-tag">MediFamily</span>
         </span>
       </a>
@@ -155,13 +185,14 @@
         <li><a href="/family-health-organizer/">Family Hub</a></li>
         <li><a href="/private-medical-records-vault/" style="color: var(--primary-cyan); font-weight: 700;">Records Vault</a></li>
         <li><a href="/privacy.html">Privacy</a></li>
-        <li><a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_vault_nav" class="btn-nav">Get App &rarr;</a></li>
+        <li><a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_vault_nav&mt=8" class="btn-nav" target="_blank" rel="noopener noreferrer">Get App &rarr;</a></li>
       </ul>
 
       <button class="mobile-menu-btn" aria-label="Toggle navigation menu">&#9776;</button>
     </div>
   </header>
 
+  <main id="main">
   <!-- Breadcrumbs -->
   <div class="container" style="padding-top: 100px;">
     <nav style="font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
@@ -187,13 +218,20 @@
         </p>
 
         <!-- CTA Buttons -->
-        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px;">
-          <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_vault_hero" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 16px; border-radius: var(--radius-full); text-decoration: none;">
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px;">
+          <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_vault_hero&mt=8" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 16px; border-radius: var(--radius-full); text-decoration: none;" target="_blank" rel="noopener noreferrer">
             <span>Download on Apple App Store</span>
             <span>&rarr;</span>
           </a>
           <a href="/#pricing" class="btn-secondary" style="display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; font-size: 16px; border-radius: var(--radius-full); text-decoration: none;">
             <span>Explore Vault Mode</span>
+          </a>
+        </div>
+
+        <div style="margin-bottom: 28px;">
+          <a href="/#reviews" style="display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px; border-radius: 999px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.12); color: var(--text-secondary); font-size: 13px; text-decoration: none;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="#f59e0b" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span><strong style="color: var(--text-primary);">4.8 / 5.0</strong> Global Apple App Store Rating (9 Ratings, 7 Reviews Across 9 Countries) &bull; <span style="color: var(--primary-cyan);">Verify &rarr;</span></span>
           </a>
         </div>
 
@@ -365,12 +403,13 @@
       <p style="color: var(--text-secondary); font-size: 16px; margin-bottom: 32px; line-height: 1.6;">
         Download MediFamily for iOS today. Explore free for up to 3 profiles or start your 7-day free trial on Annual Pro.
       </p>
-      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_vault_bottom" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; font-size: 17px; border-radius: var(--radius-full); text-decoration: none;">
+      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_vault_bottom&mt=8" class="btn-primary" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 36px; font-size: 17px; border-radius: var(--radius-full); text-decoration: none;" target="_blank" rel="noopener noreferrer">
         <span>Get MediFamily on the App Store</span>
         <span>&rarr;</span>
       </a>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer class="footer">
@@ -378,10 +417,16 @@
       <div class="footer-grid">
         <div>
           <div class="logo" style="margin-bottom: 14px;">
-            <img src="/assets/branding/mas_labs_horizontal_lockup_nav.svg" alt="MAS Labs" class="footer-brand-lockup" width="84" height="32">
+            <picture class="brand-picture">
+              <source srcset="/assets/branding/mas_labs_horizontal_lockup_nav.webp" type="image/webp">
+              <img src="/assets/branding/mas_labs_horizontal_lockup_nav.png" alt="MAS Labs" class="footer-brand-lockup" width="84" height="32" loading="lazy" decoding="async">
+            </picture>
             <span class="nav-brand-divider" style="font-size: 16px;">/</span>
             <span class="nav-product-group">
-              <img src="/assets/medifamily-icon-nav.png" alt="MediFamily App Icon" class="footer-app-icon" width="24" height="24">
+              <picture class="brand-picture">
+                <source srcset="/assets/medifamily-icon-nav.webp" type="image/webp">
+                <img src="/assets/medifamily-icon-nav.png" alt="MediFamily App Icon" class="footer-app-icon" width="24" height="24" loading="lazy" decoding="async">
+              </picture>
               <span class="nav-product-tag" style="font-size: 14px;">MediFamily</span>
             </span>
           </div>
@@ -393,6 +438,7 @@
               <img src="https://alternativeto.net/static/badges/badge-compact-color.svg"
                    alt="MediFamily | AlternativeTo"
                    width="158" height="51"
+                   loading="lazy" decoding="async"
                    style="width: 158px; height: auto; max-width: 100%; border-radius: 6px; display: block;" />
             </a>
           </div>
@@ -434,19 +480,22 @@
   </footer>
 
   <!-- Mobile Sticky Download Bar -->
-  <aside id="mobileStickyBar" class="mobile-sticky-bar" aria-label="Mobile download bar" style="display: none;">
+  <aside class="mobile-sticky-bar" id="mobileStickyBar" aria-label="Quick App Store Download">
     <div class="sticky-bar-content">
-      <div class="sticky-bar-left">
-        <img src="/assets/nav-logo.png" alt="MediFamily App Icon" class="sticky-bar-icon" width="34" height="34">
-        <div class="sticky-bar-text">
-          <span class="sticky-bar-title">MediFamily</span>
-          <span class="sticky-bar-subtitle">7-Day Free Trial &bull; Encrypted Vault</span>
-        </div>
+      <picture class="brand-picture">
+        <source srcset="/assets/medifamily-icon-nav.webp" type="image/webp">
+        <img src="/assets/medifamily-icon-nav.png" alt="MediFamily App Icon" class="sticky-logo" width="34" height="34" loading="lazy" decoding="async">
+      </picture>
+      <div class="sticky-text">
+        <span class="sticky-title">MediFamily</span>
+        <span class="sticky-subtitle">7-Day Free Trial &bull; 100% Offline</span>
       </div>
-      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_vault_sticky" class="sticky-bar-btn" id="stickyBarDownloadBtn">Get App</a>
+      <a href="https://apps.apple.com/app/id6810080893?pt=128312089&ct=maslabs_seo_vault_sticky&mt=8" class="sticky-btn" target="_blank" rel="noopener noreferrer">
+        Get on App Store &rarr;
+      </a>
     </div>
   </aside>
 
-  <script src="/script.js?v=275.8"></script>
+  <script src="/script.js?v=275.9" defer></script>
 </body>
 </html>

@@ -3,22 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service & Non-Medical Disclaimer — MediFamily & MAS Labs</title>
+  <title>Terms of Service &amp; Non-Medical Disclaimer — MediFamily &amp; MAS Labs</title>
   <meta name="description" content="MediFamily Terms of Service, End User License Agreement (EULA), and Consumer Non-Medical Disclaimer.">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://maslabs.app/terms.html">
+  <link rel="alternate" hreflang="en" href="https://maslabs.app/terms.html">
+  <link rel="alternate" hreflang="x-default" href="https://maslabs.app/terms.html">
   <meta name="apple-itunes-app" content="app-id=6810080893, app-argument=https://maslabs.app/terms.html">
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MAS Labs">
+  <meta property="og:title" content="Terms of Service &amp; Non-Medical Disclaimer — MediFamily &amp; MAS Labs">
+  <meta property="og:description" content="MediFamily Terms of Service, End User License Agreement (EULA), and Consumer Non-Medical Disclaimer.">
+  <meta property="og:url" content="https://maslabs.app/terms.html">
+  <meta property="og:image" content="https://maslabs.app/assets/og-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MediFamily Terms of Service &amp; EULA by MAS Labs">
+  <meta property="og:locale" content="en_US">
+
+  <!-- X / Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Service &amp; Non-Medical Disclaimer — MediFamily &amp; MAS Labs">
+  <meta name="twitter:description" content="MediFamily Terms of Service, End User License Agreement (EULA), and Consumer Non-Medical Disclaimer.">
+  <meta name="twitter:image" content="https://maslabs.app/assets/og-banner.png">
+  <meta name="twitter:image:alt" content="MediFamily Terms of Service &amp; EULA by MAS Labs">
+
   <!-- Favicons & App Icons -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=275.12">
+  <link rel="stylesheet" href="/styles.css?v=275.14">
+
+  <!-- Schema.org Structured Data (@graph: BreadcrumbList + WebPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://maslabs.app/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Terms of Service",
+            "item": "https://maslabs.app/terms.html"
+          }
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://maslabs.app/terms.html#webpage",
+        "url": "https://maslabs.app/terms.html",
+        "name": "MediFamily Terms of Service & EULA",
+        "description": "MediFamily Terms of Service, End User License Agreement (EULA), and Consumer Non-Medical Disclaimer.",
+        "isPartOf": {
+          "@id": "https://maslabs.app/#website"
+        },
+        "publisher": {
+          "@id": "https://maslabs.app/#organization"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -26,10 +88,16 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="/" class="logo" aria-label="MAS Labs / MediFamily Home">
-        <img src="/assets/branding/mas_labs_horizontal_lockup_nav.svg" alt="MAS Labs - Privacy-First Studio" class="nav-brand-lockup" width="99" height="38">
+        <picture class="brand-picture">
+          <source srcset="/assets/branding/mas_labs_horizontal_lockup_nav.webp" type="image/webp">
+          <img src="/assets/branding/mas_labs_horizontal_lockup_nav.png" alt="MAS Labs - Privacy-First Studio" class="nav-brand-lockup" width="99" height="38" decoding="async">
+        </picture>
         <span class="nav-brand-divider">/</span>
         <span class="nav-product-group">
-          <img src="/assets/medifamily-icon-nav.png" alt="MediFamily App Icon" class="nav-app-icon" width="28" height="28">
+          <picture class="brand-picture">
+            <source srcset="/assets/medifamily-icon-nav.webp" type="image/webp">
+            <img src="/assets/medifamily-icon-nav.png" alt="MediFamily App Icon" class="nav-app-icon" width="28" height="28" decoding="async">
+          </picture>
           <span class="nav-product-tag">MediFamily</span>
         </span>
       </a>
@@ -37,12 +105,12 @@
       <ul class="nav-links">
         <li><a href="/">Home Hub</a></li>
         <li><a href="/#features">Features</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="terms.html" style="color: var(--primary-cyan); font-weight: 700;">Terms of Use</a></li>
+        <li><a href="/privacy.html">Privacy Policy</a></li>
+        <li><a href="/terms.html" style="color: var(--primary-cyan); font-weight: 700;">Terms of Use</a></li>
         <li><a href="/#contact" class="btn-nav">Contact Us</a></li>
       </ul>
 
-      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">☰</button>
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </div>
   </header>
 
@@ -58,7 +126,7 @@
 
       <!-- Critical Consumer Non-Medical Disclaimer Alert Box -->
       <div id="disclaimer" class="alert-box" style="background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.3); color: #f87171;">
-        <h3 style="color: #f87171; font-size: 16px; margin-bottom: 8px;">⚠️ CONSUMER HEALTH ORGANIZER & NON-MEDICAL DISCLAIMER</h3>
+        <h2 style="color: #f87171; font-size: 16px; margin-bottom: 8px;">⚠️ CONSUMER HEALTH ORGANIZER &amp; NON-MEDICAL DISCLAIMER</h2>
         <p style="color: #fca5a5; font-size: 13.5px; margin: 0; line-height: 1.6;">
           <strong>MediFamily is a consumer personal health organizer and daily medication reminder utility. MediFamily is NOT a licensed healthcare provider, medical clinic, or diagnostic service. MediFamily is NOT a medical device and does NOT diagnose, treat, cure, or prevent any medical condition. It is NOT Software as a Medical Device (Non-SaMD) under U.S. FDA regulations or European Union Medical Device Regulation (EU MDR 2017/745).</strong><br><br>
           The application and exported PDF summaries are personal self-tracking tools based entirely on user-entered data. Information provided does not constitute medical advice, clinical diagnosis, or treatment plans. All vital readings (such as Blood Pressure and Glucose) are manually recorded by the user from their own certified home measurement devices. Always consult a licensed physician or qualified healthcare professional for medical advice, diagnosis, or treatment. In an emergency, contact your local emergency services immediately.
@@ -160,11 +228,11 @@
     <div class="container">
       <div class="footer-bottom">
         <div>&copy; 2026 MAS Labs. All rights reserved. MediFamily™ Legal Center.</div>
-        <div><a href="privacy.html">Privacy Policy</a> &bull; <a href="/">Home Hub</a></div>
+        <div><a href="/privacy.html">Privacy Policy</a> &bull; <a href="/">Home Hub</a></div>
       </div>
     </div>
   </footer>
 
-  <script src="script.js?v=275.7"></script>
+  <script src="/script.js?v=275.9" defer></script>
 </body>
 </html>
