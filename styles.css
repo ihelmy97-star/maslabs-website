@@ -157,9 +157,9 @@ picture.brand-picture {
 }
 
 .nav-brand-lockup {
-  height: 38px !important;
+  height: 40px !important;
   width: auto !important;
-  max-width: 120px !important;
+  max-width: 128px !important;
   min-width: unset !important;
   min-height: unset !important;
   border-radius: 0 !important;
@@ -241,9 +241,9 @@ picture.brand-picture {
 }
 
 .footer-brand-lockup {
-  height: 32px !important;
+  height: 34px !important;
   width: auto !important;
-  max-width: 100px !important;
+  max-width: 108px !important;
   min-width: unset !important;
   min-height: unset !important;
   border-radius: 0 !important;
@@ -1351,6 +1351,7 @@ picture.brand-picture {
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 1380px) {
+  .nav-brand-lockup { height: 36px !important; max-width: 112px !important; }
   .nav-links { gap: 8px; }
   .nav-links a { font-size: 12px; }
   .btn-nav-beta { padding: 5px 10px !important; font-size: 12px !important; }
@@ -2644,8 +2645,8 @@ picture.brand-picture {
     gap: 6px;
   }
   .nav-brand-lockup {
-    height: 28px !important;
-    max-width: 85px !important;
+    height: 30px !important;
+    max-width: 92px !important;
   }
   .nav-product-group {
     gap: 6px;
