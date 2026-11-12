@@ -467,8 +467,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
       if (data && data.latest_version) {
-        // Enforce floor defense: never allow cached stale responses (< 275) to downgrade display
-        const buildNum = Math.max(Number(data.latest_build) || 275, 275);
+        // Enforce floor defense: never allow cached stale responses (< 276) to downgrade display
+        const buildNum = Math.max(Number(data.latest_build) || 276, 276);
         const fullVersionBuild = `v${data.latest_version} (Build ${buildNum})`;
         
         // Update Hero Badge

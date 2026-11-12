@@ -1,12 +1,11 @@
 {
-  "latest_version": "24.9.8",
-  "latest_build": 275,
-  "ios_latest_build": 275,
+  "latest_version": "24.9.9",
+  "latest_build": 276,
+  "ios_latest_build": 276,
   "android_latest_build": 275,
   "ios": {
-    "latest_version": "24.9.8",
-    "latest_build": 275,
-    "staged_build": 276,
+    "latest_version": "24.9.9",
+    "latest_build": 276,
     "store_url": "https://apps.apple.com/app/id6810080893"
   },
   "android": {
@@ -15,8 +14,8 @@
     "staged_build": 276,
     "store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily"
   },
-  "release_date": "2026-10-24",
-  "release_notes": "Enhanced historical vaccine records, streamlined drawer feedback, and clinical stability improvements.",
+  "release_date": "2026-11-12",
+  "release_notes": "Smart early-intake reminder silencing with instant Undo re-arming, improved Family Sharing renewal reliability, and privacy refinements.",
   "min_supported_version": "22.0.0",
   "ios_store_url": "https://apps.apple.com/app/id6810080893",
   "android_store_url": "https://play.google.com/store/apps/details?id=com.mas.labs.medifamily",
@@ -43,7 +42,7 @@
   "closed_beta": {
     "is_active": true,
     "android_status": "Closed Testing Track (v24.9.8 Build 275)",
-    "ios_status": "Live on Apple App Store (v24.9.8 Build 275)",
+    "ios_status": "Live on Apple App Store (v24.9.9 Build 276)",
     "target_testers": 20,
     "reward": "MediFamily Pro Lifetime Membership ($99.99 Value)"
   }
