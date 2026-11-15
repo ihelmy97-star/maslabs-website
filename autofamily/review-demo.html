@@ -64,10 +64,10 @@
 
       <!-- Video Staging Container -->
       <div class="af-review-placeholder">
-        <span class="af-pill" style="margin-bottom: 14px;">Pre-Submission Shell Ready</span>
+        <span class="af-pill" style="margin-bottom: 14px;">Video Recording Status: Pending</span>
         <h2 style="font-size: 20px; margin-bottom: 10px;">Hardware Walkthrough Stream Staging Area</h2>
-        <p style="color: var(--text-secondary); font-size: 14px; max-width: 620px; margin: 0 auto 18px auto;">
-          This container is staged for the physical-device AutoFamily walkthrough video recorded immediately prior to App Store submission under Apple Guideline 2.1.
+        <p style="color: var(--text-secondary); font-size: 14px; max-width: 640px; margin: 0 auto 18px auto;">
+          16:9 Google Drive preview iframe and direct view and download links are marked Pending until the unedited physical-device AutoFamily walkthrough video is recorded immediately prior to store submission under Apple Guideline 2.1.
         </p>
         <div class="af-cta-row">
           <a href="/autofamily/privacy.html" class="af-btn-secondary">Review Privacy Policy</a>
@@ -77,32 +77,50 @@
 
       <!-- Planned Review Flow Chapters -->
       <div style="margin-top: 28px;">
-        <h2 style="font-size: 20px; margin-bottom: 6px;">Standard Review Verification Checklist</h2>
-        <p style="color: var(--text-secondary); font-size: 13.5px;">Architectural facts ready for review teams upon submission:</p>
+        <h2 style="font-size: 20px; margin-bottom: 6px;">Planned Unedited Walkthrough Chapter Flow</h2>
+        <p style="color: var(--text-secondary); font-size: 13.5px;">Continuous cold-launch verification sequence aligned with Guideline 2.1 and Guideline 5.1:</p>
 
         <div class="af-chapter-list">
           <div class="af-chapter-item">
-            <span class="af-step-badge">Flow 1</span>
-            <h3 style="font-size: 15px; margin-bottom: 6px;">Cold Launch With Zero Login Required</h3>
-            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">AutoFamily opens straight into the local household garage with zero server account sign-up, zero credentials needed for testing, and instant sample creation.</p>
+            <span class="af-step-badge">Chapter 1</span>
+            <h3 style="font-size: 15px; margin-bottom: 6px;">Cold Launch With Zero Login and Instant Offline Garage</h3>
+            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">Launch AutoFamily from the iOS home screen on a clean install. Confirm the app loads the branded splash screen and enters vehicle onboarding or <strong>My Garage</strong> immediately with zero sign-up wall, zero login prompt, zero email input, and zero network dependency.</p>
           </div>
 
           <div class="af-chapter-item">
-            <span class="af-step-badge">Flow 2</span>
-            <h3 style="font-size: 15px; margin-bottom: 6px;">On-Device Vault &amp; Data Deletion</h3>
-            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">All vehicle records, service logs, and documents reside in the private local sandbox with 1-tap profile deletion and zero external account servers.</p>
+            <span class="af-step-badge">Chapter 2</span>
+            <h3 style="font-size: 15px; margin-bottom: 6px;">Create Vehicle Profile, Tyre Specs, and Digital Cockpit</h3>
+            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">Open <strong>Add Vehicle</strong>, pick a popular make or enter a custom make, choose a paint color swatch or dropdown selection, enter model, year, license plate, and odometer reading, and configure <strong>Standard Tyre Specs</strong> alongside <strong>Compatible Tyre Specs</strong>. Save the vehicle, verify its card shows the <strong>Primary</strong> and <strong>Road Ready</strong> badges cleanly in <strong>My Garage</strong>, and tap <strong>Cockpit</strong> to enter the <strong>Digital Cockpit</strong>.</p>
           </div>
 
           <div class="af-chapter-item">
-            <span class="af-step-badge">Flow 3</span>
-            <h3 style="font-size: 15px; margin-bottom: 6px;">Native Store Subscriptions &amp; Restore</h3>
-            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">All Pro tiers run through native platform store billing with an unobstructed Restore Purchases button and direct Privacy Policy and Terms links in the paywall.</p>
+            <span class="af-step-badge">Chapter 3</span>
+            <h3 style="font-size: 15px; margin-bottom: 6px;">Dual-Trigger Maintenance Schedule and Spare Parts FEFO Deduction</h3>
+            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">Navigate to <strong>Maintenance</strong>, create a dual-trigger maintenance interval using both mileage and calendar months, and add an item to the <strong>Spare Parts Shelf</strong> such as an engine oil jug or oil filter with expiration date and stock count. Tap <strong>Log Service</strong>, select the linked spare part, save the completed service entry, and show the automatic stock deduction and updated maintenance countdown.</p>
           </div>
 
           <div class="af-chapter-item">
-            <span class="af-step-badge">Flow 4</span>
-            <h3 style="font-size: 15px; margin-bottom: 6px;">Non-Mechanical Disclaimer Clarity</h3>
-            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">AutoFamily acts strictly as a personal maintenance log and reminder organizer rather than a diagnostic tool or statutory safety inspection service.</p>
+            <span class="af-step-badge">Chapter 4</span>
+            <h3 style="font-size: 15px; margin-bottom: 6px;">Fuel Log, Glovebox Document Upload, and PDF Passport Export</h3>
+            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">Open <strong>Fuel &amp; Telemetry</strong>, record a refueling entry, and verify running-cost calculations update on screen. Open <strong>Glovebox</strong>, add a sample registration or insurance document, and trigger <strong>Maintenance Passport PDF</strong> generation to demonstrate local PDF preview and iOS share sheet export.</p>
+          </div>
+
+          <div class="af-chapter-item">
+            <span class="af-step-badge">Chapter 5</span>
+            <h3 style="font-size: 15px; margin-bottom: 6px;">Offline Encrypted Backup and Single-Vehicle Transfer</h3>
+            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">Open <strong>Backup &amp; Security</strong>, set an on-device Protection Password, capture the generated 16-character Emergency Recovery Key, and run an encrypted <code>.autofamily</code> full backup without any email verification prompt. Demonstrate exporting a single-vehicle <code>.autofamilyprofile</code> package protected with a local transfer password.</p>
+          </div>
+
+          <div class="af-chapter-item">
+            <span class="af-step-badge">Chapter 6</span>
+            <h3 style="font-size: 15px; margin-bottom: 6px;">StoreKit 2 Pro Paywall and Restore Purchases Flow</h3>
+            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">Open the <strong>Upgrade to AutoFamily Pro</strong> paywall screen from Settings or a Free Exploration banner. Show transparent pricing for <code>autofamily_pro_monthly</code>, <code>autofamily_pro_annual</code>, and <code>autofamily_pro_lifetime</code>, tap the <strong>Privacy Policy</strong> and <strong>Terms of Use</strong> links, and tap <strong>Restore Purchases</strong> to verify native StoreKit restoration feedback without errors.</p>
+          </div>
+
+          <div class="af-chapter-item">
+            <span class="af-step-badge">Chapter 7</span>
+            <h3 style="font-size: 15px; margin-bottom: 6px;">Local Vehicle Deletion and Vault Cleanup</h3>
+            <p style="color: var(--text-secondary); font-size: 13px; margin: 0;">Return to <strong>My Garage</strong>, open a vehicle card menu, tap <strong>Remove Vehicle</strong>, and confirm deletion to prove 1-tap local vehicle removal. Open <strong>Backup &amp; Security</strong> or <strong>Saved Reports</strong> to delete a locally created archive or PDF, demonstrating full user data deletion control.</p>
           </div>
         </div>
       </div>
