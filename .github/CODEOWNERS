@@ -1,0 +1,25 @@
+# MAS Labs Public Website Ownership and Path Protection Rules
+# Protects root studio pages, live MediFamily endpoints, and security manifests.
+
+* @ihelmy97-star
+
+/index.html @ihelmy97-star
+/privacy.html @ihelmy97-star
+/terms.html @ihelmy97-star
+/review-demo.html @ihelmy97-star
+/404.html @ihelmy97-star
+/styles.css @ihelmy97-star
+/script.js @ihelmy97-star
+/robots.txt @ihelmy97-star
+/sitemap.xml @ihelmy97-star
+/llms.txt @ihelmy97-star
+/CNAME @ihelmy97-star
+/.well-known/ @ihelmy97-star
+/apple-app-site-association @ihelmy97-star
+/api/version.json @ihelmy97-star
+/offline-medication-tracker/ @ihelmy97-star
+/family-health-organizer/ @ihelmy97-star
+/private-medical-records-vault/ @ihelmy97-star
+
+/autofamily/ @ihelmy97-star
+/api/autofamily/ @ihelmy97-star
