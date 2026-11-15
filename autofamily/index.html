@@ -14,7 +14,7 @@
   <meta property="og:title" content="AutoFamily by MAS Labs | Official Support &amp; Compliance Hub">
   <meta property="og:description" content="100% offline encrypted vehicle maintenance, service logs, and family document organizer by MAS Labs. Zero cloud accounts and zero ad trackers.">
   <meta property="og:url" content="https://maslabs.app/autofamily/">
-  <meta property="og:image" content="https://maslabs.app/autofamily/assets/og-banner.png">
+  <meta property="og:image" content="https://maslabs.app/autofamily/assets/og-banner.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="AutoFamily Offline Encrypted Vehicle Vault by MAS Labs">
@@ -24,21 +24,19 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AutoFamily by MAS Labs | Official Support &amp; Compliance Hub">
   <meta name="twitter:description" content="100% offline encrypted vehicle maintenance, service logs, and family document organizer by MAS Labs.">
-  <meta name="twitter:image" content="https://maslabs.app/autofamily/assets/og-banner.png">
+  <meta name="twitter:image" content="https://maslabs.app/autofamily/assets/og-banner.png?v=2">
 
   <!-- Favicons & App Icons -->
-  <link rel="icon" type="image/svg+xml" href="/autofamily/assets/autofamily-icon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/autofamily/assets/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/autofamily/assets/favicon-16x16.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/autofamily/assets/apple-touch-icon.png?v=2">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/styles.css?v=276.1">
-  <link rel="stylesheet" href="/autofamily/autofamily.css?v=1">
+  <link rel="stylesheet" href="/autofamily/autofamily.css?v=2">
 </head>
 <body>
 
@@ -52,7 +50,10 @@
         </picture>
         <span class="nav-brand-divider">/</span>
         <span class="nav-product-group">
-          <img src="/autofamily/assets/autofamily-icon-nav.png?v=1" alt="AutoFamily App Icon" class="nav-app-icon" width="28" height="28" decoding="async">
+          <picture class="brand-picture">
+            <source srcset="/autofamily/assets/autofamily-icon-nav.webp?v=2" type="image/webp">
+            <img src="/autofamily/assets/autofamily-icon-nav.png?v=2" alt="AutoFamily App Icon" class="nav-app-icon" width="28" height="28" decoding="async">
+          </picture>
           <span class="nav-product-tag">AutoFamily</span>
         </span>
       </a>
@@ -73,19 +74,22 @@
     <!-- Hero Overview Section -->
     <section class="af-hero">
       <div class="af-hero-icon-wrap">
-        <img src="/autofamily/assets/autofamily-icon-nav.png?v=1" alt="AutoFamily by MAS Labs" class="af-hero-icon" width="84" height="84">
+        <picture>
+          <source srcset="/autofamily/assets/autofamily-icon-hero.webp?v=2" type="image/webp">
+          <img src="/autofamily/assets/autofamily-icon-hero.png?v=2" alt="AutoFamily by MAS Labs" class="af-hero-icon" width="84" height="84" decoding="async">
+        </picture>
       </div>
 
       <span class="section-tag">Official Support &amp; Compliance Portal</span>
       <h1 class="af-hero-title">AutoFamily by MAS Labs</h1>
       <p class="af-hero-subtitle">
-        A 100% offline, zero-knowledge vehicle maintenance and family vehicle organizer built by MAS Labs. Service records, registration scans, insurance documents, and backup vaults stay privately on your device with AES-256 encryption and zero cloud user accounts.
+        A 100% offline, zero-knowledge family garage and vehicle maintenance organizer built by MAS Labs. Service schedules, fuel logs, spare parts inventory, glovebox scans, and backup vaults stay privately on your device with AES-256-CBC encryption, 10,000-iteration PBKDF2-HMAC-SHA256 key derivation, and zero cloud user accounts.
       </p>
 
       <div class="af-status-row">
         <span class="af-pill" id="afVersionBadge">Pre-Launch v1.0.0 (Build 1)</span>
         <span class="af-pill af-pill-emerald">Zero Cloud Accounts</span>
-        <span class="af-pill">AES-256 Vault Privacy</span>
+        <span class="af-pill">AES-256 &amp; PBKDF2 Vault Privacy</span>
       </div>
 
       <div class="af-cta-row">
@@ -127,7 +131,7 @@
             </span>
             <span>Encrypted Portable Backups</span>
           </h3>
-          <p>Full vault archives (<code>.autofamily</code>) and single-vehicle handoff files (<code>.autofamilyprofile</code>) are encrypted client-side using AES-256 with PBKDF2-SHA256 key derivation.</p>
+          <p>Full vault archives in <code>.autofamily</code> format and single-vehicle handoff files in <code>.autofamilyprofile</code> format are encrypted client-side inside background worker isolates using <code>AES-256-CBC</code> encryption with <code>10,000</code>-iteration <code>PBKDF2-HMAC-SHA256</code> key derivation.</p>
         </article>
 
         <article class="af-card">
@@ -201,6 +205,6 @@
     </div>
   </footer>
 
-  <script src="/autofamily/autofamily.js?v=1" defer></script>
+  <script src="/autofamily/autofamily.js?v=2" defer></script>
 </body>
 </html>

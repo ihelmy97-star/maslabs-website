@@ -14,7 +14,7 @@
   <meta property="og:title" content="AutoFamily Terms of Service &amp; EULA | MAS Labs">
   <meta property="og:description" content="AutoFamily Terms of Service, End User License Agreement, and Consumer Non-Mechanical Disclaimer by MAS Labs.">
   <meta property="og:url" content="https://maslabs.app/autofamily/terms.html">
-  <meta property="og:image" content="https://maslabs.app/autofamily/assets/og-banner.png">
+  <meta property="og:image" content="https://maslabs.app/autofamily/assets/og-banner.png?v=2">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="en_US">
@@ -23,21 +23,19 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AutoFamily Terms of Service &amp; EULA | MAS Labs">
   <meta name="twitter:description" content="AutoFamily Terms of Service, End User License Agreement, and Consumer Non-Mechanical Disclaimer.">
-  <meta name="twitter:image" content="https://maslabs.app/autofamily/assets/og-banner.png">
+  <meta name="twitter:image" content="https://maslabs.app/autofamily/assets/og-banner.png?v=2">
 
   <!-- Favicons & App Icons -->
-  <link rel="icon" type="image/svg+xml" href="/autofamily/assets/autofamily-icon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/autofamily/assets/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/autofamily/assets/favicon-16x16.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="/autofamily/assets/apple-touch-icon.png?v=2">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="/styles.css?v=276.1">
-  <link rel="stylesheet" href="/autofamily/autofamily.css?v=1">
+  <link rel="stylesheet" href="/autofamily/autofamily.css?v=2">
 </head>
 <body>
 
@@ -51,7 +49,10 @@
         </picture>
         <span class="nav-brand-divider">/</span>
         <span class="nav-product-group">
-          <img src="/autofamily/assets/autofamily-icon-nav.png?v=1" alt="AutoFamily App Icon" class="nav-app-icon" width="28" height="28" decoding="async">
+          <picture class="brand-picture">
+            <source srcset="/autofamily/assets/autofamily-icon-nav.webp?v=2" type="image/webp">
+            <img src="/autofamily/assets/autofamily-icon-nav.png?v=2" alt="AutoFamily App Icon" class="nav-app-icon" width="28" height="28" decoding="async">
+          </picture>
           <span class="nav-product-tag">AutoFamily</span>
         </span>
       </a>
@@ -114,7 +115,7 @@
           Because AutoFamily runs as a <strong>100% offline local-vault application</strong> without cloud password escrow, MAS Labs cannot access your local database or unlock encrypted backups. You are solely responsible for:
         </p>
         <ul>
-          <li>Creating regular encrypted vault backups (<code>.autofamily</code>) or vehicle handoff packages (<code>.autofamilyprofile</code>).</li>
+          <li>Creating regular client-side <strong>AES-256</strong> and <strong>PBKDF2-HMAC-SHA256</strong> encrypted vault backups in <code>.autofamily</code> format or single-vehicle handoff packages in <code>.autofamilyprofile</code> format.</li>
           <li>Safeguarding your secret backup passphrase and Emergency Recovery Key.</li>
           <li>Protecting your physical mobile device with operating system passcodes or biometric locks.</li>
         </ul>
@@ -186,6 +187,6 @@
     </div>
   </footer>
 
-  <script src="/autofamily/autofamily.js?v=1" defer></script>
+  <script src="/autofamily/autofamily.js?v=2" defer></script>
 </body>
 </html>

@@ -25,11 +25,11 @@
     "annual_discount_percent": 0,
     "lifetime_discount_percent": 0,
     "banner_text": "",
-    "monthly_anchor_usd": 0,
-    "annual_anchor_usd": 0,
-    "lifetime_anchor_usd": 0,
-    "monthly_base_usd": 0,
-    "annual_base_usd": 0,
-    "lifetime_base_usd": 0
+    "monthly_anchor_usd": 4.99,
+    "annual_anchor_usd": 29.99,
+    "lifetime_anchor_usd": 59.99,
+    "monthly_base_usd": 2.99,
+    "annual_base_usd": 19.99,
+    "lifetime_base_usd": 39.99
   }
 }
