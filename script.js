@@ -4,6 +4,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
+  // Platform Visibility Gating for Android Early Access Hero Card
+  // Preserves zero layout shift on iOS, iPadOS, macOS, and Desktop visitors
+  // ==========================================================================
+  const heroBetaCard = document.getElementById('heroBetaCard');
+  const isAndroidVisitor = /Android/i.test(navigator.userAgent);
+  const isIOSVisitor = /(iPad|iPhone|iPod)/i.test(navigator.userAgent);
+  if (heroBetaCard) {
+    if (isAndroidVisitor || window.location.hash === '#heroBetaCard') {
+      heroBetaCard.hidden = false;
+    } else {
+      heroBetaCard.hidden = true;
+    }
+  }
+  // Hide Android Early Access nav button on iOS devices where the App Store release is already live
+  const navBetaBtn = document.getElementById('navBetaBtn');
+  if (navBetaBtn && isIOSVisitor && navBetaBtn.parentElement) {
+    navBetaBtn.parentElement.hidden = true;
+  }
+
+  // ==========================================================================
   // Early Access Registration Webhook Configuration & Handlers
   // Active during Google Play Production Rollout & Early Access Phases
   // Deployed Webhook endpoint for tester registration & automated notifications
@@ -520,6 +540,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const annualPrice = document.getElementById('annualPrice');
         const lifetimePrice = document.getElementById('lifetimePrice');
         const monthlyPrice = document.getElementById('monthlyPrice');
+        const lifetimeRibbon = document.getElementById('lifetimeRibbon');
+        const lifetimeSubtext = document.getElementById('lifetimeSubtext');
 
         if (promo && promo.is_active) {
           if (promoBanner) promoBanner.style.display = 'flex';
@@ -541,6 +563,20 @@ document.addEventListener('DOMContentLoaded', () => {
           if (annualPrice) annualPrice.textContent = `$${(promo.annual_base_usd || 34.99).toFixed(2)}`;
           if (lifetimePrice) lifetimePrice.textContent = `$${(promo.lifetime_base_usd || 69.99).toFixed(2)}`;
           if (monthlyPrice) monthlyPrice.textContent = `$${(promo.monthly_base_usd || 3.99).toFixed(2)}`;
+
+          const lifetimeBaseUsd = Number(promo.lifetime_base_usd || 69.99);
+          const isBlackFridayLifetime = lifetimeBaseUsd <= 49.99;
+          const perPersonUsd = Math.max(1, Math.round(lifetimeBaseUsd / 5));
+          if (lifetimeRibbon) {
+            lifetimeRibbon.textContent = isBlackFridayLifetime
+              ? `\u{1F451} BLACK FRIDAY \u2022 ${promo.lifetime_discount_percent || 70}% OFF`
+              : '\u{1F451} BEST VALUE \u2022 OWN FOREVER';
+          }
+          if (lifetimeSubtext) {
+            lifetimeSubtext.innerHTML = isBlackFridayLifetime
+              ? `Black Friday Offer &bull; ~$${perPersonUsd}/person for 5 Family Members`
+              : 'Pays for itself in ~2 years &bull; Family Sharing included';
+          }
         } else {
           if (promoBanner) promoBanner.style.display = 'none';
           if (annualAnchor) annualAnchor.style.display = 'none';
@@ -550,6 +586,8 @@ document.addEventListener('DOMContentLoaded', () => {
           if (annualPrice) annualPrice.textContent = '$49.99';
           if (lifetimePrice) lifetimePrice.textContent = '$99.99';
           if (monthlyPrice) monthlyPrice.textContent = '$5.99';
+          if (lifetimeRibbon) lifetimeRibbon.textContent = '\u{1F451} BEST VALUE \u2022 OWN FOREVER';
+          if (lifetimeSubtext) lifetimeSubtext.innerHTML = 'One-time payment &bull; Family Sharing included';
         }
       }
     })

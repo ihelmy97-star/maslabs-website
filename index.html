@@ -51,7 +51,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="/styles.css?v=276.1">
+  <link rel="stylesheet" href="/styles.css?v=276.2">
 
   <!-- Schema.org Structured Data (@graph: SoftwareApplication + Organization + WebSite + FAQPage) -->
   <script type="application/ld+json">
@@ -302,7 +302,7 @@
         <!-- Early Access & Founding Tester Program Banner                             -->
         <!-- Active during Google Play Production Rollout & Early Access Phases        -->
         <!-- ========================================================================== -->
-        <div class="hero-beta-card" id="heroBetaCard">
+        <div class="hero-beta-card" id="heroBetaCard" hidden>
           <div class="hero-beta-topbar">
             <div class="hero-beta-badge">
               <span class="pulse-dot"></span>
@@ -1096,7 +1096,7 @@
 
           <!-- Plan 3: Pro Lifetime (Best Value / Cyber Violet) -->
           <div class="pricing-card pricing-card-lifetime">
-            <div class="popular-ribbon ribbon-purple">👑 BEST VALUE • OWN FOREVER</div>
+            <div class="popular-ribbon ribbon-purple" id="lifetimeRibbon">👑 BEST VALUE • OWN FOREVER</div>
             <div class="pricing-header">
               <div class="pricing-icon">👑</div>
               <span class="pricing-pill pill-purple">One-Time Payment</span>
@@ -1109,7 +1109,7 @@
                 <span class="price-val gradient-purple" id="lifetimePrice">$69.99</span>
                 <span class="price-period">one-time</span>
               </div>
-              <span class="pricing-subtext">Pays for itself in ~2 years &bull; Family Sharing included</span>
+              <span class="pricing-subtext" id="lifetimeSubtext">Pays for itself in ~2 years &bull; Family Sharing included</span>
             </div>
             <ul class="pricing-features-list">
               <li><span class="check-icon purple-check">✓</span> <strong>100% Full Pro Features Unlocked</strong></li>
@@ -1678,6 +1678,6 @@
     </div>
   </aside>
 
-  <script src="/script.js?v=276.1" defer></script>
+  <script src="/script.js?v=276.2" defer></script>
 </body>
 </html>
