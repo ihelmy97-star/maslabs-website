@@ -29,14 +29,14 @@
   "promo_campaign": {
     "is_active": true,
     "annual_discount_percent": 30,
-    "lifetime_discount_percent": 30,
+    "lifetime_discount_percent": 70,
     "monthly_discount_percent": 33,
-    "banner_text": "START WITH 7 DAYS FREE ON ANNUAL PASS • UP TO 33% OFF",
+    "banner_text": "BLACK FRIDAY • 70% OFF LIFETIME PRO",
     "annual_anchor_usd": 49.99,
     "lifetime_anchor_usd": 99.99,
     "monthly_anchor_usd": 5.99,
     "annual_base_usd": 34.99,
-    "lifetime_base_usd": 69.99,
+    "lifetime_base_usd": 29.99,
     "monthly_base_usd": 3.99
   },
   "closed_beta": {
